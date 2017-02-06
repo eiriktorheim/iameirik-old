@@ -61,8 +61,24 @@ body{
 
 h2{
 	font-size: 2.25em;
+	color: #fff;
+	margin-bottom: 1em;
+}
+
+h3{
+	font-size: 2.25em;
 	color: #50D0E3;
-	margin-bottom: 1.75em;
+	margin-bottom: 1em;
+    background-image: -webkit-linear-gradient(100deg,#1CDEAF 0%, #277EF2 75%);
+    /*background-image: -webkit-linear-gradient(100deg,#0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
 }
 
 #header{
@@ -105,5 +121,37 @@ article{
 	float: right;
 	background-color: rgba(0,0,0,0.6);
 	color: #fff;
+}
+
+#norsk-tipping header{
+	background: #000;
+	background-image: url("img/ntbg.jpg");
+    background-size: auto 37.5em;
+    background-repeat: no-repeat;
+    background-position: right top;
+    display: block;
+    width: auto;
+    height: 37.5em;
+}
+
+
+
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(360deg);
+  }
+}
+
+.hideme
+{
+    opacity:0;
 }
 
