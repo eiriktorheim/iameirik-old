@@ -52,33 +52,58 @@ table {
 /* iameirik.com
 */
 
+p{
+	font-size: 1.25em;
+	color: #667;
+	line-height: 1.5em;
+}
+
 body{
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
-	line-height: 2em;
 	text-align: center;
 }
 
 h2{
 	font-size: 2.25em;
 	color: #fff;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
+	margin-top: 0.125em;
+	line-height: normal;
 }
+
 
 h3{
 	font-size: 2.25em;
 	color: #50D0E3;
 	margin-bottom: 1em;
-    background-image: -webkit-linear-gradient(100deg,#1CDEAF 0%, #277EF2 75%);
-    /*background-image: -webkit-linear-gradient(100deg,#0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: hue 60s infinite linear;
+}
+
+.gradient{
+	 background-image: -webkit-linear-gradient(0deg,#1CDEAF 0%, #277EF2 75%);
+	/*background-image: -webkit-linear-gradient(100deg,#0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 60s infinite linear;
+}
+
+.line-divider{
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 1px;
+    margin: 30px auto 0;
+    width: 80px;	
+	background-image: -webkit-linear-gradient(left, #1de9b6, #2979ff);
+    background-image: linear-gradient(to right, #1de9b6, #2979ff);
+}
 }
 
 img{
 	max-width: 100%;
 	height: auto;
+}
+
+.white{
+	color: #fff;
 }
 
 #header{
@@ -92,7 +117,7 @@ section{
 	min-height: 37.5em;
 }
 
-article{
+.article{
 	max-width: 43.75em;
 }
 
@@ -154,4 +179,66 @@ article{
 {
     opacity:0;
 }
+
+
+
+
+/* RESPONSIVE GRID */
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.col-1-2, .col-1-4, .col-1-8 { width: 100%; }
+
+[class*='col-'] {
+  float: left;
+
+}
+
+.fillingimg{
+	width: 100%;
+	height: auto;
+}
+
+.grid-pad {
+  padding: 2em 2em;
+}
+
+@media only screen and (min-width: 800px) {
+	.col-1-2 {
+	  width: 50%;
+	}
+	.col-1-4 {
+	  width: 25%;
+	}
+	.col-1-8 {
+	  width: 12.5%;
+	}
+
+	.grid-pad {
+	  padding: 8%;
+	  text-align: left;
+	}
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+[class*='col-'] {
+  padding-right: 20px;
+  padding-top: 3em;
+}
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+
+
+
 
