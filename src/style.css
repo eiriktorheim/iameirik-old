@@ -83,11 +83,12 @@ h3{
 
 .gradient{
 	 background-image: -webkit-linear-gradient(0deg,#1CDEAF 0%, #277EF2 75%);
-	/*background-image: -webkit-linear-gradient(100deg,#0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);*/
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-webkit-animation: hue 60s infinite linear;
 }
+
+
 
 .line-divider{
     background-color: rgba(0, 0, 0, 0.1);
@@ -97,7 +98,100 @@ h3{
 	background-image: -webkit-linear-gradient(left, #1de9b6, #2979ff);
     background-image: linear-gradient(to right, #1de9b6, #2979ff);
 }
+
+.button{
+    font-size: 1em;
+    line-height: 1.375;
+    padding: 0.5em 1em;
+    color: #22BCD3;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+    -webkit-animation: hue 60s infinite linear;
+    text-decoration: none;
+    border-radius: 39px;
+-webkit-font-smoothing: auto;
 }
+
+
+
+/* Try on gradient border
+.button {
+	font-size: 1em;
+	color: linear-gradient(to right, #1CDEAF, #277EF2);
+	line-height: 1.375;
+
+
+	 background-image: -webkit-linear-gradient(0deg,#1CDEAF 0%, #277EF2 75%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+
+	padding-left: 1em;
+    padding-right: 1em;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 39px;
+    background: white;
+    background-clip: padding-box;
+    padding: 10px;
+    -webkit-animation: hue 60s infinite linear;
+    text-decoration: none;
+}
+
+.button::after {
+    position: absolute;
+    top: -1px; bottom: -1px;
+    left: -1px; right: -1px;
+    background: linear-gradient(to right, #1CDEAF 0%, #277EF2 75%);
+    content: '';
+    z-index: -1;
+    border-radius: 39px;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+*/
+
+
+.button-old{
+    font-size: 1em;
+    line-height: 1.375;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-width: 1px;
+    border-style: solid;
+    background: #eee;
+
+	  border: 2px solid transparent;
+
+	  -moz-border-image: -moz-linear-gradient(left, #1CDEAF 0%, #277EF2 100%);
+	  -webkit-border-image: -webkit-linear-gradient(left, #1CDEAF 0%, #277EF2 100%);
+	  border-image: linear-gradient(to right, #1CDEAF 0%, #277EF2 100%);
+
+	  border-image-slice: 1;
+
+	    cursor: pointer;
+    -webkit-animation: hue 60s infinite linear;
+    text-decoration: none;
+    border-radius: 39px;
+}
+
+
+
+@-webkit-keyframes hue {
+  	0%{-webkit-filter: hue-rotate(0deg);}
+  	50%{-webkit-filter: hue-rotate(80deg);}
+	100%{-webkit-filter: hue-rotate(0deg);}
+}
+
+.top-to-bottom {
+    border-width: 3px;
+    border-style: solid;
+
+}
+
+
+
 
 img{
 	max-width: 100%;
@@ -174,19 +268,9 @@ section{
 }
 
 
-/*-----------------------------------*\
-  $ANIMATIONS
-\*-----------------------------------*/
 
-@-webkit-keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
 
-  to {
-    -webkit-filter: hue-rotate(360deg);
-  }
-}
+
 
 .hideme
 {
@@ -290,26 +374,4 @@ section{
 [class*='col-']:last-of-type {
   padding-right: 0;
 }
-
-
-
-
-.button{
-    border: 1px solid #1de9b6;
-    font-size: 1em;
-    line-height: 1.375;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: #1de9b6;
-    cursor: pointer;
-    -webkit-animation: hue 60s infinite linear;
-    text-decoration: none;
-}
-
-.button{
-    padding: 0.5em 1em;
-    background-color: transparent;
-    border-radius: 39px;
-}
-
 
