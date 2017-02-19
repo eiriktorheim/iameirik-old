@@ -19,5 +19,17 @@ $(document).ready(function() {
         }); 
     
     });
+
+
+
+    $(".scroller").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        800, "swing");
+    });
+
     
 });
+
+
+
