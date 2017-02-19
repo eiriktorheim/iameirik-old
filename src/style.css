@@ -60,6 +60,10 @@ p{
 	line-height: 1.5em;
 }
 
+b{
+	font-weight: 700;
+}
+
 body{
 	width: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -143,7 +147,7 @@ section{
 }
 
 .article{
-	max-width: 50em;
+	max-width: 45em;
 }
 
 .caption{
@@ -304,3 +308,66 @@ section{
   padding-right: 0;
 }
 
+
+.schibsted-div{
+	padding: 6.25em 1em 0 1em; 
+	-webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+
+}
+
+.scroll-arrow{
+    cursor: pointer;
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+    z-index: 10;
+    height: 30px;
+    text-align: center;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	background-image: url("img/arrow-down.svg");
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+.scroll-arrow:hover{
+	background-image: none;
+
+}
+
+
+.scroll-arrow::before {
+    text-align: center;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    cursor: pointer;
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px
+
+}
+
+
+.scroll-arrow span{
+	display: none;
+}
+
+.scroll-arrow:hover span{
+	display: block;
+	font-size: 0.75em;
+	letter-spacing: 2px;
+}
+
+.scroll-arrow{
+	text-shadow: 0px 0px 3px rgba(0,0,0,.2);
+}
