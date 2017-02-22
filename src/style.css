@@ -178,7 +178,6 @@ section{
 }
 
 #norsk-tipping header{
-	background: #000;
 	background-image: url("img/ntbg.jpg");
     background-size: auto 37.5em;
     background-repeat: no-repeat;
@@ -201,16 +200,31 @@ section{
 }
 
 
+/*
 
+from Invision
 
-
-
-.hideme
-{
-    opacity:0;
+.home .hero.video-loaded:before, .home2 .hero.video-loaded:before, .home3 .hero.video-loaded:before {
+    background: rgba(25,29,34,.75); 
 }
 
+.home .hero:after, .home .hero:before, .home2 .hero:after, .home2 .hero:before, .home3 .hero:after, .home3 .hero:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background: rgba(25,29,34,.75); 
+}
 
+.hero.video-loaded:before {
+    background: rgba(25,29,34,.9) !important;
+}
+
+*/
 
 
 /* RESPONSIVE GRID */
