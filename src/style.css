@@ -85,12 +85,23 @@ h3{
 	margin-bottom: 1em;
 }
 
+/*p{
+	--x-height-multiplier: 0.35;
+    --baseline-multiplier: 0.179;
+    font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+    letter-spacing: .01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+}*/
+
 .gradient{
 	 background-image: -webkit-linear-gradient(0deg,#1CDEAF 0%, #277EF2 75%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	-webkit-animation: hue 60s infinite linear;
-
 }
 
 
@@ -137,7 +148,8 @@ img{
 
 #header{
 	height: 43.75em;
-	background: #3F3F3F url("img/headerbg.jpg") no-repeat center center;
+	background: url("img/headerbg.jpg") no-repeat center center;
+	background-color: #3F3F3F;
 	color: #fff;
 	padding: 0 1em;
 }
@@ -169,12 +181,8 @@ section{
     height: 37.5em;
 }
 
-#schibsted header div{
-	min-width: 23.4em;
-	height: 31.25em;
-	float: right;
-	background-color: rgba(0,0,0,0.6);
-	color: #fff;
+.center{
+	text-align: center;
 }
 
 #norsk-tipping header{
@@ -199,6 +207,15 @@ section{
     height: 37.5em;
 }
 
+.overlay {
+  background-color: rgba(25,29,34,.75);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
 
 /*
 
@@ -367,8 +384,7 @@ from Invision
     font-size: 32px;
     width: 32px;
     height: 32px;
-    line-height: 32px
-
+    line-height: 32px;
 }
 
 
