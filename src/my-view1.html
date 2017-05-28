@@ -14,19 +14,73 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="my-view1">
   <template>
     <style include="shared-styles">
-      :host {
-        display: block;
 
-        padding: 10px;
+
+       header {
+        @apply --layout-vertical;
+        @apply --layout-center-center;
+        height: calc(100vh - 64px);
+        padding: 0 16px;
+        background-image: url('/images/headerbg.jpg');
+        backgrond-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; 
+        color: white;
+        text-align: center;
       }
+
+      .avatar{
+        height: 96px;
+        width: 96px;
+        margin-top: 1em;
+        margin-right: 1em;
+        border: 1px solid rgba(0,0,0,.1);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+
+      section{
+
+        min-height: 37.5em;
+      }
+
+      .article{
+        max-width: 45em;
+      }
+
+      .center{
+        text-align: center;
+      }
+
+      .about{
+      background-color: var(--tint-white);
+      }
+
+      paper-button{
+        color: var(--tint-primary);
+      }
+
     </style>
 
-    <div class="card">
-      <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
-    </div>
+    <header>
+      <p>Presentation</p>
+      <h1>I am Eirik</h1>
+      <p>Optimistic futurist that loves nature and building digital products</p>
+      <div class="scroll-arrow animated bounce">
+        <span class="scroller">SCROLL DOWN</span>   
+      </div>
+    </header>
+
+    <section style="min-height: 10em;" class="about"> 
+      <article style="padding: 8em 1em 9em 1em; margin: 0 auto;" class="article center">
+        <img style="margin-bottom: 1em;" class="avatar" alt="Profile picture" src="/images/avatar.jpg" height="96" width="96">
+        <h2>Who am I?</h2>
+        <p>I am Eirik Torheim, a product <b>designer</b> and <b>product manager</b> from Norway currently based in Barcelona. I have 8 years experience in building <b>digital products</b>.</p>
+        <paper-button>My story &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
+      </article>
+    </section>
+
   </template>
 
   <script>
