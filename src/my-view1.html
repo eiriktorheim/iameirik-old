@@ -53,8 +53,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
       }
 
-      .about{
+      .bg-white{
       background-color: var(--tint-white);
+      }
+
+      .bg-light{
+      background-color: var(--tint-very-light-grey);
       }
 
       paper-button{
@@ -62,24 +66,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
     </style>
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
 
     <header>
       <p>PRESENTATION</p>
       <h1>I am Eirik</h1>
-      <p>Optimistic futurist that loves nature and building digital products</p>
+      <p>Product designer and product manager from Norway</p>
       <div class="scroll-arrow animated bounce">
         <span class="scroller">SCROLL DOWN</span>   
       </div>
     </header>
 
-    <section style="min-height: 10em;" class="about"> 
+    <section style="min-height: 10em;" class="bg-white"> 
       <article style="padding: 8em 1em 9em 1em; margin: 0 auto;" class="article center">
         <img style="margin-bottom: 1em;" class="avatar" alt="Profile picture" src="/images/avatar.jpg" height="96" width="96">
         <h2>Who am I?</h2>
-        <p>I am Eirik Torheim, a product <b>designer</b> and <b>product manager</b> from Norway currently based in Barcelona. I have 8 years experience in building <b>digital products</b>.</p>
+        <p>I am Eirik Torheim, a product <b>designer</b> and <b>product manager</b> from Norway currently based in Barcelona. I have been building <b>digital products</b> for about 10 years now.</p>
         <paper-button>My story &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
       </article>
     </section>
+
+    <section style="min-height: 10em;" class="bg-light layout horizontal wrap" > 
+      <article style="padding: 8em 1em 9em 1em; margin: 0 auto;" class="article center">
+
+        <h2>Redesigning Norsk-tipping.no</h2>
+        <p>How we redesigned one of the biggest websites in Norway and created a cohesive user experience on</p>
+        <paper-button>View case &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
+      </article>
+    </section>
+
+    <div class="layout horizontal">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
 
   </template>
 
