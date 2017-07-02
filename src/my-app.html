@@ -24,14 +24,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../bower_components/iron-icons/communication-icons.html">
-<link rel="import" href="../bower_components/paper-item.html">
+<link rel="import" href="../bower_components/paper-item/paper-item.html">
+<link rel="import" href="../bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="../bower_components/paper-item/paper-item-body.html">
 <link rel="import" href="../bower_components/paper-styles/color.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
-
-<link rel="import" href="../bower_components/paper-icon-item.html">
-<link rel="import" href="../bower_components/paper-item-body.html">
-
-
 
 <link rel="import" href="my-icons.html">
 
@@ -100,6 +97,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <my-view1 name="view1"></my-view1>
           <my-view2 name="view2"></my-view2>
           <my-view3 name="view3"></my-view3>
+          <my-view4 name="view4"></my-view4>
           <my-view404 name="view404"></my-view404>
         </iron-pages>
   </template>
@@ -147,10 +145,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         // Deault to 'view1' in that case.
         this.page = page || 'view1';
 
-        // Close a non-persistent drawer when the page & route are changed.
-        if (!this.$.drawer.persistent) {
-          this.$.drawer.close();
-        }
       }
 
       _pageChanged(page) {

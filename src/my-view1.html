@@ -29,40 +29,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
       }
 
-      .avatar{
-        height: 96px;
-        width: 96px;
-        margin-top: 1em;
-        margin-right: 1em;
-        border: 1px solid rgba(0,0,0,.1);
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
-      }
-
       section{
 
         min-height: 37.5em;
-      }
-
-      .article{
-        max-width: 45em;
-      }
-
-      .center{
-        text-align: center;
-      }
-
-      .bg-white{
-      background-color: var(--tint-white);
-      }
-
-      .bg-light{
-      background-color: var(--tint-very-light-grey);
-      }
-
-      paper-button{
-        color: var(--tint-primary);
       }
 
     </style>
@@ -89,17 +58,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <section style="min-height: 10em;" class="bg-light layout horizontal wrap" > 
       <article style="padding: 8em 1em 9em 1em; margin: 0 auto;" class="article center">
 
-        <h2>Redesigning Norsk-tipping.no</h2>
-        <p>How we redesigned one of the biggest websites in Norway and created a cohesive user experience on</p>
-        <paper-button>View case &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
+        <h2>Schibsted Media Platform</h2>
+        <p>A cohesive visual concept creaeting a creation suite gathering all products in one cohesive creation suite.</p>
+       
+        <paper-button onclick="goToCase2(this)">View case &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
+
       </article>
     </section>
 
-    <div class="layout horizontal">
-      <div>One</div>
-      <div>Two</div>
-      <div>Three</div>
-    </div>
+    <section style="min-height: 10em;" class="bg-light layout horizontal wrap" > 
+      <article style="padding: 8em 1em 9em 1em; margin: 0 auto;" class="article center">
+
+        <h2>Redesigning Norsk-tipping.no</h2>
+        <p>How we redesigned one of the biggest websites in Norway and created a cohesive user experience</p>
+       
+        <paper-button onclick="addNewFeature(this)">View case &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
+
+      </article>
+    </section>
+
+    <section style="min-height: 10em;" class="bg-light layout horizontal wrap" > 
+      <article style="padding: 8em 1em 9em 1em; margin: 0 auto;" class="article center">
+
+        <h2>Schibsted Service Catalogue</h2>
+        <p>Collecting services from 30+ brands in one big collection of Schibsted – Schibsted Service Catalogue</p>
+       
+        <paper-button onclick="goToCaseDevrel(this)">View case &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
+
+      </article>
+    </section>
 
   </template>
 
@@ -109,5 +96,29 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     window.customElements.define(MyView1.is, MyView1);
+
+    function addNewFeature(el) {
+    // Wait for ripple to finish.
+    el.addEventListener('transitionend', function(e) {
+      location.href = '/view2';
+    });
+    }
+    
+    function goToCase2(el) {
+    // Wait for ripple to finish.
+    el.addEventListener('transitionend', function(e) {
+      location.href = '/view3';
+    });
+    }
+
+    function goToCaseDevrel(el) {
+    // Wait for ripple to finish.
+    el.addEventListener('transitionend', function(e) {
+      location.href = '/view4';
+    });
+    }
+
+
+
   </script>
 </dom-module>
