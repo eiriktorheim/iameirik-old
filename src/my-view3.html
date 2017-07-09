@@ -15,39 +15,76 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style include="shared-styles">
 
-       header {
+      app-header-layout{
         @apply --layout-vertical;
-        @apply --layout-center-center;
+        @apply --layout-center-center; 
         height: calc(100vh - 64px);
         padding: 0 16px;
+        color: white;
         background-image: url('/images/nt/nt.jpg');
         backgrond-repeat: no-repeat;
         background-size: cover;
-        background-position: center; 
-        color: white;
-        text-align: center;
+        background-position: center;     
+      }
+
+      header {
+        text-align: center;    
+      }
+
+      app-toolbar{
+        @apply(--layout-horizontal);
+        @apply(--layout-justified);
+      }
+
+      app-toolbar a{
+        text-decoration: none;
+        color: var(--tint-white);
       }
 
     </style>
 
     <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-        
-    <header>
-      <h1>Schibsted Media Platform</h1>
-      <p>A cohesive visual concept creaeting a creation suite gathering all products in one cohesive creation suite.</p>
-    </header>
+
+    <app-header-layout>
+      
+      <app-header effects="waterfall" slot="header">
+        <app-toolbar>
+          <a href="/">
+            <paper-icon-button icon="arrow-back"></paper-icon-button>
+            <span>Back to front</span>
+          </a>
+          <a href="view4">
+            <span>Next case</span>
+            <paper-icon-button icon="arrow-forward"></paper-icon-button>
+          </a>
+        </app-toolbar>
+      </app-header>
+      
+      <header>
+        <h1>Schibsted Media Platform</h1>
+        <p>A cohesive visual concept creaeting a creation suite gathering all products in one cohesive creation suite</p>
+      </header>
+    
+    </app-header-layout>
 
     <section style="min-height: 10em;" class="tint-white"> 
       <article style="margin: 0 auto;" class="medium center">
         <h2>Overview</h2>
-        <p>Lorem ipsum</p>
+        <p>Between the ia</p>
       </article>
     </section>
 
     <section id="problem" class="tint-white"> 
       <div class="medium center">
         <h2>The problem</h2>
-        <p>Lorem ipsum</p>
+        <p>The different products in the Media Platform was made at different times by different people and different teams. Now we are putting them together in one creatuion suite they also need have the user experience as a creative suite. A consistent look and feel which is setup for easy flow between the products and support the workflow of the independent journalist.</p>
+      </div>
+    </section>
+
+    <section id="problem" class="tint-white"> 
+      <div class="medium center">
+        <h2>The problem</h2>
+        <p></p>
       </div>
     </section>
     
@@ -67,14 +104,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <section class="tint-light-grey">
       <div class="medium center center-text">
-        <h2>Norsk </h2>
-        <p>A cohesive visual concept creaeting a creation suite gathering all products in one cohesive creation suite.</p>
-       
+        <h2>Norsk Tipping.no</h2>
+        <p>How we redesigned one of the biggest websites in Norway and created a cohesive user experience</p>      
         <paper-button onclick="addNewFeature(this)">Next case &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
       </div>
     </section>
 
-    <section class="tint-light">
+    <section class="tint-very-dark-grey">
       <div class="medium center center-text">
       <p>You can find me on <a href="https://www.linkedin.com/in/iameirik/">LinkedIn</a> and <a href="https://www.instagram.com/eirik.torheim/">Instagram</a></p>
       <p>Get in touch <a href="mailto:mail@eirikgilje.com">mail@eirikgilje.com</a></p>
@@ -84,10 +120,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <script>
+      function addNewFeature(el) {
+    // Wait for ripple to finish.
+    el.addEventListener('transitionend', function(e) {
+      location.href = '/view2';
+    });
+    }
+
     class MyView3 extends Polymer.Element {
       static get is() { return 'my-view3'; }
     }
 
     window.customElements.define(MyView3.is, MyView3);
+
+    function goToFront(el) {
+    // Wait for ripple to finish.
+    el.addEventListener('transitionend', function(e) {
+      location.href = '/view1';
+    });
+    }
+
+    function goToNext(el) {
+    // Wait for ripple to finish.
+    el.addEventListener('transitionend', function(e) {
+      location.href = '/view4';
+    });
+    }
+
   </script>
 </dom-module>

@@ -15,27 +15,54 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style include="shared-styles">
 
-       header {
+      app-header-layout{
         @apply --layout-vertical;
-        @apply --layout-center-center;
+        @apply --layout-center-center; 
         height: calc(100vh - 64px);
         padding: 0 16px;
+        color: white;
         background-image: url('/images/nt/nt.jpg');
         backgrond-repeat: no-repeat;
         background-size: cover;
-        background-position: center; 
-        color: white;
-        text-align: center;
+        background-position: center;     
+      }
+
+      header {
+        text-align: center;    
+      }
+
+      app-toolbar{
+        @apply(--layout-horizontal);
+        @apply(--layout-justified);
+      }
+
+      app-toolbar a{
+        text-decoration: none;
+        color: var(--tint-white);
       }
 
     </style>
     
     <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-        
-    <header>
-      <h1>Schibsted Service Catalogue</h1>
-      <p>Collecting services from 30+ brands in one big collection of Schibsted – Schibsted Service Catalogue.</p>
-    </header>
+
+    <app-header-layout>
+      
+      <app-header effects="waterfall" slot="header">
+        <app-toolbar>
+          <a href="/">
+            <paper-icon-button icon="arrow-back"></paper-icon-button>
+            <span>Back to front</span>
+          </a>
+        </app-toolbar>
+      </app-header>
+      
+      <header>
+        <h1>Schibsted Service Catalogue</h1>
+        <p>Collecting services from 30+ brands in one big collection of Schibsted – Schibsted Service Catalogue</p>
+      </header>
+    
+    </app-header-layout>
+    
 
     <section style="min-height: 10em;" class="tint-white"> 
       <article style="margin: 0 auto;" class="medium center">
@@ -89,5 +116,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     window.customElements.define(MyView4.is, MyView4);
+
+    function goToFront(el) {
+    // Wait for ripple to finish.
+    el.addEventListener('transitionend', function(e) {
+      location.href = '/view1';
+    });
+    }
+
   </script>
 </dom-module>

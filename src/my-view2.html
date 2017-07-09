@@ -15,27 +15,58 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <style include="shared-styles">
 
-       header {
+      app-header-layout{
         @apply --layout-vertical;
-        @apply --layout-center-center;
+        @apply --layout-center-center; 
         height: calc(100vh - 64px);
         padding: 0 16px;
+        color: white;
         background-image: url('/images/nt/nt.jpg');
         backgrond-repeat: no-repeat;
         background-size: cover;
-        background-position: center; 
-        color: white;
-        text-align: center;
+        background-position: center;     
+      }
+
+      header {
+        text-align: center;    
+      }
+
+      app-toolbar{
+        @apply(--layout-horizontal);
+        @apply(--layout-justified);
+      }
+
+      app-toolbar a{
+        text-decoration: none;
+        color: var(--tint-white);
       }
 
     </style>
 
+
     <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
 
-    <header>
-      <h1>Norsk Tipping.no</h1>
-      <p>How we redesigned one of the biggest websites in Norway and created a cohesive user experience</p>
-    </header>
+    <app-header-layout>
+      
+      <app-header effects="waterfall" slot="header">
+        <app-toolbar>
+          <a href="/">
+            <paper-icon-button icon="arrow-back"></paper-icon-button>
+            <span>Back to front</span>
+          </a>
+          <a href="view3">
+            <span>Next case</span>
+            <paper-icon-button icon="arrow-forward"></paper-icon-button>
+          </a>
+        </app-toolbar>
+      </app-header>
+      
+      <header>
+        <h1>Norsk Tipping.no</h1>
+        <p>How we redesigned one of the biggest websites in Norway and created a cohesive user experience</p>
+      </header>
+    
+    </app-header-layout>
 
     <section style="min-height: 10em;" class="tint-white"> 
       <article class="medium center">
@@ -196,10 +227,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </template>
 
   <script>
+    function addNewFeature(el) {
+    // Wait for ripple to finish.
+    el.addEventListener('transitionend', function(e) {
+      location.href = '/view3';
+    });
+    }
+
     class MyView2 extends Polymer.Element {
       static get is() { return 'my-view2'; }
     }
 
     window.customElements.define(MyView2.is, MyView2);
+
   </script>
 </dom-module>

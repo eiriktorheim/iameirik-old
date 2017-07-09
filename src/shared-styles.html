@@ -22,7 +22,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --tint-dark-grey: #666666;
         --tint-very-dark-grey: #333333;
         --tint-black: #000000;
-        --tint-primary: #E91E63;
+        --tint-primary: #0faece;
         --tint-secondary: #2196F3;
       }
 
@@ -48,6 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .tint-very-dark-grey{
         background-color: var(--tint-very-dark-grey);
+        color: var(--tint-very-light-grey);
       } 
 
       .tint-black{
@@ -62,33 +63,35 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       background-color: var(--tint-secondary);
       }
 
+      a{
+      color: var(--tint-primary);  
+      }
 
       h1, h2, h3{
-        font-weight: 100;
+        font-weight: bold;
         margin: 0;
+      }
+
+      h2, h3, p{
+        line-height: 40px;
       }
       
       h1{
         font-size: 58px;
         line-height: 80px;
-        font-weight: bold;
       }
 
       h2{
-        font-size: 28px;
-        font-weight: bold;
-        line-height: 40px;
+        font-size: 32px;
       }
 
       h3{
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 40px;
+        font-size: 28px;
       }
 
       p, li{
         font-size: 18px;
-        line-height: 40px;
+        font-weight: lighter;
       }
 
       img{
