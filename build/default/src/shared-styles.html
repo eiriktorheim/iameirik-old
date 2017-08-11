@@ -12,6 +12,106 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="shared-styles">
   <template>
     <style>
+      :host {
+        --tint-white: #ffffff;
+        --tint-very-light-grey: #f9f9fb;
+        --tint-light-grey: #eaeaea;
+        --tint-medium-grey: #b6b6b6;
+        --tint-dark-grey: #666666;
+        --tint-very-dark-grey: #333333;
+        --tint-black: #000000;
+        --tint-primary: #0faece;
+        --tint-secondary: #2196F3;
+
+        --spacing-medium:4em;
+      }
+
+      .tint-white{
+        background-color: var(--tint-white);
+      }
+
+      .tint-very-light-grey{
+        background-color: var(--tint-very-light-grey);
+      }
+
+      .tint-light-grey{
+        background-color: var(--tint-light-grey);
+      }
+
+      .tint-medium-grey{
+        background-color: var(--tint-medium-grey);
+      }
+
+      .tint-dark-grey{
+        background-color: var(--tint-dark-grey);
+      }   
+
+      .tint-very-dark-grey{
+        background-color: var(--tint-very-dark-grey);
+        color: var(--tint-very-light-grey);
+      } 
+
+      .tint-black{
+        background-color: var(--tint-black);
+      }
+
+      .tint-primary{
+      background-color: var(--tint-primary);
+      }
+      
+      .tint-secondary{
+      background-color: var(--tint-secondary);
+      }
+
+      a{
+      color: var(--tint-primary);  
+      }
+
+      h1, h2, h3{
+        font-weight: bold;
+        margin: 0;
+      }
+
+      h2, h3, p, span, li{
+        line-height: 40px;
+
+      }
+      
+      h1{
+        font-size: 58px;
+        line-height: 80px;
+        margin-bottom: 40px;
+      }
+
+      h2{
+        font-size: 34px;
+        margin-bottom: 24px;
+      }
+
+      h3{
+        font-size: 26px;
+        margin-bottom: 16px;
+      }
+
+      p, li, span{
+        font-size: 18px;
+        font-weight: lighter;
+      }
+
+      li{
+        line-height: 48px;
+      }
+
+      img, video{
+          width: 100%;
+          height: auto;
+      }
+      
+      section{
+        padding: 4em 0;
+      }
+
+
       .card {
         margin: 24px;
         padding: 16px;
@@ -32,12 +132,108 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-size: 30px;
         line-height: 64px;
       }
-
-      h1 {
-        margin: 16px 0;
-        color: #212121;
-        font-size: 22px;
+      .avatar{
+        height: 96px;
+        width: 96px;
+        margin-top: 1em;
+        margin-right: 1em;
+        border: 1px solid rgba(0,0,0,.1);
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
       }
+
+      .medium{
+        max-width: 45em;
+      }
+
+      .large{
+        max-width: 65em;
+        margin: var(--spacing-medium) 0;
+      }
+
+      .center{
+        margin-left: auto;
+        margin-right: auto; 
+      }
+
+      .center-text{
+        text-align: center;
+      }
+      
+      .article{
+        max-width: 45em;
+      }
+
+      paper-button{
+        color: var(--tint-primary);
+      }
+
+
+
+.hideme
+{
+    opacity:0;
+}
+
+
+
+      .fade {
+          animation: fadein 2s;
+          -moz-animation: fadein 2s; /* Firefox */
+          -webkit-animation: fadein 2s; /* Safari and Chrome */
+          -o-animation: fadein 2s; /* Opera */
+      }
+      @keyframes fadein {
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-moz-keyframes fadein { /* Firefox */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-webkit-keyframes fadein { /* Safari and Chrome */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-o-keyframes fadein { /* Opera */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+
+
+
+    </style>
+
+
+        <style is="custom-style">
+        paper-chip{
+          --paper-chip-background-color: var(--tint-light-grey);
+          line-height: 40px;
+
+        }
+
+        paper-tabs{
+        --paper-tabs-selection-bar-color: var(--tint-black);
+        text-transform: uppercase;
+        color: var(--tint-very-dark-grey);
+        }
     </style>
   </template>
 </dom-module>

@@ -1,0 +1,211 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-a11y-keys/iron-a11y-keys.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-styles/default-theme.html">
+<link rel="import" href="paper-chip.html">
+
+<!--
+
+Material design: [Chips](https://material.io/guidelines/components/chips.html)
+
+`paper-chip-input`
+paper-chip's combined with a paper-input element.
+
+### Styling
+The following custom properties and mixins are available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--paper-chip-input-focus-color` | Label and underline color when the input is focused | `--primary-color`
+`--paper-chip-input-font-size` | Fontsize applied to input field | `13px`
+`--paper-chip-input-label-font-size` | Fontsize applied to input label | `13px`
+
+@element paper-chip-input
+@demo demo/index.html
+-->
+
+<dom-module id="paper-chip-input">
+	<template>
+		<style>
+			paper-input {
+				--paper-input-container-focus-color: var(--paper-chip-input-focus-color, var(--primary-color));
+
+				--paper-input-container-input: {
+					font-family: 'Roboto', sans-serif;
+					-webkit-font-smoothing: antialiased;
+					font-size: var(--paper-chip-input-font-size, 13px);
+				}
+
+				--paper-input-container-label: {
+					font-family: 'Roboto', sans-serif;
+					-webkit-font-smoothing: antialiased;
+					font-size: var(--paper-chip-input-label-font-size, 13px);
+				}
+			}
+		</style>
+
+		<iron-a11y-keys target="paperInput" keys="enter" on-keys-pressed="_onKeyEnter"></iron-a11y-keys>
+		<iron-a11y-keys target="paperInput" keys="backspace" on-keys-pressed="_onKeyBackspace"></iron-a11y-keys>
+
+		<paper-input id="paperInput" 
+					always-float-label$="[[alwaysFloatLabel]]" 
+					no-label-float$="[[noLabelFloat]]" 
+					disabled$="[[disabled]]"
+					value="{{_value}}" 
+					label="[[label]]">
+
+			<slot id="slot" name="input" slot="prefix"></slot>
+			<slot id="slot2" name="input2" slot="prefix">
+				<dom-repeat items="[[items]]">
+					<template>
+						[[item.name]]
+						<paper-chip id="paper-chip-[[item]]-[[index]]" label="[[item]]" closable$="[[closable]]" on-chip-removed="_removeChip"></paper-chip>
+					</template>
+				</dom-repeat>
+			</slot>
+		</paper-input>
+
+	</template>
+
+	<script>
+		class PaperChipInput extends Polymer.Element {
+
+			static get is() {
+				return 'paper-chip-input';
+			}
+
+			static get properties() {
+				return {
+
+					/**
+ 					* Set to true to always float the floating label.
+ 					*/
+					alwaysFloatLabel: {
+						type: Boolean,
+						value: false
+					},
+
+					/**
+ 					* If true, the paper-chips can be closed.
+ 					*/
+					closable: {
+						type: Boolean,
+						value: false
+					},
+
+					/**
+					* Set to true to disable this input.
+					*/
+					disabled: {
+						type: Boolean,
+						value: false,
+					},
+
+					/**
+ 					* The list of items, which will be set as paper-chips.
+ 					*/
+					items: {
+						type: Array,
+						value: function () {
+							return [];
+						}
+					},
+
+					/**
+ 					* The label for this paper-chip-input.
+ 					*/
+					label: {
+						type: String,
+						value: ''
+					},
+
+					/**
+					* Set to true to disable the floating label. The label disappears when the input value is not null.
+					*/
+					noLabelFloat: {
+						type: Boolean,
+						value: false
+					},
+					_value: {
+						type: String
+					}
+				};
+			}
+
+			_onKeyEnter() {
+				if (this._value != '' && this._value != undefined) {
+					this._saveTag(this._value);
+					this.dispatchEvent(new CustomEvent('chip-created', {
+						detail: {
+							chipLabel: this._value
+						}
+					}));
+					this._value = '';
+				}
+			}
+
+			_onKeyBackspace() {
+				if (this.items.length != 0 &&
+					(this._value == '' || this._value == undefined)) {
+					this._removeLastItem();
+				} else if (this.$.slot.assignedNodes().length > 0 &&
+					(this._value == '' || this._value == undefined)) {
+					var distributedNodes = this.$.slot.assignedNodes({
+						flatten: true
+					})
+					let lastPaperChipIndex = 0;
+					for (var i = 0; i < this.childNodes.length; i++) {
+						if (this.childNodes[i].tagName == 'PAPER-CHIP') {
+							lastPaperChipIndex = i;
+						}
+					}
+					this._throwChipRemovedEvent(this.childNodes[lastPaperChipIndex].label);
+					this.removeChild(this.childNodes[lastPaperChipIndex]);
+				}
+			}
+
+			_saveTag(name) {
+				if (this.items.indexOf(name) == -1) {
+					this.push('items', name);
+				}
+			}
+
+			_removeChip(event) {
+				var index = this.items.indexOf(event.detail.chipLabel);
+				if (index != -1) {
+					this.splice('items', index, 1);
+				}
+			}
+
+			_removeLastItem() {
+				if (this.items.length != 0) {
+					this._throwChipRemovedEvent(this.items[this.items.length - 1]);
+					this.splice('items', -1, 1);
+				}
+			}
+
+			_getLastPaperChipPosition(childNodes) {
+				let lastPaperChipIndex = 0;
+				for (var i = 0; i < childNodes.length; i++) {
+					if (childNodes[i].tagName == 'PAPER-CHIP') {
+						lastPaperChipIndex = i;
+					}
+				}
+				return lastPaperChipIndex;
+			}
+
+			_throwChipRemovedEvent(chipLabel) {
+				this.dispatchEvent(new CustomEvent('chip-removed', {
+					detail: {
+						'chipLabel': chipLabel
+					},
+					composed: true,
+					bubbles: true
+				}));
+			}
+
+		}
+		window.customElements.define(PaperChipInput.is, PaperChipInput);
+	</script>
+</dom-module>

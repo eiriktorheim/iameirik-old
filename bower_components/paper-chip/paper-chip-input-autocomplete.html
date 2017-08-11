@@ -1,0 +1,296 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-a11y-keys/iron-a11y-keys.html">
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-item/paper-item.html">
+<link rel="import" href="../paper-listbox/paper-listbox.html">
+<link rel="import" href="../paper-material/paper-material.html">
+<link rel="import" href="../paper-ripple/paper-ripple.html">
+<link rel="import" href="../paper-styles/default-theme.html">
+<link rel="import" href="paper-chip-input.html">
+
+<!--
+
+Material design: [Chips](https://material.io/guidelines/components/chips.html)
+
+`paper-chip-input-autocomplete`
+An element with a lightweight completion suggester. The selected item will be displayed as an paper-chip.
+
+### Styling
+The following custom properties and mixins are available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--paper-chip-autocomplete-focus-color` | Label and underline color when the input is focused | `--primary-color`
+`--paper-chip-input-autocomplete-font-size` | Fontsize applied to input field | `13px`
+`--paper-chip-input-autocomplete-label-font-size` | Fontsize applied to input label | `13px`
+`--paper-chip-autocomplete-width` | Width of the suggestion field | `100%`
+`--paper-chip-autocomplete-suggestion-background` | Background color of the autocomplete suggestion field | `--primary-background-color`
+`--paper-chip-autocomplete-suggestion-text-color` | Text color of the autocomplete suggestion field | `--primary-text-color`
+`--paper-chip-autocomplete-item-font-size` | Fontsize of the autocomplete suggestion field | `13px`
+`--paper-chip-autocomplete-item-height` | Minimum height of the item | `48px`
+
+@element paper-chip-input-autocomplete
+@demo demo/index.html
+-->
+
+<dom-module id="paper-chip-input-autocomplete">
+	<template>
+		<style>
+			paper-item:hover {
+				background: #eee;
+				color: #333;
+				cursor: pointer;
+			}
+
+			paper-item.active,
+			 :host ::content paper-item.active {
+				background: #eee;
+				color: #333;
+			}
+
+			paper-item {
+				--paper-item-selected-weight: normal;
+				--paper-item-min-height: var(--paper-chip-autocomplete-item-height, 48px);
+				--paper-item: {
+					font-family: 'Roboto', sans-serif;
+					-webkit-font-smoothing: antialiased;
+					font-size: var(--paper-chip-autocomplete-item-font-size, 13px);
+				}
+			}
+
+			.hide {
+				display: none;
+			}
+
+			.autocomplete {
+				width: var(--paper-chip-autocomplete-width, 100%);
+				position: absolute;
+				z-index: 1;
+			}
+
+			paper-listbox {
+				--paper-listbox-background-color: var(--paper-chip-autocomplete-suggestion-background, var(--primary-background-color));
+				--paper-listbox-color: var(--paper-chip-autocomplete-suggestion-text-color, var(--primary-text-color));
+			}
+
+			paper-input {
+				--paper-input-container-focus-color: var(--paper-chip-autocomplete-focus-color, var(--primary-color));
+
+				--paper-input-container-input: {
+					font-family: 'Roboto', sans-serif;
+					-webkit-font-smoothing: antialiased;
+					font-size: var(--paper-chip-input-autocomplete-font-size, 13px);
+				}
+
+				--paper-input-container-label: {
+					font-family: 'Roboto', sans-serif;
+					-webkit-font-smoothing: antialiased;
+					font-size: var(--paper-chip-input-autocomplete-label-font-size, 13px);
+				}
+			}
+		</style>
+
+		<iron-a11y-keys target="paperInput" keys="backspace" on-keys-pressed="_onKeyBackspace"></iron-a11y-keys>
+
+		<div>
+			<paper-input id="paperInput" label="[[label]]" on-keyup="_findItems" value="{{_inputValue}}" autofocus="{{autofocus}}">
+				<slot id="slot2" name="input" slot="prefix">
+					<dom-repeat items="[[_items]]">
+						<template>
+							[[item.name]]
+							<paper-chip id="paper-chip-[[item]]-[[index]]" label="[[item]]" closable$="[[closable]]" on-chip-removed="_removeChip"></paper-chip>
+						</template>
+					</dom-repeat>
+				</slot>
+			</paper-input>
+		</div>
+
+		<paper-material class$="[[_autocompleteClass]]" elevation="1">
+			<paper-listbox id="listbox">
+				<dom-repeat items="[[_filteredSource]]">
+					<template>
+						<paper-item id="paperItemAutocomplete" on-tap="_selectPaperItem" closable$="[[closable]]">[[item.text]]
+							<paper-ripple></paper-ripple>
+						</paper-item>
+					</template>
+				</dom-repeat>
+			</paper-listbox>
+		</paper-material>
+
+	</template>
+
+	<script>
+		class PaperChipInputAutocomplete extends Polymer.Element {
+
+			static get is() {
+				return 'paper-chip-input-autocomplete';
+			}
+
+			static get properties() {
+				return {
+					
+					/**
+ 					* The minimum lengt to trigger the autocomplete.
+ 					*/
+					minSearchStringLength: {
+						type: Number,
+						value: 2
+					},
+
+					/**
+ 					* An array containing the items.
+ 					*/
+					source: {
+						type: Array,
+						value: function () {
+							return [];
+						}
+					},
+					
+					/**
+ 					* If true, the paper-chips can be closed.
+ 					*/
+					closable: {
+						type: Boolean,
+						value: false
+					},
+
+					/**
+ 					* The label for this paper-chip-input-autocomplete.
+ 					*/
+					label: {
+						type: String,
+						value: ''
+					},
+
+					/**
+ 					* If true, the paper-chip-input-autocomplete is focused.
+ 					*/
+					autofocus: {
+						type: Boolean,
+						value: false
+					},
+					_items: {
+						type: Array,
+						value: function () {
+							return [];
+						}
+					},
+					_selectedSuggestionId: {
+						type: Object,
+						observer: '_selectPaperItem'
+					},
+					_filteredSource: {
+						type: Array,
+						value: function () {
+							return [];
+						}
+					},
+					_inputValue: {
+						type: String,
+						value: ""
+					},
+					_autocompleteClass: {
+						type: String,
+						value: "hide"
+					},
+					_paperInputWidth: {
+						type: Number
+					}
+				};
+			}
+
+			_onKeyBackspace(event) {
+				if (this._items.length != 0 &&
+					(this._inputValue == '' || this._inputValue == undefined)) {
+					this._removeLastItem();
+				}
+			}
+
+			_removeLastItem() {
+				if (this._items.length != 0) {
+					let lastItemIndex = this._items.length - 1;
+					let lastItemname = this._items[lastItemIndex];
+
+					this._throwChipRemovedEvent(lastItemname);
+					this.splice('_items', -1, 1);
+				}
+			}
+
+			_findItems(event) {
+				if (this._inputValue.length == 0) {
+					this._autocompleteClass = "hide";
+				}
+
+				if (this._inputValue.length >= this.minSearchStringLength) {
+					this._updatePaperListboxWidth();
+					this._filterItems();
+					this._autocompleteClass = "autocomplete";
+				} else {
+					this._autocompleteClass = "hide";
+				}
+			}
+
+			_updatePaperListboxWidth() {
+				this.updateStyles({
+					'--paper-chip-input-autocomplete-width': this.$.paperInput.offsetWidth + 'px',
+				});
+			}
+
+			_filterItems() {
+				let filteredByString = this.source.filter(element => this._filterBySearchString(element));
+
+				if (filteredByString.length > 0 && this._items.length) {
+					this._filteredSource = filteredByString.filter(element => this._filterByExistingPaperChip(
+						element));;
+				} else {
+					this._filteredSource = filteredByString;
+				}
+			}
+
+			_filterByExistingPaperChip(element) {
+				return this._items.indexOf(element.text) == -1;
+			}
+
+			_filterBySearchString(element) {
+				return element.text.toLowerCase().includes(this._inputValue.toLowerCase());
+			}
+
+			_selectPaperItem(event) {
+				this._saveTag(event.model.__data.item.text);
+				this._inputValue = '';
+				this._autocompleteClass = "hide";
+				this.$.paperInput.focus();
+			}
+
+			_saveTag(name) {
+				if (this._items.indexOf(name) == -1) {
+					this.push('_items', name);
+				}
+			}
+
+			_hideAutocomplete() {
+				this._autocompleteClass = "hide";
+			}
+
+			_removeChip() {
+				const index = this._items.indexOf(event.detail.chipLabel);
+				if (index != -1) {
+					this.splice('_items', index, 1);
+				}
+			}
+
+			_throwChipRemovedEvent(chipLabel) {
+				this.dispatchEvent(new CustomEvent('chip-removed', {
+					detail: {
+						'chipLabel': chipLabel
+					},
+					composed: true,
+					bubbles: true
+				}));
+			}
+
+		}
+		window.customElements.define(PaperChipInputAutocomplete.is, PaperChipInputAutocomplete);
+	</script>
+</dom-module>

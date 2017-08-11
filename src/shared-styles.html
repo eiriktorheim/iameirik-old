@@ -24,6 +24,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --tint-black: #000000;
         --tint-primary: #0faece;
         --tint-secondary: #2196F3;
+
+        --spacing-medium:4em;
       }
 
       .tint-white{
@@ -31,7 +33,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .tint-very-light-grey{
-      background-color: var(--tint-very-light-grey);
+        background-color: var(--tint-very-light-grey);
       }
 
       .tint-light-grey{
@@ -72,35 +74,43 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin: 0;
       }
 
-      h2, h3, p{
+      h2, h3, p, span, li{
         line-height: 40px;
+
       }
       
       h1{
         font-size: 58px;
         line-height: 80px;
+        margin-bottom: 40px;
       }
 
       h2{
-        font-size: 32px;
+        font-size: 34px;
+        margin-bottom: 24px;
       }
 
       h3{
-        font-size: 28px;
+        font-size: 26px;
+        margin-bottom: 16px;
       }
 
-      p, li{
+      p, li, span{
         font-size: 18px;
         font-weight: lighter;
       }
 
-      img{
+      li{
+        line-height: 48px;
+      }
+
+      img, video, iron-image{
           width: 100%;
           height: auto;
       }
       
       section{
-        padding: 6em 0;
+        padding: 4em 0;
       }
 
 
@@ -139,6 +149,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         max-width: 45em;
       }
 
+      .large{
+        max-width: 65em;
+        margin: var(--spacing-medium) 0;
+      }
+
       .center{
         margin-left: auto;
         margin-right: auto; 
@@ -156,6 +171,100 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: var(--tint-primary);
       }
 
+
+
+
+
+
+      .fade {
+          animation: fadein 2s;
+          -moz-animation: fadein 2s; /* Firefox */
+          -webkit-animation: fadein 2s; /* Safari and Chrome */
+          -o-animation: fadein 2s; /* Opera */
+      }
+      @keyframes fadein {
+          from {
+              opacity:0;
+              -webkit-transform: translateY(20px);
+          }
+          to {
+              opacity:1;
+               -webkit-transform: translateY(0);
+          }
+      }
+      @-moz-keyframes fadein { /* Firefox */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-webkit-keyframes fadein { /* Safari and Chrome */
+          from {
+              opacity:0;
+               -webkit-transform: translateY(40px);
+          }
+          to {
+              opacity:1;
+               -webkit-transform: translateY(0);
+          }
+      }
+      @-o-keyframes fadein { /* Opera */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+
+
+
+      .gradient1{
+
+        background: linear-gradient(141deg, #eaeaea 0%, #eaeaea 51%, #b6b6b6 75%);
+      }
+
+    </style>
+
+
+
+
+
+        <style is="custom-style">
+
+         iron-image {
+            --iron-image-width: 100%;
+            height: auto;
+            display: block;
+          }
+
+        paper-chip{
+          --paper-chip-background-color: var(--tint-light-grey);
+          line-height: 40px;
+          display: block;
+          margin-bottom: 1em;
+
+        }
+
+        .paper-chip-alt{
+         --paper-chip-background-color: var(--tint-very-light-grey);
+        }
+        
+        .chip-image{
+          float: left;
+          margin: 0 8px 0 -12px;
+          height: 32px;
+          width: 32px;
+          border-radius: 50%;
+          }
+
+        paper-tabs{
+        --paper-tabs-selection-bar-color: var(--tint-black);
+        text-transform: uppercase;
+        color: var(--tint-very-dark-grey);
+        }
     </style>
   </template>
 </dom-module>

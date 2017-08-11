@@ -21,11 +21,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         height: calc(100vh - 64px);
         padding: 0 16px;
         color: white;
-        background-image: url('/images/nt/nt.jpg');
-        backgrond-repeat: no-repeat;
+        background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.6) 100%), url('/images/smp/overview.jpg') no-repeat;
         background-size: cover;
         background-position: center;     
+
       }
+
 
       header {
         text-align: center;    
@@ -41,12 +42,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         color: var(--tint-white);
       }
 
+        :root{
+           --paper-tabs-selection-bar-color: var(--tint-primary);
+        }
     </style>
 
     <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
 
     <app-header-layout>
-      
+
       <app-header effects="waterfall" slot="header">
         <app-toolbar>
           <a href="/">
@@ -62,45 +66,156 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       
       <header>
         <h1>Schibsted Media Platform</h1>
-        <p>A cohesive visual concept creaeting a creation suite gathering all products in one cohesive creation suite</p>
+        <p>Designing a cohesive media platform where the products belong together in one product family and creation suite.</p>
       </header>
     
     </app-header-layout>
 
-    <section style="min-height: 10em;" class="tint-white"> 
-      <article style="margin: 0 auto;" class="medium center">
+    <section class="tint-white"> 
+      <article style="margin: 0 auto;" class="medium center center-text">
+        <span>Overview</span>
         <h2>Overview</h2>
-        <p>Between the ia</p>
+        <p>When I joined Schibsted, September 2015, we were building a new media platform and a creation suite for the newsrooms in Norway and Sweden. 4-5 products that make the creation suite and follow the journalist workflow. This case shows you a cohesive visual system for the products in the creation suite that could make them look and feel like they belong in the same product family. </p>
       </article>
     </section>
 
     <section id="problem" class="tint-white"> 
-      <div class="medium center">
+      <div class="medium center center-text">
         <h2>The problem</h2>
-        <p>The different products in the Media Platform was made at different times by different people and different teams. Now we are putting them together in one creatuion suite they also need have the user experience as a creative suite. A consistent look and feel which is setup for easy flow between the products and support the workflow of the independent journalist.</p>
+        <p>There used to be 4 different products made at different times by different teams and also with different design. In addition, there were no ways for journalists to navigate between them easily and they were not optimized for the journalists workflow. This case is how we made a concept tying the different products into ONE product suite. They are all in the same product family and it's easy to navigate between them. A consistent look and feel which is setup for easy flow between the products and support the workflow of the independent journalist.</p>
       </div>
-    </section>
 
-    <section id="problem" class="tint-white"> 
       <div class="medium center">
-        <h2>The problem</h2>
-        <p></p>
+      <h3>The different products we now want in one product family</h3>
+       <ul>
+          <li><b>Discover:</b> Monitor news and trends in real time from major news sources</li>
+          <li><b>Create:</b> Fast and simple content creation</li>
+          <li><b>Stream:</b> An online video platform that enables the newsrooms to upload, convert, store and play back video content</li>
+          <li><b>Engage:</b> Monitor and optimize performance of published content</li>
+          <li><b>Curate:</b> Curate content to reach the consumer in the right way at the right time and place</li>
+        </ul>
       </div>
+
+      <div class="large center">
+          <img src="images/smp/before.gif" height="2000" width="2000">
+      </div>
+
     </section>
     
-    <section name="the-result" id="mentions" class="tint-light" style="padding: 4em 0;">
+     <section name="the-result" id="mentions" class="tint-white" style="padding: 4em 0;">
+      <div class="medium center center-text">
+        <span>Approach</span>
+        <h2>Designing a cohesive creation suite</h2>
+        <p></p>
+
+        <span>Aligning stakeholders</span>
+        <h3>Defining our values and tone of voice</h3>
+        <p>We facilitated a workshop with the product managers, designers and tech leads of the five products. The outcome was a defitntion of our values we want the product suite to reflect and what mood we want it to set.</p>
+        <div>
+          <img src="images/smp/values.png" height="500" width="500" style="max-width: 500px;">
+        </div>
+  
+       </div>
+  
       <div class="medium center">
-        <h2>The result</h2>
-        <p>Lorem ipsum</p>
+        <span>Designers</span>
+        <h3>Design workshop</h3>
+
+        <p>March 2016 we got together to define</p>
+
+        <ul>
+        <li>Wall 1: Our inspiration – products we like</li>
+        <li>Wall 2: Our values - who we are</li>
+        <li>Wall 3: Products today - what we have today</li>
+        </ul>
+
+        <div>
+          <img src="images/smp/workshop.jpg" height="2000" width="2000">
+        </div>
+
+        <div class="layout horizontal">
+          <div><img src="images/smp/workshop2.jpg" height="2000" width="2000"></div>
+          <div><img src="images/smp/workshop3.jpg" height="2000" width="2000"></div>
+          <div><img src="images/smp/workshop4.jpg" height="2000" width="2000"></div>
+        </div>
+      </div>
+
+
+      <div class="full center tint-very-light-grey">
+
+        <div class="medium center center-text">
+
+          <span>Getting an overview</span>
+          <h3>Creating an interface inventory</h3>
+          <p>To get an overview we mapped out the inventory of the elements we were using today. We took a screenshot of each element in the different products, collected them in Keynote and grouped them by function. Now it was easy to see what elements and patterns we use. 
+
+        </div>
+    
+        <div class="full center">
+          <img src="images/smp/UI-Inventory3.png" height="2000" width="2000">
+        </div>
+
+      </div>
+
+
+      <div class="medium center center-text tint-white">
+
+      <span></span>
+      <h3></h3>
+      <p></p>
+
+      </div>
+
+
+      <div class="medium center">
+        <span>Common styles</span>
+        <h3>Tying it together with a unified style guide</h3>
+        <p></p>
+      </div>
+
+
+    </section>
+   
+    <section name="the-result" id="mentions" class="tint-light">
+      <div class="medium center center-text">
+        <span>The result</span>
+        <h2>A unified platform (proof of concept)</h2>
+      </div>
+      
+
+      <div class="large center center-text">
+
+
+      <video width="2000" height="2000" autoplay loop>
+        <source src="images/smp/beforeafter.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+
+       <!-- <img src="images/smp/after.gif" height="2000" width="2000">-->
+      
+        <div class="center" style="max-width:14em;">
+        <paper-tabs selected="1">
+          <paper-tab>Before</paper-tab>
+          <paper-tab>After</paper-tab>
+        </paper-tabs>
+        </div>
+      </div>
+
+      <div class="medium center center-text">
+        <p>A cohesive and unified media platform with prodocuts that belong to the creation suite family. Easy access and navigiation between the products supports the independent journalists daily workflow.</p>
+      </div>
+      <div>
+        <img src="images/smp/overview.jpg" height="2000" width="2000">
       </div>
     </section>
 
     <section name="final-thoughts" class="tint-white" style="padding: 4em 0;">
-      <div class="medium center">
+      <div class="medium center center-text">
         <h2>Final thoughts</h2>
         <p>Looking back I would love us to do more experimentations and split-testing.</p>
       </div>
     </section>
+
 
     <section class="tint-light-grey">
       <div class="medium center center-text">
