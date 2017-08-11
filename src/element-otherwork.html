@@ -1,0 +1,139 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="element-otherwork">
+
+  <template>
+
+    <style include="shared-styles">
+
+    </style>
+
+    <style is="custom-style">
+      .header { font-weight: bold; text-transform: uppercase;}
+      .cafe-light { color: var(--paper-grey-600); }
+      .cafe-location {
+        float: right;
+        font-size: 15px;
+        vertical-align: middle;
+      }
+      .cafe-reserve { color: var(--google-blue-500); }
+      iron-icon.star {
+        --iron-icon-width: 16px;
+        --iron-icon-height: 16px;
+        color: var(--paper-amber-500);
+      }
+
+      paper-card{
+        margin: 0 8px;
+        max-width: 400px;
+        min-width: 250px;
+      }
+
+      paper-card:hover {
+        @apply(--shadow-elevation-16dp);
+
+      }
+
+    </style>
+
+    <!-- shadow DOM goes here -->
+    <section class="tint-light-grey">
+      <div class="full center">
+        <div class="center-text">
+          <h2>Other projects</h2>
+          <p>Websites, apps, concepts and other design I have created</p>
+        </div>
+
+        <div class="large center" style="border-bottom: 1px solid #e0e0e0">
+        <div class="center" style="max-width:14em;">
+          <paper-tabs selected="0">
+            <paper-tab>Digital products</paper-tab>
+            <paper-tab>Print</paper-tab>
+          </paper-tabs>
+        </div>
+        </div>
+
+
+        <div id="projects" class="layout horizontal center large">
+
+        <div>
+          <a href="//www.fjordyoga.com">
+            <paper-card image="images/fjordyoga.jpg" alt="Fjordyoga">
+              <div class="card-content">
+                <div class="header">Fjordyoga</div>
+                <div>fjordyoga.com</div>
+              </div>
+            </paper-card>
+          </a>
+        </div>
+        <div>
+          <a href="//www.fjordyoga.com">
+            <paper-card image="images/nt.jpg" alt="Norsk Tipping">
+              <div class="card-content">
+                <div class="header">Norsk-tipping.no</div>
+                <div>fjordyoga.com</div>
+              </div>
+            </paper-card>
+          </a>
+        </div>
+        <div>
+          <a href="//www.kammermusikkfestival.no">
+            <paper-card image="images/nt.jpg" alt="Fjordyoga">
+              <div class="card-content">
+                <div class="header">Sunnmøre kammermusikkfestival</div>
+                <div>fjordyoga.com</div>
+              </div>
+            </paper-card>
+          </a>
+        </div>
+
+        </div>
+
+
+        <div class="layout horizontal center large">
+
+        <div>
+          <paper-card image="images/fjordyoga.jpg" alt="Fjordyoga">
+            <div class="card-content">
+              <div class="header">Fjordyoga</div>
+              <div>fjordyoga.com</div>
+            </div>
+          </paper-card>
+        </div>
+        <div>
+          <paper-card image="images/nt.jpg" alt="Norsk Tipping">
+            <div class="card-content">
+              <div class="header">Norsk-tipping.no</div>
+              <div>fjordyoga.com</div>
+            </div>
+          </paper-card>
+        </div>
+        <div>
+          <paper-card image="images/nt.jpg" alt="Fjordyoga">
+            <div class="card-content">
+              <div class="header">Sunnmøre kammermusikkfestival</div>
+              <div>fjordyoga.com</div>
+            </div>
+          </paper-card>
+        </div>
+
+        </div>
+
+
+      </div>
+    </section>
+
+  </template>
+
+<script>
+
+	Polymer({
+		is: "element-otherwork"
+
+	});
+	
+</script>
+
+</dom-module>
+
