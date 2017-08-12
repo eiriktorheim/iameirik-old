@@ -21,7 +21,8 @@
     "paper-button": "PolymerElements/paper-button#^2.0.0",
     "paper-tabs": "PolymerElements/paper-tabs#^2.0.0",
     "paper-chip": "ThomasCybulski/paper-chip#^2.0.10",
-    "paper-card": "PolymerElements/paper-card#^2.0.0"
+    "paper-card": "PolymerElements/paper-card#^2.0.0",
+    "iron-list": "PolymerElements/iron-list#^2.0.8"
   },
   "resolutions": {
     "polymer": "^2.0.0-rc.3",

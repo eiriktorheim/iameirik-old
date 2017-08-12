@@ -5,17 +5,22 @@
 
   <template>
 
-    <style include="shared-styles">
-      /* shadow DOM styles go here */
-      :host {
-        display: block;
+    <style include="shared-styles"></style>
+
+    <style>
+      
+      section{
+        padding: 0;
+        background-color: var(--tint-very-dark-grey);
+        color: var(--tint-very-light-grey);
       }
+
     </style>
 
     <!-- shadow DOM goes here -->
-    <section class="tint-dark-grey">
+    <section>
       <div class="medium center center-text">
-      <p>Handcrafted with love (and plenty of coffee) using Polymer and recent web technologies</p>
+      <span>Handcrafted with 💚 + ☕ from Barcelona</span>
       </div>
     </section>
 
