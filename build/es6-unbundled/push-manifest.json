@@ -650,62 +650,6 @@
       "type": "document",
       "weight": 1
     },
-    "src/element-cases.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/paper-chip/paper-chip.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/paper-styles/paper-styles.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/paper-styles/color.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/paper-styles/default-theme.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/paper-styles/typography.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/font-roboto/roboto.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/iron-icons/iron-icons.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "bower_components/iron-iconset-svg/iron-iconset-svg.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "src/element-cases2.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "src/element-cases3a.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "src/element-cases3b.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "src/element-cases3c.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "src/element-cases4.html": {
-      "type": "document",
-      "weight": 1
-    },
     "src/element-otherwork.html": {
       "type": "document",
       "weight": 1
@@ -746,7 +690,19 @@
       "type": "document",
       "weight": 1
     },
+    "bower_components/paper-styles/default-theme.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-styles/color.html": {
+      "type": "document",
+      "weight": 1
+    },
     "bower_components/paper-tabs/paper-tabs-icons.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-iconset-svg/iron-iconset-svg.html": {
       "type": "document",
       "weight": 1
     },
@@ -779,6 +735,50 @@
       "weight": 1
     },
     "src/element-footer.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/element-cases-a.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-chip/paper-chip.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-styles/paper-styles.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/paper-styles/typography.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/font-roboto/roboto.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-icons/iron-icons.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/element-cases-b.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/element-cases-c.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/element-cases-old-a.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/element-cases-old-b.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/element-cases-old-c.html": {
       "type": "document",
       "weight": 1
     }

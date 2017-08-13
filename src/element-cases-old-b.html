@@ -3,7 +3,7 @@
 <link rel="import" href="../bower_components/paper-chip/paper-chip.html">
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="element-cases3b">
+<dom-module id="element-cases-old-b">
 
   <template>
 
@@ -36,42 +36,35 @@
       text-transform: uppercase;
     }
 
-    #case1{
-      background: 
-      /*linear-gradient(
 
-      rgba(12, 40, 60, 0.6), 
-      rgba(21, 47, 66, 0.9)
-    ),*/ url("../images/cases/smp3.jpg") no-repeat;
+    #case1{
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 10%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.05) 90%),
+      url("../images/cases/smp2.jpg") no-repeat;
       background-size: cover;
     }
 
     #case2{
-      background: /*linear-gradient(
-      /*rgba(12, 40, 60, 0.6), 
-      rgba(21, 47, 66, 0.9)
-    ), */url("../images/nt/nt4.jpg") no-repeat;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 10%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.05) 90%),
+      url("../images/nt/nt4.jpg") no-repeat;
       background-size: cover;
     }
 
     #case3{
-      background: 
-      /*linear-gradient(
-
-      rgba(12, 40, 60, 0.6), 
-      rgba(21, 47, 66, 0.9)
-    ),*/ url("../images/cases/cars2.jpg") no-repeat;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 10%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.05) 90%),
+      url("../images/cases/cars2.jpg") no-repeat;
       background-size: cover;
     }
 
 
     #case4{
-      background: linear-gradient(0deg,
-      rgba(0, 0, 0, 0.0), 
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.0)
-    ), url("../images/cases/reboot.jpg") no-repeat;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 10%, rgba(0, 0, 0, 0.3) 45%, rgba(0, 0, 0, 0.05) 90%),
+      url("../images/cases/reboot.jpg") no-repeat;
       background-size: cover;
+      background-position: center center;
+    }
+
+    #case1, #case2, #case3, #case4{
+      background-position: center center;
     }
 
     .work-card > div{
@@ -80,8 +73,10 @@
       width: 100%;
     }
 
+
+
     span,h3{
-      text-shadow: 2px 2px 19px rgba(0, 0, 0, 0.2);
+      text-shadow: 2px 2px 19px rgba(0, 0, 0, 0.4);
     }
 
     @media (max-width: 768px) {
@@ -159,7 +154,7 @@
 <script>
 
 	Polymer({
-		is: "element-cases3b"
+		is: "element-cases-old-b"
 
 	});
 	
