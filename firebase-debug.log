@@ -1,0 +1,31 @@
+[debug] [2017-08-13T22:42:43.830Z] ----------------------------------------------------------------------
+[debug] [2017-08-13T22:42:43.833Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2017-08-13T22:42:43.833Z] CLI Version:   3.9.2
+[debug] [2017-08-13T22:42:43.833Z] Platform:      darwin
+[debug] [2017-08-13T22:42:43.833Z] Node Version:  v6.11.2
+[debug] [2017-08-13T22:42:43.834Z] Time:          Mon Aug 14 2017 00:42:43 GMT+0200 (CEST)
+[debug] [2017-08-13T22:42:43.834Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-08-13T22:42:43.847Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-08-13T22:42:43.847Z] > authorizing via signed-in user
+[debug] [2017-08-13T22:42:43.849Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2017-08-13T22:42:43.850Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token { refresh_token: '1/dz1_fZgZdN8djADLHqmMfZdpEp6xFJ5io-bZimSdHjk',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Mon Aug 14 2017 00:42:43 GMT+0200 (CEST)
+[debug] [2017-08-13T22:42:44.004Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-13T22:42:44.021Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/iameirikcom  
+ Mon Aug 14 2017 00:42:44 GMT+0200 (CEST)
+[debug] [2017-08-13T22:42:45.328Z] <<< HTTP RESPONSE 200
+[debug] [2017-08-13T22:42:45.329Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/iameirikcom/tokens  
+ Mon Aug 14 2017 00:42:45 GMT+0200 (CEST)
+[debug] [2017-08-13T22:42:46.091Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'iameirikcom'...
+[info] 
+[info] i  deploying hosting
+[info] i  hosting: preparing build/es5-bundled/ directory for upload...
+[debug] [2017-08-13T22:42:51.030Z] >>> HTTP REQUEST PUT https://deploy.firebase.com/v1/hosting/iameirikcom/uploads/-KrSkt3_LaZsuf9RnAXU?fileCount=105&message=  
+ Mon Aug 14 2017 00:42:51 GMT+0200 (CEST)
