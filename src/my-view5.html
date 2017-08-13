@@ -9,6 +9,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/paper-chip/paper-chip.html">
+<link rel="import" href="element-footer.html">
+<link rel="import" href="element-contact.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view5">
@@ -20,11 +27,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply --layout-center-center; 
         height: calc(100vh - 64px);
         padding: 0 16px;
-        color: white;
-        background-image: url('/images/nt/nt.jpg');
-        backgrond-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;     
+        background-color: white;
       }
 
       header {
@@ -45,8 +48,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         font-weight: 100;
       }
 
+      paper-chip{
+        display: inline;
+      } 
+
     </style>
-    
+
+
+
     <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
 
 

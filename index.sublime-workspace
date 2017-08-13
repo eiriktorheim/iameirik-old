@@ -1,0 +1,456 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"users",
+				"usersChanged"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"margin",
+				"margin"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"tint-",
+				"tint-very-light-grey"
+			],
+			[
+				"cen",
+				"center"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"min-",
+				"min-width"
+			],
+			[
+				"view",
+				"view5"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"tin",
+				"tint-white"
+			],
+			[
+				"case",
+				"case-smp"
+			],
+			[
+				"te",
+				"center-text"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"arro",
+				"arrow-forward"
+			],
+			[
+				"header",
+				"headerbg"
+			],
+			[
+				"light",
+				"tint-light-grey"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"background",
+				"background-repeat"
+			],
+			[
+				"img",
+				"background-image"
+			],
+			[
+				"cont",
+				"content-box"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"col-",
+				"col-1-of-12"
+			],
+			[
+				"hea",
+				"header\tTag"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"b",
+				"background"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/shared-styles.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-cases3.html",
+		"/Users/eiriktorheim/Desktop/index.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/my-view1.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/my-app.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/app.yaml",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-instafeed2.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-instafeed3.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/index.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-footer.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/bower_components/iron-list/demo/grid.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-mywork.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-cases.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-contact.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-aboutme.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-otherwork.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/element-header.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/my-view2.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/my-view3.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/my-view4.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/my-view5.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/elements-footer.html",
+		"/Users/eiriktorheim/Documents/iameirik/element/polymer-2-first-element/icon-toggle.html",
+		"/Users/eiriktorheim/Documents/iameirik/element/polymer-2-first-element/index.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/bower_components/paper-material/paper-material.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/components/iam-footer/iam-footer.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/components/footer/footer.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/components/footer",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/bower_components/paper-chip/paper-chip.html",
+		"/Users/eiriktorheim/Documents/iameirik/test/src/my-app.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/bower_components/paper-tabs/paper-tabs.html",
+		"/Users/eiriktorheim/Downloads/20160302_130927.jpg",
+		"/Users/eiriktorheim/Downloads/20160302_134450-2.jpg",
+		"/Users/eiriktorheim/Documents/react/my-app/src/App.js",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/polymer.json",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/package.json",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/manifest.json",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/bower.json",
+		"/Users/eiriktorheim/Documents/iameirik2/iameirik-old/src/index.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/build/default/bower.json",
+		"/Users/eiriktorheim/Documents/iameirik/test/data/mens_tshirts.json",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/iameirik-app/iameirik-app.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/style.css",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/index.html",
+		"/Users/eiriktorheim/Documents/iameirik/iameirik/src/nt.html",
+		"/Users/eiriktorheim/Documents/iameirik/src/style.css",
+		"/Users/eiriktorheim/Documents/iameirik/feedback.md",
+		"/Users/eiriktorheim/Documents/iameirik/src/index.html",
+		"/Users/eiriktorheim/Documents/web/webpack/index.html",
+		"/Users/eiriktorheim/Documents/web/webpack/app.js",
+		"/Users/eiriktorheim/Documents/iameirik/app/index.js",
+		"/Users/eiriktorheim/Documents/iameirik/package.json",
+		"/Users/eiriktorheim/Documents/iameirik/src/js/js.js",
+		"/Users/eiriktorheim/Documents/web/webpack/webpack.config.js",
+		"/Users/eiriktorheim/Documents/iameirik/original/js/js.js",
+		"/Users/eiriktorheim/Documents/iameirik/original/style.css",
+		"/Users/eiriktorheim/Documents/iameirik/original/index.html",
+		"/Users/eiriktorheim/Documents/iameirik.com/index.html",
+		"/Users/eiriktorheim/Documents/iameirik.com/style.css",
+		"/Users/eiriktorheim/Documents/iameirik.com/README.md",
+		"/Users/eiriktorheim/Downloads/noun_26623_cc.svg",
+		"/Users/eiriktorheim/Downloads/noun_23806_cc.svg"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"success",
+			"              <h3>Case 1</h3>",
+			"center",
+			"paper-card",
+			"card-container",
+			"flex",
+			"card-container",
+			"card-",
+			"card-container",
+			"class=\"card\"",
+			"card",
+			"div",
+			"webcomponents",
+			"header",
+			"class",
+			"MyView5",
+			"my-view5",
+			"eaeaea",
+			"style=\"max-width: 320px;\"",
+			"no-hover",
+			"label",
+			"paper-chip",
+			"case",
+			"case-",
+			"      \n",
+			"center",
+			"white",
+			"light",
+			"white",
+			"light",
+			"white",
+			"light",
+			"bg-",
+			"style=\"padding: 8em 1em 9em 1em; margin: 0 auto;\"",
+			" style=\"min-height: 10em;\"",
+			"view",
+			"MyView3",
+			"my-view3",
+			"View",
+			"my-view2",
+			"application",
+			"game",
+			"section",
+			"secton",
+			"view",
+			"flex",
+			"tint",
+			"second",
+			"article",
+			"paper-styles/color.html",
+			"paper-item-body.html",
+			"paper-item.html",
+			"paper-icon-item.html",
+			"paper-icon-button/paper-icon-button.html",
+			"paper-icon-button.html",
+			"iron-icon",
+			"../",
+			"15px",
+			"30px",
+			"strong",
+			"100",
+			"3a4ed5",
+			"3acfd5",
+			"col-1-2",
+			"_of_",
+			"span",
+			"padding",
+			"margin"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Me",
+			"me",
+			"tint-white",
+			"tint-light",
+			"tint-white",
+			"CaseSMP",
+			"Case-SMP",
+			"case-smp",
+			"my-view3",
+			"div"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
