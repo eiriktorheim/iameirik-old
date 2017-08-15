@@ -26,6 +26,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --tint-secondary: #2196F3;
 
         --spacing-medium:4em;
+
+
+        --txt-xl: 58px;
+        --txt-l: 34px;
+        --txt-m: 18px;
+        --txt-s: 16px;
+        --txt-xs: 14px;
+        --txt-xxs: 12px;
       }
 
       .tint-white{
@@ -80,19 +88,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       
       h1{
-        font-size: 58px;
-        line-height: 80px;
-        margin-bottom: 40px;
+        font-size: var(--txt-xl);
+        line-height: 40px;
+        margin-bottom: 16px;
       }
 
       h2{
-        font-size: 34px;
-        margin-bottom: 24px;
+        font-size: var(--txt-l);
+        margin-bottom: 32px;
       }
 
       h3{
         font-size: 26px;
-        margin-bottom: 16px;
+        margin-bottom: 24px;
       }
 
       h4{
@@ -116,18 +124,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       
       section{
-        padding: 4em 0;
+        padding: 6em 0;
+      }
+
+      .medium{
+        max-width: 45em;
+      }
+
+      .large{
+        max-width: 60em;
+      }
+
+      .full{
+        width: 100vw;
       }
 
 
-      .card {
+     /* .card {
         margin: 24px;
         padding: 16px;
         color: #757575;
         border-radius: 5px;
         background-color: #fff;
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-      }
+      }*/
 
       .circle {
         display: inline-block;
@@ -151,15 +171,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         border-radius: 50%;
       }
 
-      .medium{
-        max-width: 45em;
-      }
-
-      .large{
-        max-width: 65em;
-        margin: var(--spacing-medium) 0;
-      }
-
       .center{
         margin-left: auto;
         margin-right: auto; 
@@ -169,9 +180,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
       }
       
-      .article{
-        max-width: 45em;
-      }
+
 
       paper-button{
         color: var(--tint-primary);
@@ -230,6 +239,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       .gradient1{
 
         background: linear-gradient(141deg, #eaeaea 0%, #eaeaea 51%, #b6b6b6 75%);
+      }
+
+
+      .button a{
+        text-decoration: none;
       }
 
     </style>
