@@ -770,15 +770,19 @@
       "type": "document",
       "weight": 1
     },
+    "src/element-cases-d.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-flex-layout/iron-flex-layout-classes.html": {
+      "type": "document",
+      "weight": 1
+    },
     "src/element-cases-old-a.html": {
       "type": "document",
       "weight": 1
     },
-    "src/element-cases-old-b.html": {
-      "type": "document",
-      "weight": 1
-    },
-    "src/element-cases-old-c.html": {
+    "src/element-instafeed.html": {
       "type": "document",
       "weight": 1
     }
