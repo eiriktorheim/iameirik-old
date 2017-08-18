@@ -32,7 +32,9 @@
       perspective: 800px;
     }
 
-    .card{
+    #card{
+      width: 300px;
+      height: 480px;
       background-color: var(--tint-white);
       position: relative;
       width: 100%;
@@ -40,9 +42,22 @@
       position: absolute;
       transform-style: preserve-3d;
       transition: transform 0.5s;
+      cursor:pointer;
     }
 
-    .card figure {
+  @media (max-width:450px){
+    .grid{
+      @apply --layout-vertical;
+      @apply --layout-wrap;
+      @apply --layout-center;
+    }
+
+    a{
+      margin-bottom: 2em;
+    }
+  }
+
+    #card figure {
       margin: 0;
       display: block;
       position: absolute;
@@ -51,18 +66,47 @@
       backface-visibility: hidden;
     }
 
-    .card .front {
+    #card .front {
       background-color: var(--tint-white);
     }
 
-    .card .back {
-      background-color: var(--tint-white);
+    .back{
+      display: none;
+    }
+
+    #card .back {
+      background-color: var(--tint-light-grey);
+      color: var(--tint-white);
       transform: rotateY( -180deg );
     }
 
-    .card:hover {
-      transform: rotateY( -180deg );
+
+    @media (min-width:1025px){
+
+
+      .flipped1, .flipped2, .flipped3{
+        transform: rotateY( -180deg );
+      }
+
+      .gradient-1{
+        background-image: linear-gradient(145deg, #f5576c 0%, #f5576c 100%);
+      }
+
+      .gradient-2{
+        background-image: linear-gradient(145deg, #16A085 0%, #16A085 100%);
+      }
+
+      .gradient-3{
+        background-image: linear-gradient(145deg, #1E90FF 0%, #1E90FF 100%);
+      }
+
+      .card-content-back{
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
     }
+
 
     .card-txt{
       @apply --layout-vertical;
@@ -71,11 +115,16 @@
       height: 237px;
     }
 
+    .card-text{
+      font-weight: 400;
+      font-size: 24px;
+      padding: 30px 25px 25px 25px;
+    }
+
     iron-image{
       width: 300px;
       height: 210px;
     }
-
 
     span{
       display: block;
@@ -101,40 +150,6 @@
       @apply --layout-flex;
     }
 
-    .back{
-      color: var(--tint-white);
-    }
-
-    .card-content-back{
-      height: 100%;
-      width: 100%;
-    }
-
-    .gradient-1{
-      background-image: linear-gradient(145deg, #f5576c 0%, #f5576c 100%);
-     /* background-image: linear-gradient(145deg, #f093fb 0%, #f5576c 100%);*/
-    }
-
-    .gradient-2{
-      background-image: linear-gradient(145deg, #2af598 0%, #2af598 100%);
-     /* background-image: linear-gradient(145deg, #2af598 0%, #009efd 100%);*/
-    }
-
-    .gradient-3{
-      background-image: linear-gradient(145deg, #4facfe 0%, #4facfe 100%);
-     /* background-image: linear-gradient(145deg, #4facfe 0%, #00f2fe 100%);*/
-    }
-
-    .view{
-
-    }
-
-    .card-text{
-      font-weight: 400;
-      font-size: 24px;
-      padding: 30px 25px 25px 25px;
-    }
-
 
     </style>
 
@@ -150,11 +165,12 @@
       <div class="grid large center">
 
         <a href="/view3">
-          <div class="flipspace">
-            <div class="card">
+          <div class="flipspace" on-mouseover='onHovered1' 
+          on-mouseout='onUnhovered1'>
+            <div id="card" class$="{{hovered1}}">
               <figure class="front">
                 <iron-image style="background-color: lightgray;"
-          sizing="cover" preload fade src=""></iron-image>
+          sizing="cover" preload fade src="images/smp.png"></iron-image>
                 <div class="card-txt">
                   <div>
                     <span class="role">UX/UI Designer</span>
@@ -181,11 +197,12 @@
         </a>
 
         <a href="/view2">
-          <div class="flipspace">
-            <div id="card" class="card">
+          <div id="hideme" class="flipspace" on-mouseover='onHovered2' 
+          on-mouseout='onUnhovered2'>
+            <div id="card" class$="{{hovered2}}">
               <figure class="front">
                 <iron-image style="background-color: lightgray;"
-        sizing="cover" preload fade src=""></iron-image>
+        sizing="cover" preload fade src="./images/nt/nt4.jpg"></iron-image>
                 <div class="card-txt">
                   <div>
                     <span class="role">Team Lead Design</span>
@@ -211,11 +228,12 @@
 
 
         <a href="/view6">  
-          <div class="flipspace">
-            <div class="card">
+          <div class="flipspace" on-mouseover='onHovered3' 
+          on-mouseout='onUnhovered3'>
+            <div id="card" class$="{{hovered3}}">
               <figure class="front">
                 <iron-image style="background-color: lightgray;"
-          sizing="cover" preload fade src=""></iron-image>
+          sizing="cover" preload fade src="../images/cases/cars2.jpg"></iron-image>
                 <div class="card-txt">
                   <div>
                     <span class="role">Design Lead</span>
@@ -252,8 +270,30 @@
 <script>
 
 	Polymer({
-		is: "element-cases-d"
+		is: "element-cases-d", 
+      hovered1: false,
+      onHovered1: function() {
+        this.hovered1 = 'flipped1';
+      },
+      onUnhovered1: function() {
+        this.hovered1 = false;
+      },
 
+      hovered2: false,
+      onHovered2: function() {
+        this.hovered2 = 'flipped2';
+      },
+      onUnhovered2: function() {
+        this.hovered2 = false;
+      },
+
+       hovered3: false,
+      onHovered3: function() {
+        this.hovered3 = 'flipped3';
+      },
+      onUnhovered3: function() {
+        this.hovered3 = false;
+      }     
 	});
 
 </script>
