@@ -20,17 +20,17 @@
       @media only screen and (min-width : 320px) {
 
         .grid {
+          width: 80vw;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           grid-template-rows: 1fr 1fr;
-          grid-gap: 2px;
+          /*grid-gap: 2px;*/
         }
 
         .grid div {
           background-color: grey;
           min-width: 114px;
           min-height: 114px;
-          width: 100%;
           height: 100%;
         }
 
@@ -51,11 +51,8 @@
       @media only screen and (min-width : 768px) {
 
 
-        .large{
-          margin: 0 4em;
-        }
-
         .grid {
+          width: 80vw;
           display: grid;
           grid-template-columns: 1fr 1fr 1fr 1fr;
           grid-template-rows: 1fr 1fr;
@@ -64,9 +61,8 @@
 
         .grid div {
           background-color: grey;
-          min-width: 164px;
+          min-width: 144px;
           min-height: 164px;
-          width: 100%;
           height: 100%;
         }
 
@@ -85,23 +81,25 @@
       @media only screen and (min-width : 992px) {
 
         .grid {
+          width: 80vw;
           display: grid;
-          grid-template-columns: 25% 25% 25% 25%;
-          grid-template-rows: 25% 25% 25% 25%;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
           grid-gap: 1em;
         }
 
         .grid div {
           background-color: grey;
-          min-width: 240px;
-          min-height: 240px;
+          min-width: 204px;
+          min-height: 204px;
+          height: 100%;
         }
 
         iron-image{
           width: 100%;
           height: 100%;
         }
-  
+
         .last-card{
           display: none;
         }
@@ -129,7 +127,7 @@
 
       </div>
     
-    <div class="large grid center">
+    <div class="grid center">
 
         <div class="image">
           <a href="//www.instagram.com/p/BWs46JLH5kP">
@@ -203,8 +201,6 @@
         <paper-button>Follow on Instagram &nbsp;<iron-icon icon="arrow-forward"></iron-icon></paper-button>
        </a>
     </div>
-
-
 
     </section>
 

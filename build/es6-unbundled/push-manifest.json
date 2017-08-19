@@ -594,7 +594,15 @@
       "type": "document",
       "weight": 1
     },
+    "bower_components/iron-icons/communication-icons.html": {
+      "type": "document",
+      "weight": 1
+    },
     "src/element-footer.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "src/element-thanks.html": {
       "type": "document",
       "weight": 1
     }
@@ -893,6 +901,18 @@
       "weight": 1
     },
     "src/element-contact.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-iconset-svg/iron-iconset-svg.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-icons/communication-icons.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-flex-layout/iron-flex-layout-classes.html": {
       "type": "document",
       "weight": 1
     }
@@ -1229,6 +1249,14 @@
     "src/element-contact.html": {
       "type": "document",
       "weight": 1
+    },
+    "bower_components/iron-icons/communication-icons.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-flex-layout/iron-flex-layout-classes.html": {
+      "type": "document",
+      "weight": 1
     }
   },
   "src/my-view4.html": {
@@ -1525,6 +1553,18 @@
       "weight": 1
     },
     "src/element-contact.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-iconset-svg/iron-iconset-svg.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-icons/communication-icons.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-flex-layout/iron-flex-layout-classes.html": {
       "type": "document",
       "weight": 1
     }
@@ -1847,6 +1887,14 @@
       "weight": 1
     },
     "src/element-contact.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-icons/communication-icons.html": {
+      "type": "document",
+      "weight": 1
+    },
+    "bower_components/iron-flex-layout/iron-flex-layout-classes.html": {
       "type": "document",
       "weight": 1
     }
