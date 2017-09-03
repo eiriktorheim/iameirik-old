@@ -17,28 +17,74 @@
 
   <custom-style>
     <style is="custom-style">
+      section{
+        background-color: var(--tint-very-light-grey);
+      }
       paper-chip{
         display: inline;
       } 
+    
+    .cards{
+      @apply --layout-horizontal;
+
+    }
+    .element-card{
+      width: calc(50% - 2rem);
+      margin: 0.5rem;
+      background-color: white;
+      border-radius: 0.25rem;
+     }
+
+     .card-content{
+      margin: 1rem;
+     }
+
+     h3,h4,h5{
+      margin: 0;
+      padding: 0;
+     }
+
+
     </style>
+
   </custom-style>
 
   
     <section style="min-height: 10em;" class="tint-white"> 
+
       <div style="margin: 0 auto;" class="medium center center-text">
         <div>
           <span class="emoji">🎓<span>
         </div>
-
         <h2>Education</h2>
-        <p>Bachelor in Graphic Design
-Swansea Metropolitan University
-2011-2012
-
-Bachelor in Media, ICT and Design
-Volda University College
-2005-2008</p>
       </div>
+
+      <div class="large center">
+
+        <div class="cards">
+
+          <div class="element-card">
+            <div class="card-content">
+              <h3>Bachelor in Media, ICT and Design</h3>
+              <h4>Volda University College<h4>
+              <h4>Volda, Norway</h4>
+              <h5>2005-2008</h5>
+            </div>
+          </div>
+
+          <div class="element-card">
+            <div class="card-content">
+              <h3>Bachelor in Graphic Design</h3>
+              <h4>Swansea Metropolitan University</h4>
+              <h4>Wales, UK</h4>
+              <h5>2011-2012</h5>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </section>
 
   </template>

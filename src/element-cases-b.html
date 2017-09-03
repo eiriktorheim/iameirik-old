@@ -12,105 +12,100 @@
 
     <style>
 
-    h2{
-      margin-top: 32px;
+      h2{
+        margin-top: 2rem;
 
-    }
+      }
 
-    .work-grid{
-        @apply --layout-horizontal;
-        @apply --layout-wrap;
-        width: 100vw;
-    }
+      .work-grid{
+          @apply --layout-horizontal;
+          @apply --layout-wrap;
+          width: 100vw;
+      }
 
-    .work-card{
-      /*height: calc(33.33vh - 1vw);*/
-      min-height: 320px;
-      width: 48%;
-      background: #000000 no-repeat right top;
-      background-size: cover;
-      color: white;
+      .work-card{
+        /*height: calc(33.33vh - 1vw);*/
+        min-height: 20rem;
+        width: 48%;
+        background: #000000 no-repeat right top;
+        background-size: cover;
+        color: white;
+          @apply --layout-horizontal;
+          @apply(--layout-justified);
+        cursor: pointer;
+        text-transform: uppercase;
+        margin: 8px;
+      }
+
+      #case1{
+        background: linear-gradient(155deg, rgba(15, 184, 173, 0.75) 0%, rgba(31, 200, 219, 0.96) 51%, rgba(44, 181, 255, 0.9) 75%),
+        /*linear-gradient(
+
+        rgba(12, 40, 60, 0.6), 
+        rgba(21, 47, 66, 0.9)
+      ),*/ url("../images/cases/smp3.jpg") no-repeat;
+        background-size: cover;
+      }
+
+      #case1 > .overlay{
+        background: url("../images/smp.png") no-repeat;
+        background-size: cover;
+        /*background-size: 320px auto;
+        background-position: center center;*/
+        
+      }
+
+      #case2{
+        background: linear-gradient(155deg, rgba(233, 222, 250, 0.4) 0%, rgba(251, 252, 219, 0.6) 100%),
+        url("../images/cases/nt.jpg") no-repeat;
+        background-size: cover;
+      }
+
+
+      #case3{
+        background: linear-gradient(155deg, rgba(252, 203, 144, 0.7) 0%, rgba(213, 126, 235, 0.9) 100%),
+        url("../images/cases/cars2.jpg") no-repeat;
+        background-size: cover;
+      }
+
+      #case4{
+        background: linear-gradient(155deg, rgba(16, 40, 61, 0.6) 0%, rgba(16, 25, 25, 0.8) 100%),
+        url("../images/cases/reboot.jpg") no-repeat;
+        background-size: cover;
+      }
+
+
+      .overlay{
         @apply --layout-horizontal;
         @apply(--layout-justified);
-      cursor: pointer;
-      text-transform: uppercase;
-      margin: 8px;
-    }
-
-    #case1{
-      background: linear-gradient(155deg, rgba(15, 184, 173, 0.75) 0%, rgba(31, 200, 219, 0.96) 51%, rgba(44, 181, 255, 0.9) 75%),
-      /*linear-gradient(
-
-      rgba(12, 40, 60, 0.6), 
-      rgba(21, 47, 66, 0.9)
-    ),*/ url("../images/cases/smp3.jpg") no-repeat;
-      background-size: cover;
-    }
-
-    #case1 > .overlay{
-      background: url("../images/smp.png") no-repeat;
-      background-size: cover;
-      /*background-size: 320px auto;
-      background-position: center center;*/
-      
-    }
-
-    #case2{
-      background: linear-gradient(155deg, rgba(233, 222, 250, 0.4) 0%, rgba(251, 252, 219, 0.6) 100%),
-      url("../images/cases/nt.jpg") no-repeat;
-      background-size: cover;
-    }
-
-
-    #case3{
-      background: linear-gradient(155deg, rgba(252, 203, 144, 0.7) 0%, rgba(213, 126, 235, 0.9) 100%),
-      url("../images/cases/cars2.jpg") no-repeat;
-      background-size: cover;
-    }
-
-    #case4{
-      background: linear-gradient(155deg, rgba(16, 40, 61, 0.6) 0%, rgba(16, 25, 25, 0.8) 100%),
-      url("../images/cases/reboot.jpg") no-repeat;
-      background-size: cover;
-    }
-
-
-    .overlay{
-      @apply --layout-horizontal;
-      @apply(--layout-justified);
-     /* background-color: black;*/
-      height: 100%;
-      width: 100%;
-    }
-
-    .center-it{
-      @apply --layout-self-center;
-      text-align: center;
-      width: 100%;
-
-    }
-
-    span,h3{
-      text-shadow: 2px 2px 19px rgba(0, 0, 0, 0.5);
-    }
-
-    @media (max-width: 768px) {
-      .work-card{
+        height: 100%;
         width: 100%;
       }
-    }
 
-    span{
-      font-size: 14px;
-    }
+      .center-it{
+        @apply --layout-self-center;
+        text-align: center;
+        width: 100%;
+      }
 
-  /*  h4{
-        font-size: 24px;
-        text-transform: uppercase;
-        font-weight: 100;
-    }  */
+      span,h3{
+        text-shadow: 2px 2px 19px rgba(0, 0, 0, 0.5);
+      }
 
-    a{color: white; text-decoration: none;}
+      @media (max-width: 768px) {
+        .work-card{
+          width: 100%;
+        }
+      }
+
+      span{
+        font-size: 0.875rem;
+      }
+
+      a{
+        color: white; 
+        text-decoration: none;
+      }
 
     </style>
 
@@ -126,50 +121,47 @@
         
         <div id="case1" class="work-card">
           <div class="overlay">
-              <div class="center-it">
-                <a href="view3"> 
-                  <span>UX/UI</span>
-                  <h3>Building Schibsted Media Platform</h3>
-                  <!--<img src="images/smp.png" width="64" height="64" alt="Schibsted Media Platform" style="height: 96px; width: auto">-->
-                </a>
+            <div class="center-it">
+              <a href="view3"> 
+                <span>UX/UI</span>
+                <h3>Building Schibsted Media Platform</h3>
+              </a>
             </div>
           </div>
         </div>
         
-
-         <div id="case2" class="work-card">
+        <div id="case2" class="work-card">
           <div class="overlay">
-              <div class="center-it">
-                <a href="view3"> 
-                  <span>UX / Product Management</span>
-                  <h3>Redesigning Norsk-tipping.no</h3>
-                </a>
+            <div class="center-it">
+              <a href="view3"> 
+                <span>UX / Product Management</span>
+                <h3>Redesigning Norsk-tipping.no</h3>
+              </a>
             </div>
           </div>
         </div>
         
-         <div id="case3" class="work-card">
+        <div id="case3" class="work-card">
           <div class="overlay">
-              <div class="center-it">
-                <a href="view3"> 
-                  <span>Product Design</span>
-                  <h3>Marketplaces Professionals - Car dealers</h3>
-                </a>
+            <div class="center-it">
+              <a href="view3"> 
+                <span>Product Design</span>
+                <h3>Marketplaces Professionals - Car dealers</h3>
+              </a>
             </div>
           </div>
         </div>
 
-         <div id="case4" class="work-card">
+        <div id="case4" class="work-card">
           <div class="overlay">
-              <div class="center-it">
-                <a href="view3"> 
-                  <span>Product Design</span>
-                  <h3>One company – one collection of services</h3>
-                </a>
+            <div class="center-it">
+              <a href="view3"> 
+                <span>Product Design</span>
+                <h3>One company – one collection of services</h3>
+              </a>
             </div>
           </div>
         </div>
-
 
       </div>
     

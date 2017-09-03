@@ -17,6 +17,9 @@
 
     <style>
 
+      section{
+        background-color: var(--tint-light-grey);
+      }
 
       .contact{
         @apply --layout-horizontal;
@@ -26,8 +29,8 @@
       .icons{
         @apply --layout-horizontal;
         @apply --layout-center;
-        height: 48px;
-        width: 48px;
+        height: 3rem;
+        width: 3rem;
         border-radius: 50%;
         background-color: var(--tint-black);
         margin: 0 auto;
@@ -36,15 +39,15 @@
       .contact > div{
         @apply --layout-vertical;
         @apply --layout-center-justified;
-        width: 164px;
+        width: 10.25rem
         height: auto;
         margin: 1em;
       }
 
 
       iron-icon{
-        height: 28px;
-        width: 28px;
+        height: 1.75rem;
+        width: 1.75rem;
         color: var(--tint-light-grey);
         margin: 0 auto;
       }
@@ -56,17 +59,11 @@
         }
       }
 
-
-
-
     </style>
 
-    <!-- shadow DOM goes here -->
     <section class="tint-light-grey">
 
       <div class="medium center center-text">
-
-
         <div>
           <span class="emoji">👋<span>
         </div>
@@ -75,7 +72,6 @@
       </div>
 
       <div class="medium center center-text contact">
-
         <div>
           <div class="icons">
             <iron-icon icon="communication:phone"></iron-icon>

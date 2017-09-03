@@ -9,7 +9,7 @@
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="shared-styles.html">
 
-<dom-module id="element-skillsexperience">
+<dom-module id="element-skills">
   <template>
 
   <style include="shared-styles"></style>
@@ -18,14 +18,20 @@
 
   <custom-style>
     <style is="custom-style">
+
+      section{
+        background-color: var(--tint-very-light-grey);
+      }
+
       paper-chip{
         display: inline;
       } 
+      
     </style>
   </custom-style>
 
   
-    <section style="min-height: 10em;" class="tint-white"> 
+    <section style="min-height: 10rem;" class="tint-white"> 
       <div style="margin: 0 auto;" class="medium center center-text">
         <h2>My skills</h2>
         
@@ -37,7 +43,7 @@
               <paper-tab>Tools</paper-tab>
             </paper-tabs>
           </div>
-        <div style="padding-top: 2em;">
+        <div style="padding-top: 2rem;">
           <paper-chip no-hover label="Design"></paper-chip>
           <paper-chip no-hover label="Prototyping"></paper-chip>
           <paper-chip no-hover label="CSS"></paper-chip>
@@ -60,7 +66,7 @@
   <script>
 
     Polymer({
-    is: "element-skillsexperience",
+    is: "element-skills",
 
   });
   

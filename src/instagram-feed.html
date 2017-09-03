@@ -37,7 +37,7 @@
       @media (min-width: 401px) {
         .item {
           display: block;
-          padding: 8px;
+          padding: 0.5rem;
         }
       }
 
@@ -65,7 +65,9 @@
       }
     </style>
 
+
     <byutv-jsonp id="jsonp" url="https://api.instagram.com/v1/users/self/media/recent/" on-response="_onResponse" debounce-duration="300"></byutv-jsonp>
+
 
     <div class="center">
       <slot></slot>
@@ -87,6 +89,7 @@
         </paper-button>
       </a>
     </div>
+
   </template>
 
   <script>
