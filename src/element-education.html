@@ -25,25 +25,32 @@
       } 
     
     .cards{
-      @apply --layout-horizontal;
+      @apply --layout-vertical;
+      width: 30rem;
 
     }
     .element-card{
-      width: calc(50% - 2rem);
+      width: calc(100% - 1rem);
       margin: 0.5rem;
       background-color: white;
       border-radius: 0.25rem;
      }
 
      .card-content{
-      margin: 1rem;
+      margin: 1.5rem 1rem;
      }
+
+
 
      h3,h4,h5{
       margin: 0;
       padding: 0;
+      line-height: 2rem;
      }
 
+     h3{
+      line-height: 2.75rem;
+     }
 
     </style>
 
@@ -61,23 +68,23 @@
 
       <div class="large center">
 
-        <div class="cards">
+        <div class="cards center center-text">
 
           <div class="element-card">
             <div class="card-content">
-              <h3>Bachelor in Media, ICT and Design</h3>
-              <h4>Volda University College<h4>
-              <h4>Volda, Norway</h4>
-              <h5>2005-2008</h5>
+              <h5>2011-2012</h5>
+              <h3>Bachelor in Graphic Design</h3>
+              <h4>Swansea Metropolitan University</h4>
+              <h4>Wales, UK</h4>
             </div>
           </div>
 
           <div class="element-card">
             <div class="card-content">
-              <h3>Bachelor in Graphic Design</h3>
-              <h4>Swansea Metropolitan University</h4>
-              <h4>Wales, UK</h4>
-              <h5>2011-2012</h5>
+              <h5>2005-2008</h5>
+              <h3>Bachelor in Media, ICT and Design</h3>
+              <h4>Volda University College</h4>
+              <h4>Volda, Norway</h4>
             </div>
           </div>
 
