@@ -26,107 +26,68 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --tint-primary: #0faece;
         --tint-secondary: #2196F3;
 
-        --spacing-medium:4em;
+        --spacing-medium: 4em;
 
-
-        --txt-xl: 58px;
-        --txt-l: 40px;
-        --txt-m: 18px;
-        --txt-s: 16px;
-        --txt-xs: 14px;
-        --txt-xxs: 12px;
+        --txt-xl: 3.625rem;
+        --txt-l: 2.5rem;
+        --txt-m: 1.125rem;
+        --txt-s: 1rem;
+        --txt-xs: 0.875rem;
+        --txt-xxs: 0.75rem;
       }
 
       body{
         background-color: var(--tint-light-grey);
       }
 
-      .tint-white{
-        background-color: var(--tint-white);
-      }
-
-      .tint-very-light-grey{
-        background-color: var(--tint-very-light-grey);
-      }
-
-      .tint-light-grey{
-        background-color: var(--tint-light-grey);
-      }
-
-      .tint-medium-grey{
-        background-color: var(--tint-medium-grey);
-      }
-
-      .tint-dark-grey{
-        background-color: var(--tint-dark-grey);
-      }   
-
-      .tint-very-dark-grey{
-        background-color: var(--tint-very-dark-grey);
-        color: var(--tint-very-light-grey);
-      } 
-
-      .tint-black{
-        background-color: var(--tint-black);
-      }
-
-      .tint-primary{
-      background-color: var(--tint-primary);
-      }
-      
-      .tint-secondary{
-      background-color: var(--tint-secondary);
-      }
-
       a{
-      color: var(--tint-primary);  
+        color: var(--tint-primary);  
       }
 
-      h1, h2, h3{
+      h1, h2, h3, h4{
         font-weight: bold;
         margin: 0;
       }
 
-      h2, h3, p, span, li{
-        line-height: 40px;
-
+      h2, h3, h4, p, span, li{
+        line-height: 2.5rem;
       }
       
       h1{
         font-size: var(--txt-xl);
-        line-height: 80px;
-        margin-bottom: 16px;
+        line-height: 5rem;
+        margin-bottom: 1rem;
       }
 
       h2{
         font-size: var(--txt-l);
-        margin-bottom: 32px;
+        margin-bottom: 2rem;
       }
 
       h3{
-        font-size: 26px;
-        margin-bottom: 24px;
+        font-size: 1.625rem;
+        margin-bottom: 1.5rem;
       }
 
       h4{
-        font-size: 24px;
+        font-size: 1.5rem
         text-transform: uppercase;
         font-weight: 100;
       }
 
       p, li, span{
-        font-size: 18px;
+        font-size: 1.125rem
         font-weight: lighter;
       }
 
       .ingress{
-        font-size: 24px;
+        font-size: 1.5rem
         font-weight: 100;
         
       }
 
       li{
-        line-height: 48px;
+        line-height: 3rem;
       }
 
       img, video, iron-image{
@@ -135,45 +96,36 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
       
       section{
-        padding: 6em 1em;
+        padding: 6rem 1rem;
       }
 
       .medium{
-        max-width: 45em;
+        max-width: 45rem;
       }
 
       .large{
-        max-width: 60em;
+        max-width: 60rem;
       }
 
       .full{
         width: 100vw;
       }
 
-
-     /* .card {
-        margin: 24px;
-        padding: 16px;
-        color: #757575;
-        border-radius: 5px;
-        background-color: #fff;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-      }*/
-
       .circle {
         display: inline-block;
-        width: 64px;
-        height: 64px;
+        width: 4rem;
+        height: 4rem;
         text-align: center;
         color: #555;
         border-radius: 50%;
         background: #ddd;
-        font-size: 30px;
-        line-height: 64px;
+        font-size: 1.875rem;
+        line-height: 4rem;
       }
+
       .avatar{
-        height: 96px;
-        width: 96px;
+        height: 6rem;
+        width: 6rem;
         margin-top: 1em;
         margin-right: 1em;
         border: 1px solid rgba(0,0,0,.1);
@@ -191,16 +143,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-align: center;
       }
       
-
-
       paper-button{
         color: var(--tint-primary);
       }
-
-
-
-
-
 
       .fade {
           animation: fadein 2s;
@@ -211,7 +156,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       @keyframes fadein {
           from {
               opacity:0;
-              -webkit-transform: translateY(20px);
+              -webkit-transform: translateY(1.625rem);
           }
           to {
               opacity:1;
@@ -229,7 +174,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       @-webkit-keyframes fadein { /* Safari and Chrome */
           from {
               opacity:0;
-               -webkit-transform: translateY(40px);
+               -webkit-transform: translateY(2.5rem);
           }
           to {
               opacity:1;
@@ -245,51 +190,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
       }
 
-
-
       .gradient1{
-
         background: linear-gradient(141deg, #eaeaea 0%, #eaeaea 51%, #b6b6b6 75%);
       }
-
 
       .button a{
         text-decoration: none;
       }
 
+      .emoji{
+        font-size: var(--txt-l);
+      }
 
-       /* Custom, iPhone Retina */ 
-        @media only screen and (min-width : 320px) {
-
-        }
-
-        /* Extra Small Devices, Phones */ 
-        @media only screen and (min-width : 480px) {
-
-        }
-
-        /* Small Devices, Tablets */
-        @media only screen and (min-width : 768px) {
-
-        }
-
-        /* Medium Devices, Desktops */
-        @media only screen and (min-width : 992px) {
-
-        }
-
-        /* Large Devices, Wide Screens */
-        @media only screen and (min-width : 1200px) {
-
-        }
 
 
     
     </style>
-
-
-
-
 
         <style is="custom-style">
 
@@ -301,10 +217,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         paper-chip{
           --paper-chip-background-color: var(--tint-light-grey);
-          line-height: 40px;
+          line-height: 2.5rem;
           display: block;
           margin-bottom: 1em;
-
         }
 
         .paper-chip-alt{
@@ -313,9 +228,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         
         .chip-image{
           float: left;
-          margin: 0 8px 0 -12px;
-          height: 32px;
-          width: 32px;
+          margin: 0 0.5rem 0 -0.75rem;
+          height: 2rem;
+          width: 2rem;
           border-radius: 50%;
           }
 
@@ -324,6 +239,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-transform: uppercase;
         color: var(--tint-very-dark-grey);
         }
+
     </style>
+
   </template>
 </dom-module>

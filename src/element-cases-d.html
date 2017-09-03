@@ -17,6 +17,9 @@
 
     <style>
 
+    section{
+      background-color: var(--tint-white);
+    }
 
     .grid{
       @apply --layout-horizontal;
@@ -25,16 +28,16 @@
     }
 
     .flipspace{
-      width: 300px;
-      height: 480px;
+      width: 18.75rem;
+      height: 30rem;
       position: relative;
-      -webkit-perspective: 800px; /* Chrome, Safari, Opera */
-      perspective: 800px;
+      -webkit-perspective: 50rem; /* Chrome, Safari, Opera */
+      perspective: 50rem;
     }
 
     #card{
-      width: 300px;
-      height: 480px;
+      width: 18.75rem;
+      height: 30rem;
       background-color: var(--tint-white);
       position: relative;
       width: 100%;
@@ -112,18 +115,18 @@
       @apply --layout-vertical;
       padding: 1em;
       position: relative;
-      height: 237px;
+      height: 14.812rem;
     }
 
     .card-text{
       font-weight: 400;
-      font-size: 24px;
-      padding: 30px 25px 25px 25px;
+      font-size: 1.5rem;
+      padding: 1.875rem 1.562rem 1.562rem 1.562rem;
     }
 
     iron-image{
-      width: 300px;
-      height: 210px;
+      width: 18.75rem;
+      height: 13.125rem;
     }
 
     span{
@@ -167,10 +170,10 @@
         <a href="/view3">
           <div class="flipspace" on-mouseover='onHovered1' 
           on-mouseout='onUnhovered1'>
-            <div id="card" class$="{{hovered1}}">
+            <div id="card">
               <figure class="front">
                 <iron-image style="background-color: lightgray;"
-          sizing="cover" preload fade src="images/smp.png"></iron-image>
+          sizing="cover" preload fade src="../images/cases/case1.jpg"></iron-image>
                 <div class="card-txt">
                   <div>
                     <span class="role">UX/UI Designer</span>
@@ -199,10 +202,10 @@
         <a href="/view2">
           <div id="hideme" class="flipspace" on-mouseover='onHovered2' 
           on-mouseout='onUnhovered2'>
-            <div id="card" class$="{{hovered2}}">
+            <div id="card">
               <figure class="front">
                 <iron-image style="background-color: lightgray;"
-        sizing="cover" preload fade src="./images/nt/nt4.jpg"></iron-image>
+        sizing="cover" preload fade src="../images/cases/case2.jpg"></iron-image>
                 <div class="card-txt">
                   <div>
                     <span class="role">Team Lead Design</span>
@@ -233,10 +236,10 @@
         <a href="/view6">  
           <div class="flipspace" on-mouseover='onHovered3' 
           on-mouseout='onUnhovered3'>
-            <div id="card" class$="{{hovered3}}">
+            <div id="card" >
               <figure class="front">
                 <iron-image style="background-color: lightgray;"
-          sizing="cover" preload fade src="../images/cases/cars2.jpg"></iron-image>
+          sizing="cover" preload fade src="../images/cases/case3.jpg"></iron-image>
                 <div class="card-txt">
                   <div>
                     <span class="role">Design Lead</span>
@@ -276,7 +279,8 @@
 <script>
 
 	Polymer({
-		is: "element-cases-d", 
+		is: "element-cases-d"
+    /*
       hovered1: false,
       onHovered1: function() {
         this.hovered1 = 'flipped1';
@@ -299,7 +303,7 @@
       },
       onUnhovered3: function() {
         this.hovered3 = false;
-      }     
+      }     */
 	});
 
 </script>

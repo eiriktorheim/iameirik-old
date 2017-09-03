@@ -1,0 +1,75 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/paper-chip/paper-chip.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="element-skills">
+  <template>
+
+  <style include="shared-styles"></style>
+  <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+
+
+  <custom-style>
+    <style is="custom-style">
+
+      section{
+        background-color: var(--tint-very-light-grey);
+      }
+
+      paper-chip{
+        display: inline;
+      } 
+      
+    </style>
+  </custom-style>
+
+  
+    <section style="min-height: 10rem;" class="tint-white"> 
+      <div style="margin: 0 auto;" class="medium center center-text">
+        <h2>My skills</h2>
+        
+        <div class="large center" >
+          <div class="center" style="border-bottom: 1px solid #e0e0e0">
+            <paper-tabs selected="0">
+              <paper-tab>Product Design</paper-tab>
+              <paper-tab>Product Management</paper-tab>
+              <paper-tab>Tools</paper-tab>
+            </paper-tabs>
+          </div>
+        <div style="padding-top: 2rem;">
+          <paper-chip no-hover label="Design"></paper-chip>
+          <paper-chip no-hover label="Prototyping"></paper-chip>
+          <paper-chip no-hover label="CSS"></paper-chip>
+          <paper-chip no-hover label="A/B Testing"></paper-chip>
+          <paper-chip no-hover label="Photography"></paper-chip>
+          <paper-chip no-hover label="Graphic Design"></paper-chip>
+          <paper-chip no-hover label="Animation"></paper-chip>
+          <paper-chip no-hover label="Web Analytics"></paper-chip>
+          <paper-chip no-hover label="Lean"></paper-chip>
+          <paper-chip no-hover label="Design Sprint"></paper-chip>
+          <paper-chip no-hover label="Polymer"></paper-chip>
+          <paper-chip no-hover label="Something more"></paper-chip>
+          <paper-chip no-hover label="Something more"></paper-chip>
+        </div>
+      </div>
+    </section>
+
+  </template>
+
+  <script>
+
+    Polymer({
+    is: "element-skills",
+
+  });
+  
+  </script>
+
+</dom-module>

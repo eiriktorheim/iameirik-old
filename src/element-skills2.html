@@ -1,0 +1,98 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/paper-chip/paper-chip.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="element-skills2">
+  <template>
+
+  <style include="shared-styles"></style>
+  <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+
+
+  <custom-style>
+    <style is="custom-style">
+
+      section{
+        background-color: var(--tint-very-light-grey);
+      }
+
+      paper-chip{
+        display: inline;
+      } 
+
+      .skills{
+      }
+
+
+    .skill{
+      text-align: center;
+      width: 33.33%
+    }
+
+    .chips{
+      @apply --layout-self-start;
+      padding-top: 0rem;
+    }
+      
+    </style>
+  </custom-style>
+
+  
+    <section style="min-height: 10rem;" class="tint-white"> 
+      <div style="margin: 0 auto;" class="large center center-text">
+        <h2>My skills</h2>
+      </div>
+
+      <div class="large skills horizontal layout center">
+
+        <div class="skill">
+          <h3>Product Design</h3>
+            <p>Design thinking, prototyping, Interaction Design, Experimentation, Graphic Design, Design Sprint and and animation</p>
+        </div>
+
+        <div class="skill">
+          <h3>Product Management</h3>
+            <div class="chips">
+              <paper-chip no-hover label="Vision"></paper-chip>
+              <paper-chip no-hover label="Roadmap"></paper-chip>
+              <paper-chip no-hover label="Prioritizing"></paper-chip>
+              <paper-chip no-hover label="Stakeholder management"></paper-chip>
+              <paper-chip no-hover label="Strategic Thinking"></paper-chip>
+              <paper-chip no-hover label="Business"></paper-chip>
+            </div>
+        </div>
+
+        <div class="skill">
+          <h3>Front-End</h3>
+            <div class="chips">
+              <paper-chip no-hover label="HTML"></paper-chip>
+              <paper-chip no-hover label="CSS"></paper-chip>
+              <paper-chip no-hover label="Basic Javascript"></paper-chip>
+              <paper-chip no-hover label="Polymer"></paper-chip>
+            </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+  </template>
+
+  <script>
+
+    Polymer({
+    is: "element-skills2",
+
+  });
+  
+  </script>
+
+</dom-module>

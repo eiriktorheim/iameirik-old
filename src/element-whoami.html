@@ -1,0 +1,47 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/app-layout/app-layout.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="element-whoami">
+  <template>
+
+  <style include="shared-styles"></style>
+  <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+  <style>
+
+    section{
+      background-color: var(--tint-white);
+    }
+
+    p{
+      font-size: 1.6rem;
+      line-height: 3.5rem;
+      font-style: normal;
+      font-weight: 100;
+      font-style: italic;
+    }
+  </style>
+  
+    <section style="min-height: 10rem;" class="tint-white"> 
+      <div style="margin: 0 auto;" class="medium center center-text">
+        <p>I believe we all can make a difference in the world. </br>I believe we all can improve it somehow.</br>My mission in life is make the (digital) world a better place.</p>
+      </div>
+    </section>
+
+  </template>
+
+  <script>
+
+    Polymer({
+    is: "element-whoami",
+
+  });
+  
+  </script>
+
+</dom-module>

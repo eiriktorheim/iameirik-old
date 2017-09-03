@@ -14,7 +14,8 @@
 
     <style>
       section {
-        padding: 6em 0;
+        background-color: var(--tint-very-light-grey);
+        padding: 6rem 0;
       }
 
       .header {
@@ -27,12 +28,17 @@
       }
 
       .paper-card {
-        width: 330px;
-        margin: 8px;
+        width: 20.625rem;
+        margin: 0.5rem;
       }
+
 
       a {
         color: var(--tint-very-dark-grey);
+      }
+
+      paper-card {
+        box-shadow: 0 0.625rem 0.625rem -0.5rem rgba(0, 0, 0, 0.08);
       }
 
       paper-card {
@@ -50,11 +56,11 @@
       @media (max-width: 1040px) {
 
         .grid {
-          margin: 32px;
+          margin: 2rem;
         }
 
         .paper-card {
-          width: calc(50% - 16px);
+          width: calc(50% - 1rem);
         }
 
         paper-card {
@@ -65,7 +71,7 @@
       @media (max-width: 600px) {
 
         .grid {
-          margin: 16px;
+          margin: 1rem;
         }
 
         .paper-card {
@@ -84,7 +90,7 @@
           <h2>A broader look at my work</h2>
         </div>
 
-        <div class="large center" style="border-bottom: 1px solid #e0e0e0">
+        <div class="large center" style="border-bottom: 1px solid #e0e0e0; margin-bottom: 1.5em;">
           <div class="center" style="max-width:14em;">
             <paper-tabs selected="{{_selected}}">
               <paper-tab>Digital products</paper-tab>
@@ -107,6 +113,7 @@
               </a>
             </div>
           </template>
+
         </div>
 
       </div>
@@ -128,53 +135,48 @@
             type: Array,
             value: () => {
               return [{
-                  "type": "0",
-                  "url": "//www.fjordyoga.com",
-                  "imagePath": "images/fjordyoga.jpg",
-                  "alt": "Fjordyoga",
-                  "title": "Fjordyoga",
-                  "content": "fjordyoga.com"
-                },
-                {
-                  "type": "1",
-                  "url": "//www.fjordyoga.com",
-                  "imagePath": "images/nt.jpg",
-                  "alt": "Norsk Tipping",
-                  "title": "Norsk-tipping.no",
-                  "content": "norsk-tipping.no"
-                },
-                {
-                  "type": "0",
-                  "url": "//www.kammermusikkfestival.no",
-                  "imagePath": "images/kammermusikk.jpg",
-                  "alt": "Sunnmøre kammermusikkfestival",
-                  "title": "Sunnmøre kammermusikkfestival",
-                  "content": "kammermusikkfestival.no.com"
-                }, {
-                  "type": "1",
-                  "url": "//www.fjordyoga.com",
-                  "imagePath": "images/fjordyoga.jpg",
-                  "alt": "Fjordyoga",
-                  "title": "Fjordyoga",
-                  "content": "fjordyoga.com"
-                },
-                {
-                  "type": "0",
-                  "url": "//www.fjordyoga.com",
-                  "imagePath": "images/nt.jpg",
-                  "alt": "Norsk Tipping",
-                  "title": "Norsk-tipping.no",
-                  "content": "norsk-tipping.no"
-                },
-                {
-                  "type": "0",
-                  "url": "//www.kammermusikkfestival.no",
-                  "imagePath": "images/kammermusikk.jpg",
-                  "alt": "Sunnmøre kammermusikkfestival",
-                  "title": "Sunnmøre kammermusikkfestival",
-                  "content": "kammermusikkfestival.no.com"
-                }
-              ]
+                "type": 0,
+                "url": "//www.fjordyoga.com",
+                "imagePath": "../images/work/fjordyoga.jpg",
+                "alt": "Fjordyoga",
+                "title": "Fjordyoga",
+                "content": "fjordyoga.com"
+              }, {
+                "type": 0,
+                "url": "//www.fjordyoga.com",
+                "imagePath": "../images/work/nt.jpg",
+                "alt": "Norsk Tipping",
+                "title": "Norsk-tipping.no",
+                "content": "norsk-tipping.no"
+              }, {
+                "type": 0,
+                "url": "//www.behance.net/gallery/4633017/Sunnmoere-Chamber-Music-Festival",
+                "imagePath": "../images/work/sk.jpg",
+                "alt": "Sunnmøre kammermusikkfestival",
+                "title": "Sunnmøre kammermusikkfestival",
+                "content": "kammermusikkfestival.no"
+              }, {
+                "type": 1,
+                "url": "//www.fjordyoga.com",
+                "imagePath": "../images/work/real.jpg",
+                "alt": "Real World",
+                "title": "Real World",
+                "content": "Book"
+              }, {
+                "type": 1,
+                "url": "//www.fjordyoga.com",
+                "imagePath": "../images/work/photo.jpg",
+                "alt": "Photo",
+                "title": "Photo",
+                "content": "Book"
+              }, {
+                "type": 0,
+                "url": "//www.kammermusikkfestival.no",
+                "imagePath": "../images/work/graphic.jpg",
+                "alt": "Graphic",
+                "title": "Exhibition website",
+                "content": "http://smudesign.co.uk/"
+              }]
             }
           },
           _selected: {
