@@ -1,4 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../bower_components/paper-card/paper-card.html">
 
@@ -12,44 +13,43 @@
     <style include="shared-styles"></style>
 
     <style>
-      
-      section{
+      section {
         padding: 6em 0;
       }
-      .header { 
-        font-weight: bold; 
+
+      .header {
+        font-weight: bold;
         text-transform: uppercase;
       }
 
-      .grid{
+      .grid {
         justify-content: center;
       }
 
-     .paper-card{
+      .paper-card {
         width: 330px;
         margin: 8px;
       }
 
-
-      a{color: var(--tint-very-dark-grey);}
-
-      paper-card{
-       box-shadow: 0 10px 10px -8px rgba(0,0,0,0.08);
-
+      a {
+        color: var(--tint-very-dark-grey);
       }
 
-      paper-card:hover{
-       box-shadow: 8px 20px 20px -8px rgba(0,0,0,0.12);
-               box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.08),
-                          0  6px 30px 5px rgba(0, 0, 0, 0.06),
-                          0  8px 10px -5px rgba(0, 0, 0, 0.14);
+      paper-card {
+        box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.08);
+      }
 
+      paper-card:hover {
+        box-shadow: 8px 20px 20px -8px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.08),
+        0 6px 30px 5px rgba(0, 0, 0, 0.06),
+        0 8px 10px -5px rgba(0, 0, 0, 0.14);
       }
 
 
       @media (max-width: 1040px) {
 
-        .grid{
+        .grid {
           margin: 32px;
         }
 
@@ -64,7 +64,7 @@
 
       @media (max-width: 600px) {
 
-        .grid{
+        .grid {
           margin: 16px;
         }
 
@@ -72,8 +72,6 @@
           width: 100%;
         }
       }
-      
-
     </style>
 
 
@@ -87,78 +85,28 @@
         </div>
 
         <div class="large center" style="border-bottom: 1px solid #e0e0e0">
-        <div class="center" style="max-width:14em;">
-          <paper-tabs selected="0">
-            <paper-tab>Digital products</paper-tab>
-            <paper-tab>Prints</paper-tab>
-          </paper-tabs>
+          <div class="center" style="max-width:14em;">
+            <paper-tabs selected="{{_selected}}">
+              <paper-tab>Digital products</paper-tab>
+              <paper-tab>Prints</paper-tab>
+            </paper-tabs>
+          </div>
         </div>
-        </div>
-
+        <br>
 
         <div class="horizontal layout wrap grid">
-
-          <div class="paper-card">
-            <a href="//www.fjordyoga.com">
-              <paper-card image="images/fjordyoga.jpg" alt="Fjordyoga">
-                <div class="card-content">
-                  <div class="header">Fjordyoga</div>
-                  <div>fjordyoga.com</div>
-                </div>
-              </paper-card>
-            </a>
-          </div>
-          <div class="paper-card">
-            <a href="//www.fjordyoga.com">
-              <paper-card image="images/nt.jpg" alt="Norsk Tipping">
-                <div class="card-content">
-                  <div class="header">Norsk-tipping.no</div>
-                  <div>norsk-tipping.no</div>
-                </div>
-              </paper-card>
-            </a>
-          </div>
-          <div class="paper-card">
-            <a href="//www.kammermusikkfestival.no">
-              <paper-card image="images/kammermusikk.jpg" alt="Sunnmøre kammermusikkfestival">
-                <div class="card-content">
-                  <div class="header">Sunnmøre kammermusikkfestival</div>
-                  <div>kammermusikkfestival.no</div>
-                </div>
-              </paper-card>
-            </a>
-          </div>
-          <div class="paper-card">
-            <a href="//www.fjordyoga.com">
-              <paper-card image="images/fjordyoga.jpg" alt="Fjordyoga">
-                <div class="card-content">
-                  <div class="header">Fjordyoga</div>
-                  <div>fjordyoga.com</div>
-                </div>
-              </paper-card>
-            </a>
-          </div>
-          <div class="paper-card">
-            <a href="//www.fjordyoga.com">
-              <paper-card image="images/nt.jpg" alt="Norsk Tipping">
-                <div class="card-content">
-                  <div class="header">Norsk-tipping.no</div>
-                  <div>norsk-tipping.no</div>
-                </div>
-              </paper-card>
-            </a>
-          </div>
-          <div class="paper-card">
-            <a href="//www.kammermusikkfestival.no">
-              <paper-card image="images/kammermusikk.jpg" alt="Sunnmøre kammermusikkfestival">
-                <div class="card-content">
-                  <div class="header">Sunnmøre kammermusikkfestival</div>
-                  <div>kammermusikkfestival.no</div>
-                </div>
-              </paper-card>
-            </a>
-          </div>
-
+          <template is="dom-repeat" items="{{workItems}}" filter="{{_filterWorkItems(_selected)}}" observe="_selected">
+            <div class="paper-card">
+              <a href="[[item.url]]">
+                <paper-card image="[[item.imagePath]]" alt="[[item.alt]]">
+                  <div class="card-content">
+                    <div class="header">[[item.title]]</div>
+                    <div>[[item.content]]</div>
+                  </div>
+                </paper-card>
+              </a>
+            </div>
+          </template>
         </div>
 
       </div>
@@ -167,14 +115,88 @@
 
   </template>
 
-<script>
+  <script>
+    /**
+     */
+    class ElementOtherwork extends Polymer.Element {
+      static get is() {
+        return 'element-otherwork';
+      }
+      static get properties() {
+        return {
+          workItems: {
+            type: Array,
+            value: () => {
+              return [{
+                  "type": "0",
+                  "url": "//www.fjordyoga.com",
+                  "imagePath": "images/fjordyoga.jpg",
+                  "alt": "Fjordyoga",
+                  "title": "Fjordyoga",
+                  "content": "fjordyoga.com"
+                },
+                {
+                  "type": "1",
+                  "url": "//www.fjordyoga.com",
+                  "imagePath": "images/nt.jpg",
+                  "alt": "Norsk Tipping",
+                  "title": "Norsk-tipping.no",
+                  "content": "norsk-tipping.no"
+                },
+                {
+                  "type": "0",
+                  "url": "//www.kammermusikkfestival.no",
+                  "imagePath": "images/kammermusikk.jpg",
+                  "alt": "Sunnmøre kammermusikkfestival",
+                  "title": "Sunnmøre kammermusikkfestival",
+                  "content": "kammermusikkfestival.no.com"
+                }, {
+                  "type": "1",
+                  "url": "//www.fjordyoga.com",
+                  "imagePath": "images/fjordyoga.jpg",
+                  "alt": "Fjordyoga",
+                  "title": "Fjordyoga",
+                  "content": "fjordyoga.com"
+                },
+                {
+                  "type": "0",
+                  "url": "//www.fjordyoga.com",
+                  "imagePath": "images/nt.jpg",
+                  "alt": "Norsk Tipping",
+                  "title": "Norsk-tipping.no",
+                  "content": "norsk-tipping.no"
+                },
+                {
+                  "type": "0",
+                  "url": "//www.kammermusikkfestival.no",
+                  "imagePath": "images/kammermusikk.jpg",
+                  "alt": "Sunnmøre kammermusikkfestival",
+                  "title": "Sunnmøre kammermusikkfestival",
+                  "content": "kammermusikkfestival.no.com"
+                }
+              ]
+            }
+          },
+          _selected: {
+            type: Number,
+            value: 0
+          }
+        };
+      }
 
-	Polymer({
-		is: "element-otherwork"
+      connectedCallback() {
+        super.connectedCallback();
+      }
 
-	});
-	
-</script>
+      _filterWorkItems(selected) {
+        return item => {
+          return item.type == this._selected ? true : false;
+        }
+      }
+
+    }
+
+    window.customElements.define(ElementOtherwork.is, ElementOtherwork);
+  </script>
 
 </dom-module>
-
