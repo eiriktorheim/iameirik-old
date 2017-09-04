@@ -1,4 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../bower_components/iron-iconset-svg/iron-iconset-svg.html">
@@ -9,31 +11,43 @@
 
   <template>
 
-    <style include="shared-styles">
 
-      header {
-        @apply --layout-vertical;
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        background-color: rgba(21, 25, 31, 0.85);
-        color: white;
-      }
+    <style include="iron-flex iron-flex-alignment"></style>
+    <style include="shared-styles"></style>
 
-      .ingress{
-        font-size: 1.5rem;
-        font-weight: 300;
-        opacity: 0.5;
-      }
+    <style>
+
+        header {
+            @apply --layout-vertical;
+            width: 100%;
+            height: 100vh;
+            text-align: center;
+            background-color: rgba(21, 25, 31, 0.85);
+            color: white;
+        }
+
+          .ingress{
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.5;
+          }
 
         .avatar{
-            width: 12.5rem;
-            height: 12.5rem;
-        }      
+            height: 14rem;
+            width: 14rem;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border: 1px solid rgba(0,0,0,.1);
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+          }
+
 
         .profile{
-            @apply --layout-vertical;
-            @apply --layout-center-center;
+            @apply --layout-horizontal;
+            @apply --layout-center;
+            height: 100vh;
         }
 
         .icons{
@@ -138,21 +152,22 @@
       url("../images/header-img.jpg") no-repeat;
                 background-size: cover;
                 background-position: center center;
-   
+
             }
             #bgvid {
                 display: none;
             }
         }
 
+
     </style>
 
     <header>
 
         <div class="profile">
-            <div class="medium">
-                <div style="margin-top: 4rem;">
-                    <img style="margin-bottom: 1rem;" class="avatar" alt="Profile picture" src="/images/profile.jpg" height="164" width="164">
+            <div class="medium center" style="padding: 1rem;">
+                <div>
+                    <img class="avatar" alt="Profile picture" src="/images/profile.jpg" height="164" width="164">
                 </div>
                 <div>
                     <h1>I am Eirik</h1>

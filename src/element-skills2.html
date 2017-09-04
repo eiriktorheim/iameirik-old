@@ -33,15 +33,21 @@
 
     .skill{
       text-align: center;
-      width: 33.33%
+      width: calc(33.33% - 2rem);
+      padding: 1rem;
     }
 
     .chips{
       @apply --layout-self-start;
       padding-top: 0rem;
     }
+
+    h3{
+      margin: 0;
+    }
       
     </style>
+    }
   </custom-style>
 
   
@@ -50,33 +56,33 @@
         <h2>My skills</h2>
       </div>
 
-      <div class="large skills horizontal layout center">
+      <div class="large skills center">
+        <div class="horizontal layout">
 
-        <div class="skill">
-          <h3>Product Design</h3>
-            <p>Design thinking, prototyping, Interaction Design, Experimentation, Graphic Design, Design Sprint and and animation</p>
-        </div>
+          <div class="skill">
+            <h3>Product Design</h3>
+              <p>Design Thinking</p>
+              <p>Interaction Design</p>
+              <p>Visual Design</p>
+              <p>Prototyping</p>
+              <p>Design Sprint</p>
+          </div>
 
-        <div class="skill">
-          <h3>Product Management</h3>
-            <div class="chips">
-              <paper-chip no-hover label="Vision"></paper-chip>
-              <paper-chip no-hover label="Roadmap"></paper-chip>
-              <paper-chip no-hover label="Prioritizing"></paper-chip>
-              <paper-chip no-hover label="Stakeholder management"></paper-chip>
-              <paper-chip no-hover label="Strategic Thinking"></paper-chip>
-              <paper-chip no-hover label="Business"></paper-chip>
-            </div>
-        </div>
+          <div class="skill">
+            <h3>Product Management</h3>
+              <p>Mission & Vision</p>
+              <p>Roadmap and prioritizing</p>
+              <p>Stakeholder management</p>
+              <p>Business Strategy</p>
+          </div>
 
-        <div class="skill">
-          <h3>Front-End</h3>
-            <div class="chips">
-              <paper-chip no-hover label="HTML"></paper-chip>
-              <paper-chip no-hover label="CSS"></paper-chip>
-              <paper-chip no-hover label="Basic Javascript"></paper-chip>
-              <paper-chip no-hover label="Polymer"></paper-chip>
-            </div>
+          <div class="skill">
+            <h3>Front-end</h3>
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>Basic Javascript</p>
+              <p>Polymer</p>
+          </div>
         </div>
 
       </div>

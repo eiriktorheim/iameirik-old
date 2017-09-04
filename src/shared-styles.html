@@ -23,8 +23,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --tint-very-dark-grey: #31353A;
         --tint-almost-black: #1C2026;
         --tint-black: #15191F;
-        --tint-primary: #0faece;
-        --tint-secondary: #2196F3;
+        --tint-primary: #f42c65;
+        --tint-secondary: #0faece;
+        /*0faece #2196F3;*/
 
         --spacing-medium: 4em;
 
@@ -86,6 +87,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         
       }
 
+      .button{
+        display: inline-block;
+        background: var(--tint-primary);
+        border: 0;
+        border-radius: 5px;
+        color: #fff;
+        font-size: .74rem;
+        line-height: 1rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background .3s;
+        padding: 0.75rem 1.5rem;
+        letter-spacing: .1rem;
+        border-radius: 6.25rem;
+      }
+
       li{
         line-height: 3rem;
       }
@@ -123,16 +141,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         line-height: 4rem;
       }
 
-      .avatar{
-        height: 6rem;
-        width: 6rem;
-        margin-top: 1em;
-        margin-right: 1em;
-        border: 1px solid rgba(0,0,0,.1);
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        border-radius: 50%;
+      .card{
+        background-color: white;
+        border-radius: 0.25rem;
+        border: 1px solid #EAEAEB;
+       }
+
+      .card{
+       box-shadow: 0 0.625rem 0.625rem -0.5rem rgba(0,0,0,0.08);
+
       }
+
+      a > .card{
+          text-decoration: none;
+      }
+
+      a > .card:hover{
+        box-shadow: 6px 18px 14px -8px rgba(0,0,0,0.12);
+               box-shadow: 8px 1px 18px -1px rgba(0, 0, 0, 0.04),
+                          11px  6px 16px 0px rgba(0, 0, 0, 0.06),
+                          0  8px 6px -5px rgba(0, 0, 0, 0.12);
+      }
+
 
       .center{
         margin-left: auto;
