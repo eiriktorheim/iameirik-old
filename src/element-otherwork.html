@@ -1,0 +1,176 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="element-otherwork">
+
+  <template>
+
+    <style is="custom-style" include="iron-flex"></style>
+    <style include="shared-styles"></style>
+
+    <style>
+      
+      section{
+        background-color: var(--tint-very-light-grey);
+        padding: 6rem 0;
+      }
+
+      .grid{
+        display: grid;
+        grid-gap: 1rem;
+        grid-auto-rows: minmax(5rem, auto);
+      }   
+
+      @media (max-width: 599px) {
+        .grid{
+          grid-template-columns: repeat(1, 1fr);
+        }   
+      }
+
+      @media (min-width: 600px) {
+        .grid{
+          grid-template-columns: repeat(2, 1fr);
+        }   
+      }
+
+      @media (min-width: 900px) { 
+        .grid{
+          grid-template-columns: repeat(3, 1fr);
+        }   
+      }
+
+
+      .header { 
+        font-weight: bold; 
+        text-transform: uppercase;
+      }
+
+      .card-content{
+        padding: 0.5rem 1rem 1rem 1rem;
+      }
+
+      a{
+        color: var(--tint-very-dark-grey);
+        text-decoration: none;
+      }
+
+
+    </style>
+
+
+    <section class="tint-light-grey">
+
+      <div class="large center">
+
+        <div class="medium center center-text">
+          <span>Portfolio</span>
+          <h2>A broader look at my work</h2>
+        </div>
+
+<!-- MAYBE I WILL NOT USE THESE TABS
+        <div class="large center" style="border-bottom: 1px solid #e0e0e0; margin-bottom: 1.5em;">
+        <div class="center" style="max-width:14em;">
+          <paper-tabs selected="0">
+            <paper-tab>Digital products</paper-tab>
+            <paper-tab>Prints</paper-tab>
+          </paper-tabs>
+        </div>
+        </div>
+-->
+
+        <div class="grid">
+
+          <a href="//www.fjordyoga.com">
+            <div class="card">
+              <div class="card-img">
+                <img src="../images/work/fjordyoga.jpg" alt="Fjordyoga">
+              </div>
+              <div class="card-content">
+                <div class="header">Fjordyoga</div>
+                <div>fjordyoga.com</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="//www.norsk-tipping.no/">
+            <div class="card">
+              <div class="card-img">
+                <img src="../images/work/nt.jpg" alt="Norsk Tipping">
+              </div>
+              <div class="card-content">
+                <div class="header">Norsk Tipping</div>
+                <div>Norsk-tipping.no</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="https://www.behance.net/gallery/4633017/Sunnmoere-Chamber-Music-Festival">
+            <div class="card">
+              <div class="card-img">
+                <img src="../images/work/sk.jpg" alt="Sunnmøre kammermusikkfestival">
+              </div>
+              <div class="card-content">
+                <div class="header">Kammermusikkfestival</div>
+                <div>kammermusikkfestival.no</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="card">
+              <div class="card-img">
+                <img src="../images/work/real.jpg" alt="Real World">
+              </div>
+              <div class="card-content">
+                <div class="header">Real World</div>
+                <div>Book</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="card">
+              <div class="card-img">
+                <img src="../images/work/photo.jpg" alt="Photo">
+              </div>
+              <div class="card-content">
+                <div class="header">Photo</div>
+                <div>Book</div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#">
+            <div class="card">
+              <div class="card-img">
+                <img src="../images/work/graphic.jpg" alt="Graphic">
+              </div>
+              <div class="card-content">
+                <div class="header">Exhibition website</div>
+                <div>http://smudesign.co.uk/</div>
+              </div>
+            </div>
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </template>
+
+<script>
+
+	Polymer({
+		is: "element-otherwork"
+
+	});
+	
+</script>
+
+</dom-module>
+
