@@ -22,6 +22,21 @@
       paper-chip{
         display: inline;
       } 
+   
+    .content{
+      @apply --layout-horizontal;
+    }
+
+    h3{
+      margin: 0;
+      padding: 0;
+    }
+
+    .col{
+      width: calc(33.33% - 2rem);
+      padding: 1rem;
+    }
+
     </style>
   </custom-style>
 
@@ -31,7 +46,25 @@
           <span class="emoji">💡<span>
         </div>
         <h2>Currently studying</h2>
-        <p>Blokkchain</p>
+      </div>
+
+      <div class="large center">
+
+        <div class="content">
+          <div class="col">
+            <h3 class="card-content">Blockchain</h3>
+            <p>Blockchain is so much more than cryptocurrency. It can validate and secure almost anything. It eliminates the need of a third part. There is so much potential in the blockchain technology.</p>
+          </div>
+          <div class="col">
+            <h3 class="card-content">Drone Photography</h3>
+            <p>Nature, landscapes, photography, and flying a toy - my perfect combo. It might be more fun than valuable, but hey, you get awesome photos from it.</p>
+          </div>
+          <div class="col">
+            <h3 class="card-content">Remote work</h3>
+            <p>Remote work is booming, whether you’re working from home, your favorite coffee shop, a coworking space, or somewhere else entirely. Remote work brings more control over the location you are in.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 

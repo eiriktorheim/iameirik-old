@@ -1,0 +1,179 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-chip/paper-chip.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="element-cases">
+
+  <template>
+
+    <style is="custom-style" include="iron-flex"></style>
+    <style include="iron-flex iron-flex-alignment"></style>
+    <style include="shared-styles"></style>
+
+    <style>
+
+      section{
+        background-color: var(--tint-white);
+      }
+
+
+      .grid{
+        display: grid;
+        grid-gap: 1rem;
+        grid-auto-rows: minmax(5rem, auto);
+      }   
+
+      @media (max-width: 599px) {
+        .grid{
+          grid-template-columns: repeat(1, 1fr);
+        }   
+      }
+
+      @media (min-width: 600px) {
+        .grid{
+          grid-template-columns: repeat(1, 1fr);
+        }   
+      }
+
+      @media (min-width: 900px) { 
+        .grid{
+          grid-template-columns: repeat(3, 1fr);
+        }   
+      }
+
+
+      .card-content{
+        @apply --layout-vertical;
+        position: relative;
+        height: 14.812rem;
+        font-weight: 400;
+        font-size: 1.5rem;
+        padding: 1.875rem 1.562rem 1.562rem 1.562rem;
+      }
+
+      iron-image{
+        width: 100%;
+        height: 13.125rem;
+      }
+
+      span{
+        display: block;
+      }
+
+      .role{
+        text-transform: uppercase;
+        color: var(--tint-medium-grey);
+        font-size: var(--txt-xs);
+      }
+
+      .title{
+        color: var(--tint-black);
+      }
+
+      .link{
+        text-transform: uppercase;
+        color: var(--tint-medium-grey);
+        font-size: var(--txt-xxs);
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+
+      .button{
+
+      }
+
+    </style>
+
+        
+    <section class="tint-very-light-grey">
+
+      <div class="center-text">
+        <span>Design case studies</span>
+        <h2>A deeper look at my work</h2>
+      </div>
+
+
+      <div class="grid large center">
+
+
+          <div class="card">
+              <iron-image style="background-color: lightgray;"
+      sizing="cover" preload fade src="../images/cases/case1.jpg"></iron-image>
+              <div class="card-content center-text">
+                <div>
+                  <span class="role">UX/UI Designer</span>
+                </div>
+                <div class="flexchild-vertical">
+                  <h3 class="title">Schibsted Media Platform </br>&nbsp;</h3>
+                </div>
+                 <div>
+                  <a href="/view3" class="button">View case</a>
+                </div>
+              </div>
+          </div>
+
+
+          <div class="card">
+              <iron-image style="background-color: lightgray;"
+      sizing="cover" preload fade src="../images/cases/case2.jpg"></iron-image>
+              <div class="card-content center-text">
+                <div>
+                  <span class="role">Team Lead Design</span>
+                </div>
+                <div class="flexchild-vertical">
+                  <h3 class="title">Redesigning Norsk-tipping.no</br>&nbsp;</h3>
+                </div>
+                 <div>
+                  <a href="/view3" class="button">View case</a>
+                </div>
+              </div>
+          </div>
+
+
+
+          <div class="card">
+              <iron-image style="background-color: lightgray;"
+      sizing="cover" preload fade src="../images/cases/case3.jpg"></iron-image>
+              <div class="card-content center-text">
+                <div>
+                  <span class="role">Design Lead</span>
+                </div>
+                <div class="flexchild-vertical">
+                  <h3 class="title">Marketplaces Professionals - Car dealers</h3>
+                </div>
+                 <div>
+                  <a href="/view3" class="button">View case</a>
+                </div>
+              </div>
+          </div>
+
+
+
+      </div>
+    
+    </section>
+
+    <script>
+
+    </script>
+
+  </template>
+
+<script>
+
+	Polymer({
+		is: "element-cases"
+	});
+
+</script>
+
+</dom-module>
+

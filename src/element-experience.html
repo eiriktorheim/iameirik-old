@@ -27,11 +27,6 @@
         display: inline;
       } 
 
-      .item{
-        margin-bottom: 3rem;
-
-      }
-
       h2{
         margin-bottom: 2rem;
       }
@@ -43,6 +38,7 @@
       }
 
       h3{
+        font-size: var(--txt-m);
         font-weight: bold;
       }
 
@@ -50,6 +46,31 @@
         font-weight: normal;
         text-transform: none;
       }
+
+      .grid{
+        display: grid;
+        grid-gap: 1rem;
+        grid-auto-rows: minmax(5rem, auto);
+      }   
+
+      @media (max-width: 599px) {
+        .grid{
+          grid-template-columns: repeat(1, 1fr);
+        }   
+      }
+
+      @media (min-width: 600px) {
+        .grid{
+          grid-template-columns: repeat(2, 1fr);
+        }   
+      }
+
+      @media (min-width: 900px) { 
+        .grid{
+          grid-template-columns: repeat(3, 1fr);
+        }   
+      }
+
 
       .timespan{
         color: var(--tint-dark-grey);
@@ -61,13 +82,8 @@
         font-weight: 100;
       } 
 
-      .columns{
-        width: 33%;
-        margin-left: 2em;
-      }
-
-      .column{
-        width: 17em;
+      .card-content{
+        padding: 1rem;
       }
 
     </style>
@@ -83,74 +99,61 @@
       
         <h2 class="center-text">Relevant work experience</h2>  
 
-        <div class="layout horizontal">
+        <div class="grid">
 
-          <div class="columns">
-
-            <div class="column center">
-
-              <div class="item">
-                <h3 class="role">Product Designer</h3>
-                <h4 class="company">Schibsted Media Group</h4>
-                <h4 class="timespan">May 2016 – Present</h4>
-                <h4 class="location">Barcelona, Spain</h4>
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="role">Product Designer</h3>
+                  <h4 class="company">Schibsted Media Group</h4>
+                  <h4 class="timespan">May 2016 – Present</h4>
+                  <h4 class="location">Barcelona, Spain</h4>
+                </div>
               </div>
 
-              <div class="item">
-                <h3 class="role">UX Designer</h3>
-                <h4 class="company">Schibsted Media Group</h4>
-                <h4 class="timespan">Sep 2015 - May 2016 · 9 mos</h4>
-                <h4 class="location">Oslo, Norway</h4>
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="role">UX Designer</h3>
+                  <h4 class="company">Schibsted Media Group</h4>
+                  <h4 class="timespan">Sep 2015 - May 2016 · 9 mos</h4>
+                  <h4 class="location">Oslo, Norway</h4>
+                </div>
               </div>
 
-            </div>
-
-          </div>
-
-          <div class="columns">
-
-            <div class="column center">
-
-              <div class="item">
-                <h3 class="role">Product Manager Web</h3>
-                <h4 class="company">Norsk Tipping</h4>
-                <h4 class="timespan">Sep 2014 - Sep 2015 · 1 yr 1 mo</h4>
-                <h4 class="location">Hamar, Norway</h4>
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="role">Product Manager Web</h3>
+                  <h4 class="company">Norsk Tipping</h4>
+                  <h4 class="timespan">Sep 2014 - Sep 2015 · 1 yr 1 mo</h4>
+                  <h4 class="location">Hamar, Norway</h4>
+                </div>
               </div>
 
-              <div class="item">
-                <h3 class="role">Lead Designer</h3>
-                <h4 class="company">Norsk Tipping</h4>
-                <h4 class="timespan">Sep 2013 - Sep 2014 · 1 yr 1 mo</h4>
-                <h4 class="location">Hamar, Norway</h4>
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="role">Lead Designer</h3>
+                  <h4 class="company">Norsk Tipping</h4>
+                  <h4 class="timespan">Sep 2013 - Sep 2014 · 1 yr 1 mo</h4>
+                  <h4 class="location">Hamar, Norway</h4>
+                </div>
               </div>
 
-            </div>
-
-          </div>
-
-
-          <div class="columns">
-
-            <div class="column center">
-
-              <div class="item">
-                <h3 class="role">Interaction Designer</h3>
-                <h4 class="company">Norsk Tipping</h4>
-                <h4 class="timespan">Sep 2012 - Sep 2013 · 1 yr</h4>
-                <h4 class="location">Hamar, Norway</h4>
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="role">Interaction Designer</h3>
+                  <h4 class="company">Norsk Tipping</h4>
+                  <h4 class="timespan">Sep 2012 - Sep 2013 · 1 yr</h4>
+                  <h4 class="location">Hamar, Norway</h4>
+                </div>
               </div>
 
-              <div class="item">
-                <h3 class="role">Webdesigner</h3>
-                <h4 class="company">Volda University College</h4>
-                <h4 class="timespan">Mar 2008 - Oct 2011 · 4 yrs</h4>
-                <h4 class="location">Volda, Norway</h4>
+              <div class="card">
+                <div class="card-content">
+                  <h3 class="role">Webdesigner</h3>
+                  <h4 class="company">Volda University College</h4>
+                  <h4 class="timespan">Mar 2008 - Oct 2011 · 4 yrs</h4>
+                  <h4 class="location">Volda, Norway</h4>
+                </div>
               </div>
-
-            </div>
-
-          </div>
 
 
         </div>
