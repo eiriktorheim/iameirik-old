@@ -8,38 +8,34 @@
     <style include="shared-styles"></style>
 
     <style>
-      
-      section{
+      section {
         padding: 0;
         background-color: var(--tint-black);
         color: var(--tint-light-grey);
       }
 
-      h3{
+      h3 {
         font-size: 0.875rem;
         font-weight: 100;
+        margin-bottom: 0;
       }
-
     </style>
 
     <!-- shadow DOM goes here -->
     <section>
       <div class="medium center center-text">
-      <h3>Handcrafted with ❤️ and ☕ from Barcelona. Code and design by Eirik Torheim Gilje. Fork on <a href="https://github.com/eiriktorheim/iameirik">Github</a>.
-      </h3>
+        <h3>Handcrafted with ❤️ and ☕ from Barcelona. Code and design by Eirik Torheim Gilje. Fork on <a href="https://github.com/eiriktorheim/iameirik">Github</a>.
+        </h3>
       </div>
     </section>
 
   </template>
 
-<script>
+  <script>
+    Polymer({
+      is: "element-footer"
 
-	Polymer({
-		is: "element-footer"
-
-	});
-	
-</script>
+    });
+  </script>
 
 </dom-module>
-
