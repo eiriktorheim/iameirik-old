@@ -1,7 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../bower_components/paper-chip/paper-chip.html">
-<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
 <link rel="import" href="../bower_components/lazy-image/lazy-image.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
@@ -19,7 +17,6 @@
       section {
         background-color: var(--tint-white);
       }
-
 
       .grid {
         display: grid;
@@ -83,6 +80,14 @@
       a {
         text-decoration: none;
       }
+
+      .flex-end {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+        justify-content: center;
+        padding-bottom: 8px;
+      }
     </style>
 
 
@@ -96,57 +101,22 @@
 
       <div class="grid large center">
 
-
-        <div class="card">
-          <lazy-image style="background-color: lightgray;" sizing="cover" preload fade src="../images/cases/case1.jpg"></lazy-image>
-          <div class="card-content center-text">
-            <div>
-              <span class="role">UX/UI Designer</span>
-            </div>
-            <div class="flexchild-vertical">
-              <h3 class="title">Schibsted Media Platform </br>&nbsp;</h3>
-            </div>
-            <div>
-              <a href="/view3" class="button">View case</a>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card">
-          <lazy-image style="background-color: lightgray;" sizing="cover" preload fade src="../images/cases/case2.jpg"></lazy-image>
-          <div class="card-content center-text">
-            <div>
-              <span class="role">Team Lead Design</span>
-            </div>
-            <div class="flexchild-vertical">
-              <h3 class="title">Redesigning Norsk-tipping.no</br>&nbsp;</h3>
-            </div>
-            <div>
-              <a href="/view2" class="button">View case</a>
+        <template is="dom-repeat" items="[[cases]]">
+          <div class="card">
+            <lazy-image style="background-color: lightgray;" sizing="cover" preload fade src="[[item.img]]"></lazy-image>
+            <div class="card-content center-text">
+              <div>
+                <span class="role">[[item.role]]</span>
+              </div>
+              <div class="flexchild-vertical">
+                <h3 class="title">[[item.title]]&nbsp;</h3>
+              </div>
+              <div class="flex-end">
+                <a href="[[item.url]]" class="button">View case</a>
+              </div>
             </div>
           </div>
-        </div>
-
-
-
-        <div class="card">
-          <lazy-image style="background-color: lightgray;" sizing="cover" preload fade src="../images/cases/case3.jpg"></lazy-image>
-          <div class="card-content center-text">
-            <div>
-              <span class="role">Design Lead</span>
-            </div>
-            <div class="flexchild-vertical">
-              <h3 class="title">Marketplaces Professionals - Car dealers</h3>
-            </div>
-            <div>
-              <a href="/view3" class="button">View case</a>
-            </div>
-          </div>
-        </div>
-
-
-
+        </template>
       </div>
 
     </section>
@@ -157,9 +127,38 @@
   </template>
 
   <script>
-    Polymer({
-      is: "element-cases"
-    });
+    class ElementCases extends Polymer.Element {
+      static get is() {
+        return 'element-cases';
+      }
+      static get properties() {
+        return {
+          cases: {
+            type: Array,
+            value: () => {
+              return [{
+                "role": "UX/UI Designer",
+                "title": "Schibsted Media Platform",
+                "img": "../images/cases/case1.jpg",
+                "url": "/view3"
+              }, {
+                "role": "Team Lead Design",
+                "title": "Redesigning Norsk-tipping.no",
+                "img": "../images/cases/case2.jpg",
+                "url": "/view2"
+              }, {
+                "role": "Design Lead",
+                "title": "Marketplaces Professionals - Car dealers",
+                "img": "../images/cases/case3.jpg",
+                "url": "/view3"
+              }]
+            }
+          }
+        }
+      }
+    }
+
+    window.customElements.define(ElementCases.is, ElementCases);
   </script>
 
 </dom-module>
