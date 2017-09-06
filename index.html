@@ -10,77 +10,80 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-    <title>I am Eirik</title>
-    <meta name="description" content="Presentation and portfolio of product designer and manager Eirik Torheim">
-    
-    <base href="/">
-    
-    <!-- See https://goo.gl/OOhYW5 -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#3f51b5">
 
-    <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="I am Eirik">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>I am Eirik</title>
+  <meta name="description" content="Presentation and portfolio of product designer and manager Eirik Torheim">
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="I am Eirik">
+  <base href="/">
 
-    <!-- Homescreen icons -->
-    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="images/manifest/apple-icon-120x120.png">
-    <link rel="icon" type="image/png" href="images/manifest/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="images/manifest/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/manifest/favicon-96x96.png" sizes="96x96">
+  <!-- See https://goo.gl/OOhYW5 -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#3f51b5">
+
+  <!-- Add to homescreen for Chrome on Android. Fallback for manifest.json -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="I am Eirik">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="I am Eirik">
+
+  <!-- Homescreen icons -->
+  <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/manifest/apple-icon-120x120.png">
+  <link rel="icon" type="image/png" href="images/manifest/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="images/manifest/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="images/manifest/favicon-96x96.png" sizes="96x96">
 
 
-    <style>
-
+  <style>
     body {
       display: block;
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 
-  "Segoe UI", "Roboto", "Oxygen", 
-  "Ubuntu", "Cantarell", "Fira Sans", 
-  "Droid Sans", "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont,
+      "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
       font-weight: 100;
       font-size: 100%;
       line-height: 1.5;
       min-height: 100vh;
       background-color: #ffffff;
+      max-width: 100vw;
+      overflow-x: hidden;
     }
+  </style>
 
-    </style>
+</head>
 
-  </head>
-  <body>
+<body>
 
-    <script>
-      // Register the base URL
-      const baseUrl = document.querySelector('base').href;
+  <script>
+    // Register the base URL
+    const baseUrl = document.querySelector('base').href;
 
-      // Load and register pre-caching Service Worker
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register(baseUrl + 'service-worker.js');
-        });
-      }
-    </script>
+    // Load and register pre-caching Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register(baseUrl + 'service-worker.js');
+      });
+    }
+  </script>
 
-    <my-app unresolved></my-app>
+  <my-app unresolved></my-app>
 
-    <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
-    <link rel="import" href="src/my-app.html">
+  <link rel="import" href="src/my-app.html">
 
-    <noscript>
-      Please enable JavaScript to view this website.
-    </noscript>
-    
-  </body>
+  <noscript>
+    Please enable JavaScript to view this website.
+  </noscript>
+
+</body>
+
 </html>

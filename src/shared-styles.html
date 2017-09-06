@@ -14,7 +14,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <dom-module id="shared-styles">
   <template>
     <style>
-      :host {
+       :host {
         --tint-white: #ffffff;
         --tint-very-light-grey: #f9f9fb;
         --tint-light-grey: #EAEAEB;
@@ -26,7 +26,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --tint-primary: #f42c65;
         --tint-secondary: #0faece;
         /*0faece #2196F3;*/
-
         --spacing-medium: 4em;
 
         --txt-xl: 3.625rem;
@@ -37,57 +36,66 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --txt-xxs: 0.75rem;
       }
 
-      body{
+      body {
         background-color: var(--tint-light-grey);
       }
 
-      a{
-        color: var(--tint-primary);  
+      a {
+        color: var(--tint-primary);
       }
 
-      h1, h2, h3, h4{
+      h1,
+      h2,
+      h3,
+      h4 {
         font-weight: bold;
         margin: 0;
       }
 
-      h2, h3, h4, p, span, li{
+      h2,
+      h3,
+      h4,
+      p,
+      span,
+      li {
         line-height: 2.5rem;
       }
-      
-      h1{
+
+      h1 {
         font-size: var(--txt-xl);
         line-height: 5rem;
         margin-bottom: 1rem;
       }
 
-      h2{
+      h2 {
         font-size: var(--txt-l);
         margin-bottom: 2rem;
       }
 
-      h3{
+      h3 {
         font-size: 1.625rem;
         margin-bottom: 1.5rem;
       }
 
-      h4{
-        font-size: 1.5rem
+      h4 {
+        font-size: 1.5rem;
         text-transform: uppercase;
         font-weight: 100;
       }
 
-      p, li, span{
-        font-size: 1.125rem
+      p,
+      li,
+      span {
+        font-size: 1.125rem;
         font-weight: lighter;
       }
 
-      .ingress{
-        font-size: 1.5rem
+      .ingress {
+        font-size: 1.5rem;
         font-weight: 100;
-        
       }
 
-      .button{
+      .button {
         display: inline-block;
         background: var(--tint-primary);
         border: 0;
@@ -105,28 +113,30 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         text-decoration: none;
       }
 
-      li{
+      li {
         line-height: 3rem;
       }
 
-      img, video, iron-image{
-          width: 100%;
-          height: auto;
+      img,
+      video,
+      iron-image {
+        width: 100%;
+        height: auto;
       }
-      
-      section{
+
+      section {
         padding: 6rem 1rem;
       }
 
-      .medium{
+      .medium {
         max-width: 45rem;
       }
 
-      .large{
+      .large {
         max-width: 60rem;
       }
 
-      .full{
+      .full {
         width: 100vw;
       }
 
@@ -142,135 +152,138 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         line-height: 4rem;
       }
 
-      .card{
+      .card {
         background-color: white;
         border-radius: 0.25rem;
         border: 1px solid #EAEAEB;
-       }
-
-      .card{
-       box-shadow: 0 0.625rem 0.625rem -0.5rem rgba(0,0,0,0.08);
-
       }
 
-      a > .card{
-          text-decoration: none;
+      .card {
+        box-shadow: 0 0.625rem 0.625rem -0.5rem rgba(0, 0, 0, 0.08);
       }
 
-      a > .card:hover{
-        box-shadow: 6px 18px 14px -8px rgba(0,0,0,0.12);
-               box-shadow: 8px 1px 18px -1px rgba(0, 0, 0, 0.04),
-                          11px  6px 16px 0px rgba(0, 0, 0, 0.06),
-                          0  8px 6px -5px rgba(0, 0, 0, 0.12);
+      a>.card {
+        text-decoration: none;
+      }
+
+      a>.card:hover {
+        box-shadow: 6px 18px 14px -8px rgba(0, 0, 0, 0.12);
+        box-shadow: 8px 1px 18px -1px rgba(0, 0, 0, 0.04),
+        11px 6px 16px 0px rgba(0, 0, 0, 0.06),
+        0 8px 6px -5px rgba(0, 0, 0, 0.12);
       }
 
 
-      .center{
+      .center {
         margin-left: auto;
-        margin-right: auto; 
+        margin-right: auto;
       }
 
-      .center-text{
+      .center-text {
         text-align: center;
       }
-      
-      paper-button{
+
+      paper-button {
         color: var(--tint-primary);
       }
 
       .fade {
-          animation: fadein 2s;
-          -moz-animation: fadein 2s; /* Firefox */
-          -webkit-animation: fadein 2s; /* Safari and Chrome */
-          -o-animation: fadein 2s; /* Opera */
-      }
-      @keyframes fadein {
-          from {
-              opacity:0;
-              -webkit-transform: translateY(1.625rem);
-          }
-          to {
-              opacity:1;
-               -webkit-transform: translateY(0);
-          }
-      }
-      @-moz-keyframes fadein { /* Firefox */
-          from {
-              opacity:0;
-          }
-          to {
-              opacity:1;
-          }
-      }
-      @-webkit-keyframes fadein { /* Safari and Chrome */
-          from {
-              opacity:0;
-               -webkit-transform: translateY(2.5rem);
-          }
-          to {
-              opacity:1;
-               -webkit-transform: translateY(0);
-          }
-      }
-      @-o-keyframes fadein { /* Opera */
-          from {
-              opacity:0;
-          }
-          to {
-              opacity: 1;
-          }
+        animation: fadein 2s;
+        -moz-animation: fadein 2s;
+        /* Firefox */
+        -webkit-animation: fadein 2s;
+        /* Safari and Chrome */
+        -o-animation: fadein 2s;
+        /* Opera */
       }
 
-      .gradient1{
+      @keyframes fadein {
+        from {
+          opacity: 0;
+          -webkit-transform: translateY(1.625rem);
+        }
+        to {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+        }
+      }
+
+      @-moz-keyframes fadein {
+        /* Firefox */
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @-webkit-keyframes fadein {
+        /* Safari and Chrome */
+        from {
+          opacity: 0;
+          -webkit-transform: translateY(2.5rem);
+        }
+        to {
+          opacity: 1;
+          -webkit-transform: translateY(0);
+        }
+      }
+
+      @-o-keyframes fadein {
+        /* Opera */
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .gradient1 {
         background: linear-gradient(141deg, #eaeaea 0%, #eaeaea 51%, #b6b6b6 75%);
       }
 
-      .button a{
+      .button a {
         text-decoration: none;
       }
 
-      .emoji{
+      .emoji {
         font-size: var(--txt-l);
       }
-
-
-
-    
     </style>
 
-        <style is="custom-style">
+    <style is="custom-style">
+      iron-image {
+        --iron-image-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-         iron-image {
-            --iron-image-width: 100%;
-            height: auto;
-            display: block;
-          }
+      paper-chip {
+        --paper-chip-background-color: var(--tint-light-grey);
+        line-height: 2.5rem;
+        display: block;
+        margin-bottom: 1em;
+      }
 
-        paper-chip{
-          --paper-chip-background-color: var(--tint-light-grey);
-          line-height: 2.5rem;
-          display: block;
-          margin-bottom: 1em;
-        }
+      .paper-chip-alt {
+        --paper-chip-background-color: var(--tint-very-light-grey);
+      }
 
-        .paper-chip-alt{
-         --paper-chip-background-color: var(--tint-very-light-grey);
-        }
-        
-        .chip-image{
-          float: left;
-          margin: 0 0.5rem 0 -0.75rem;
-          height: 2rem;
-          width: 2rem;
-          border-radius: 50%;
-          }
+      .chip-image {
+        float: left;
+        margin: 0 0.5rem 0 -0.75rem;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+      }
 
-        paper-tabs{
+      paper-tabs {
         --paper-tabs-selection-bar-color: var(--tint-black);
         text-transform: uppercase;
         color: var(--tint-very-dark-grey);
-        }
-
+      }
     </style>
 
   </template>

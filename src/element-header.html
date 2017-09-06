@@ -33,8 +33,13 @@
             }
 
             .avatar {
-                width: 12.5rem;
-                height: 12.5rem;
+                height: 14rem;
+                width: 14rem;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                border: 1px solid rgba(0, 0, 0, .1);
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
                 overflow: hidden;
                 background-color: lightgray;
                 border-radius: 50%;
@@ -44,7 +49,6 @@
                 display: flex;
                 justify-content: center;
             }
-
 
             .profile {
                 @apply --layout-horizontal;
@@ -97,6 +101,59 @@
                 -o-animation-duration: 2s;
                 animation-duration: 2s;
             }
+
+            .profile {
+                @apply --layout-horizontal;
+                @apply --layout-center;
+                height: 100vh;
+            }
+
+            .icons {
+                @apply --layout-horizontal;
+                @apply --layout-center;
+                height: 3rem;
+                width: 3rem;
+                border-radius: 50%;
+                background-color: var(--tint-dark-grey);
+                margin: 0 auto;
+                opacity: 0.6;
+            }
+
+            iron-icon {
+                color: white;
+                margin: 0 auto;
+            }
+
+            .arrow {
+                position: relative;
+                bottom: 0;
+            }
+
+            .bounce {
+                -webkit-animation-name: bounce;
+                -moz-animation-name: bounce;
+                -o-animation-name: bounce;
+                animation-name: bounce;
+            }
+
+            .animated {
+                -webkit-animation-fill-mode: both;
+                -moz-animation-fill-mode: both;
+                -ms-animation-fill-mode: both;
+                -o-animation-fill-mode: both;
+
+                animation-iteration-count: infinite;
+                -moz-animation-iteration-count: infinite;
+                -webkit-animation-iteration-count: infinite;
+
+                animation-fill-mode: both;
+                -webkit-animation-duration: 2s;
+                -moz-animation-duration: 2s;
+                -ms-animation-duration: 2s;
+                -o-animation-duration: 2s;
+                animation-duration: 2s;
+            }
+
 
 
             @-webkit-keyframes bounce {
@@ -174,6 +231,14 @@
             }
 
             @media screen and (min-width: 800px) {
+
+                video {
+                    width: 100vw;
+                    object-fit: cover;
+                    height: 100vh;
+                    position: absolute;
+                    z-index: -100;
+
                 video#bgvid {
                     position: absolute;
                     top: 50%;
