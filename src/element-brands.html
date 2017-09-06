@@ -1,79 +1,78 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/app-layout/app-layout.html">
-<link rel="import" href="../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
-<link rel="import" href="../bower_components/paper-chip/paper-chip.html">
+<link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+
+<link rel="import" href="../bower_components/lazy-image/lazy-image.html">
+
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="element-brands">
   <template>
 
-  <style include="shared-styles"></style>
-  <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style include="shared-styles"></style>
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
 
-  <custom-style>
-    <style is="custom-style">
+    <custom-style>
+      <style is="custom-style">
+        section {
+          background-color: var(--tint-very-light-grey);
+        }
 
-      section{
-        background-color: var(--tint-very-light-grey);
-      }
+        .grid {
+          display: grid;
+          grid-gap: 1rem;
+          grid-auto-rows: minmax(5rem, auto);
+        }
 
-      .grid{
-        display: grid;
-        grid-gap: 1rem;
-        grid-auto-rows: minmax(5rem, auto);
-      }   
+        @media (max-width: 599px) {
+          .grid {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
 
-      @media (max-width: 599px) {
-        .grid{
-          grid-template-columns: repeat(1, 1fr);
-        }   
-      }
+        @media (min-width: 600px) {
+          .grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
 
-      @media (min-width: 600px) {
-        .grid{
-          grid-template-columns: repeat(2, 1fr);
-        }   
-      }
+        @media (min-width: 900px) {
+          .grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+        }
 
-      @media (min-width: 900px) { 
-        .grid{
-          grid-template-columns: repeat(4, 1fr);
-        }   
-      }
+        .brand lazy-image,
+        .brand svg,
+        .size {
+          opacity: 0.6;
+          height: 1.5rem;
+          width: auto;
+          padding: 8px;
+        }
 
+        .brand {
+          @apply --layout-horizontal;
+          @apply --layout-center;
+          min-height: 5rem;
+          min-width: 100%;
+          justify-self: center;
+          align-items: center;
+        }
 
-      .brand img, .brand svg, .size{
-        opacity: 0.6;
-        height: 1.5rem;
-        width: auto;
-      }
+        h2 {
+          margin: 0;
+          padding: 0;
+        }
 
-      .brand{
-        @apply --layout-horizontal;
-        @apply --layout-center;
-        min-height: 5rem;
-        min-width: 100%;
-        justify-self: center;
-        align-items: center;
-      }
+        .center {
+          margin-top: 6px;
+        }
+      </style>
+    </custom-style>
 
-      h2{
-        margin: 0;
-        padding: 0;
-      }
-
-      .center{
-        margin-top: 6px;
-      }
-
-    </style>
-  </custom-style>
-  
-    <section> 
+    <section>
 
       <div class="large center center-text">
         <h2>Clients</h2>
@@ -82,111 +81,15 @@
 
       <div class="large center">
         <div class="grid">
-          
-          <a href="https://www.vg.no/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                  <svg class="logo-red" viewBox="0 0 495 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                          <g id="Imported-Layers" transform="translate(1.000000, 1.000000)">
-                              <path d="M-0.012,-0.5 L493.703,-0.5 L493.703,113.199 L-0.012,113.199 L-0.012,-0.5 Z" id="Fill-1" fill="#000000"></path>
-                              <path d="M429.86,99.098 L275.461,99.098 C275.461,99.098 256.76,100.163 256.76,83.45 L256.76,32.242 C256.76,12.335 275.461,13.546 275.461,13.546 L431.453,13.546 C450.58,13.546 450.243,32.346 450.243,32.346 L450.243,35.482 L389.287,35.482 L389.287,32.057 C389.287,32.057 388.565,23.363 378.159,23.363 L330.931,23.363 C318.087,23.363 318.432,34.036 318.432,34.036 L318.432,77.223 C318.432,77.223 317,89.496 330.086,89.496 L377.704,89.496 C388.494,89.496 389.539,78.878 389.539,78.878 L389.539,62.758 L354.861,62.758 L354.861,52.822 L450.213,52.822 L450.213,80.975 C450.213,80.975 450.213,99.098 429.86,99.098" id="Fill-2" fill="#FFFFFF"></path>
-                              <path d="M93.868,99.204 L20.459,13.494 L96.131,13.494 L134.388,71.365 L175.662,13.494 L250.464,13.494 L176.154,99.204 L93.868,99.204" id="Fill-3" fill="#FFFFFF"></path>
-                          </g>
-                      </g>
-                  </svg>
+          <template is="dom-repeat" items="[[brands]]">
+            <a href="[[item.url]]" target="_blank">
+              <div class="card brand">
+                <div class="center">
+                  <lazy-image src="[[item.img]]" alt="[[item.alt]]"></lazy-image>
                 </div>
-            </div>
-          </a>
-
-          <a href="https://www.finn.no/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <svg focusable="false" class="hide-lt768 mrm" width="92" height="32" viewBox="0 0 184 64"><title>FINN.no</title><path fill="#000000" fill-opacity="0.6" d="M179.8 58V6c0-1-.8-1.9-1.9-1.9H66c-1 0-1.9.8-1.9 1.9v53.8H178c1 0 1.8-.8 1.8-1.8"></path><path fill="#000000" d="M22.5 4.2H6C5 4.2 4.2 5 4.2 6v52c0 1 .8 1.9 1.9 1.9H60V41.5C59.9 20.9 43.2 4.2 22.5 4.2"></path><path fill="#fff" d="M178 0H66c-3.3 0-6 2.7-6 6v17.4C53.2 9.6 38.9 0 22.5 0H6C2.7 0 0 2.7 0 6v52c0 3.3 2.7 6 6 6h172c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6m1.8 58c0 1-.8 1.9-1.9 1.9H64.1V6c0-1 .8-1.9 1.9-1.9h112c1 0 1.9.8 1.9 1.9v52zM4.2 58V6C4.2 5 5 4.2 6 4.2h16.5c20.6 0 37.4 16.8 37.4 37.4v18.3H6c-1-.1-1.8-.9-1.8-1.9"></path><path fill="#fff" d="M110.1 21.1h-4.2c-.7 0-1.2.5-1.2 1.2v19.3c0 .7.5 1.2 1.2 1.2h4.2c.7 0 1.2-.5 1.2-1.2V22.3c0-.6-.6-1.2-1.2-1.2M98.1 21.1H83c-.7 0-1.2.5-1.2 1.2v19.3c0 .7.5 1.2 1.2 1.2h4.2c.7 0 1.2-.5 1.2-1.2v-4h7.7c.7 0 1.2-.5 1.2-1.2v-3.2c0-.7-.5-1.2-1.2-1.2h-7.7v-4.9h9.7c.7 0 1.2-.5 1.2-1.2v-3.7c0-.5-.6-1.1-1.2-1.1M160.9 21.1h-4.2c-.7 0-1.2.5-1.2 1.2v9.5l-6.6-10c-.3-.4-.8-.7-1.3-.7h-3.2c-.7 0-1.2.5-1.2 1.2v19.3c0 .7.5 1.2 1.2 1.2h4.2c.7 0 1.2-.5 1.2-1.2v-9.4l6.5 9.8c.3.4.8.7 1.3.7h3.4c.7 0 1.2-.5 1.2-1.2V22.3c-.1-.6-.6-1.2-1.3-1.2M135.5 21.1h-4.2c-.7 0-1.2.5-1.2 1.2v9.5l-6.6-10c-.3-.4-.8-.7-1.3-.7H119c-.7 0-1.2.5-1.2 1.2v19.3c0 .7.5 1.2 1.2 1.2h4.2c.7 0 1.2-.5 1.2-1.2v-9.4l6.5 9.8c.3.4.8.7 1.3.7h3.4c.7 0 1.2-.5 1.2-1.2V22.3c-.1-.6-.6-1.2-1.3-1.2"></path></svg>
               </div>
-            </div>
-          </a>
-
-          <a href="https://www.aftenposten.no/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/aftenposten.svg" alt="Aftenposten">
-              </div>
-            </div>
-          </a>
-
-          <a href="https://www.aftonbladet.se/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/aftonbladet.svg" alt="Aftonbladet">
-              </div>
-            </div>
-          </a>
-
-          <a href="https://www.svd.se/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/svd.svg" alt="Svenska Dagbladet" style="height: 1.25rem;">
-              </div>
-            </div>
-          </a>
-
-          <a href="https://www.blocket.se/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/blocket.png" alt="Blocket">
-              </div>
-            </div>  
-          </a>        
-
-          <a href="https://www.leboncoin.fr/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/leboncoin.svg" alt="Leboncoin">
-              </div>
-            </div>    
-          </a>     
-
-          <a href="https://www.bytbil.se/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/bytbil.png" alt="Bytbil.se" style="height: 2.5rem">
-              </div>
-            </div> 
-          </a>
-
-          <a href="https://www.willhaben.at/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/willhaben.svg" alt="Willhaben.at" style="height: 2.5rem">
-              </div>
-            </div>       
-          </a>  
-
-          <a href="https://www.coches.net/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/coches.svg" alt="Coches.net">
-              </div>
-            </div> 
-          </a>
-
-          <a href="https://www.norsk-tipping.no/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/nt2.svg" alt="Norsk Tipping">
-              </div>
-            </div>  
-          </a>
-
-          <a href="https://www.hivolca.no/" target="_blank">
-            <div class="card brand">
-              <div class="center">
-                <img src="images/brands/vuc.png" alt="Volda University College" style="height: 1.25rem;">
-              </div>
-            </div> 
-          </a>
-
+            </a>
+          </template>
         </div>
 
       </div>
@@ -196,12 +99,71 @@
   </template>
 
   <script>
+    class ElementBrands extends Polymer.Element {
+      static get is() {
+        return 'element-brands';
+      }
 
-    Polymer({
-    is: "element-brands",
-
-  });
-  
+      static get properties() {
+        return {
+          brands: {
+            type: Array,
+            value: () => {
+              return [{
+                "url": "https://www.vg.no/",
+                "img": "images/brands/vg.svg",
+                "alt": "VG"
+              }, {
+                "url": "https://www.finn.no/",
+                "img": "images/brands/finn.svg",
+                "alt": "Finn"
+              }, {
+                "url": "https://www.aftenposten.no/",
+                "img": "images/brands/aftenposten.svg",
+                "alt": "Aftenposten"
+              }, {
+                "url": "https://www.aftonbladet.se/",
+                "img": "images/brands/aftonbladet.svg",
+                "alt": "Aftonbladet"
+              }, {
+                "url": "https://www.svd.se/",
+                "img": "images/brands/svd.svg",
+                "alt": "Svenska Dagbladet"
+              }, {
+                "url": "https://www.blocket.se/",
+                "img": "images/brands/blocket.png",
+                "alt": "Blocket"
+              }, {
+                "url": "https://www.leboncoin.fr",
+                "img": "images/brands/leboncoin.svg",
+                "alt": "Leboncoin"
+              }, {
+                "url": "https://www.bytbil.se/",
+                "img": "images/brands/bytbil.png",
+                "alt": "Bytbil.se"
+              }, {
+                "url": "https://www.willhaben.at/",
+                "img": "images/brands/willhaben.svg",
+                "alt": "Willhaben.at"
+              }, {
+                "url": "https://www.coches.net/",
+                "img": "images/brands/coches.svg",
+                "alt": "Coches.net"
+              }, {
+                "url": "https://www.norsk-tipping.no/",
+                "img": "images/brands/nt2.svg",
+                "alt": "Norsk Tipping"
+              }, {
+                "url": "https://www.hivolca.no/",
+                "img": "images/brands/vuc.png",
+                "alt": "Volda University College"
+              }]
+            }
+          }
+        }
+      }
+    }
+    window.customElements.define(ElementBrands.is, ElementBrands);
   </script>
 
 </dom-module>

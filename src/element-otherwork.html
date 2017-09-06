@@ -1,6 +1,8 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/lazy-image/lazy-image.html">
+
 
 <link rel="import" href="shared-styles.html">
 
@@ -12,51 +14,49 @@
     <style include="shared-styles"></style>
 
     <style>
-
-      section{
+      section {
         background-color: var(--tint-very-light-grey);
         padding: 6rem 0;
       }
 
-      .grid{
+      .grid {
         display: grid;
         grid-gap: 1rem;
         grid-auto-rows: minmax(5rem, auto);
-      }   
+      }
 
       @media (max-width: 599px) {
-        .grid{
+        .grid {
           grid-template-columns: repeat(1, 1fr);
-        }   
+        }
       }
 
       @media (min-width: 600px) {
-        .grid{
+        .grid {
           grid-template-columns: repeat(2, 1fr);
-        }   
+        }
       }
 
-      @media (min-width: 900px) { 
-        .grid{
+      @media (min-width: 900px) {
+        .grid {
           grid-template-columns: repeat(3, 1fr);
-        }   
+        }
       }
 
 
-      .header { 
-        font-weight: bold; 
+      .header {
+        font-weight: bold;
         text-transform: uppercase;
       }
 
-      .card-content{
+      .card-content {
         padding: 0.5rem 1rem 1rem 1rem;
       }
 
-      a{
+      a {
         color: var(--tint-very-dark-grey);
         text-decoration: none;
       }
-
     </style>
 
 
@@ -75,7 +75,7 @@
             <a href="[[item.url]]">
               <div class="card">
                 <div class="card-img">
-                  <img src="[[item.imagePath]]" alt="[[item.alt]]">
+                  <lazy-image fade src="[[item.imagePath]]" alt="[[item.alt]]"></lazy-image>
                 </div>
                 <div class="card-content">
                   <div class="header">[[item.title]]</div>
@@ -94,7 +94,6 @@
   </template>
 
   <script>
-
     class ElementOtherwork extends Polymer.Element {
       static get is() {
         return 'element-otherwork';

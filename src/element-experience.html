@@ -1,9 +1,5 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/app-layout/app-layout.html">
-<link rel="import" href="../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
-<link rel="import" href="../bower_components/paper-chip/paper-chip.html">
+<link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="shared-styles.html">
@@ -11,86 +7,83 @@
 <dom-module id="element-experience">
   <template>
 
-  <style include="shared-styles"></style>
-  <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style include="shared-styles"></style>
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+
+    <custom-style>
+      <style is="custom-style">
+        section {
+          background-color: var(--tint-white);
+          padding: 6rem 0;
+        }
+
+        paper-chip {
+          display: inline;
+        }
+
+        h2 {
+          margin-bottom: 2rem;
+        }
+
+        h3,
+        h4 {
+          font-size: 1.125rem;
+          margin: 0;
+          line-height: 1.75rem;
+        }
+
+        h3 {
+          font-size: var(--txt-m);
+          font-weight: bold;
+        }
+
+        h4 {
+          font-weight: normal;
+          text-transform: none;
+        }
+
+        .grid {
+          display: grid;
+          grid-gap: 1rem;
+          grid-auto-rows: minmax(5rem, auto);
+        }
+
+        @media (max-width: 599px) {
+          .grid {
+            grid-template-columns: repeat(1, 1fr);
+          }
+        }
+
+        @media (min-width: 600px) {
+          .grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+
+        @media (min-width: 900px) {
+          .grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
+        }
 
 
-  <custom-style>
-    <style is="custom-style">
+        .timespan {
+          color: var(--tint-dark-grey);
+          font-weight: 100;
+        }
 
-      section{
-        background-color: var(--tint-white);
-        padding: 6rem 0;
-      }
+        .location {
+          color: var(--tint-dark-grey);
+          font-weight: 100;
+        }
 
-      paper-chip{
-        display: inline;
-      } 
+        .card-content {
+          padding: 1rem;
+        }
+      </style>
+    </custom-style>
 
-      h2{
-        margin-bottom: 2rem;
-      }
-
-      h3, h4{
-        font-size: 1.125rem
-        margin: 0;
-        line-height: 1.75rem;
-      }
-
-      h3{
-        font-size: var(--txt-m);
-        font-weight: bold;
-      }
-
-      h4{
-        font-weight: normal;
-        text-transform: none;
-      }
-
-      .grid{
-        display: grid;
-        grid-gap: 1rem;
-        grid-auto-rows: minmax(5rem, auto);
-      }   
-
-      @media (max-width: 599px) {
-        .grid{
-          grid-template-columns: repeat(1, 1fr);
-        }   
-      }
-
-      @media (min-width: 600px) {
-        .grid{
-          grid-template-columns: repeat(2, 1fr);
-        }   
-      }
-
-      @media (min-width: 900px) { 
-        .grid{
-          grid-template-columns: repeat(3, 1fr);
-        }   
-      }
-
-
-      .timespan{
-        color: var(--tint-dark-grey);
-        font-weight: 100;
-      }
-
-      .location{
-        color: var(--tint-dark-grey);
-        font-weight: 100;
-      } 
-
-      .card-content{
-        padding: 1rem;
-      }
-
-    </style>
-  </custom-style>
-
-  
-    <section style="min-height: 10em;" class="tint-white"> 
+    <section style="min-height: 10em;" class="tint-white">
       <div style="margin: 0 auto;" class="large center ">
 
         <div class="center-text">
@@ -100,64 +93,17 @@
         <h2 class="center-text">Relevant work experience</h2>  
 
         <div class="grid">
-
+          <template is="dom-repeat" items="[[xps]]">
               <div class="card">
                 <div class="card-content">
-                  <h3 class="role">Product Designer</h3>
-                  <h4 class="company">Schibsted Media Group</h4>
-                  <h4 class="timespan">May 2016 – Present</h4>
-                  <h4 class="location">Barcelona, Spain</h4>
+                  <h3 class="role">[[item.role]]</h3>
+                  <h4 class="company">[[item.company]]</h4>
+                  <h4 class="timespan">[[item.timespan]]</h4>
+                  <h4 class="location">[[item.location]]</h4>
                 </div>
               </div>
-
-              <div class="card">
-                <div class="card-content">
-                  <h3 class="role">UX Designer</h3>
-                  <h4 class="company">Schibsted Media Group</h4>
-                  <h4 class="timespan">Sep 2015 - May 2016 · 9 mos</h4>
-                  <h4 class="location">Oslo, Norway</h4>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-content">
-                  <h3 class="role">Product Manager Web</h3>
-                  <h4 class="company">Norsk Tipping</h4>
-                  <h4 class="timespan">Sep 2014 - Sep 2015 · 1 yr 1 mo</h4>
-                  <h4 class="location">Hamar, Norway</h4>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-content">
-                  <h3 class="role">Lead Designer</h3>
-                  <h4 class="company">Norsk Tipping</h4>
-                  <h4 class="timespan">Sep 2013 - Sep 2014 · 1 yr 1 mo</h4>
-                  <h4 class="location">Hamar, Norway</h4>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-content">
-                  <h3 class="role">Interaction Designer</h3>
-                  <h4 class="company">Norsk Tipping</h4>
-                  <h4 class="timespan">Sep 2012 - Sep 2013 · 1 yr</h4>
-                  <h4 class="location">Hamar, Norway</h4>
-                </div>
-              </div>
-
-              <div class="card">
-                <div class="card-content">
-                  <h3 class="role">Webdesigner</h3>
-                  <h4 class="company">Volda University College</h4>
-                  <h4 class="timespan">Mar 2008 - Oct 2011 · 4 yrs</h4>
-                  <h4 class="location">Volda, Norway</h4>
-                </div>
-              </div>
-
-
+          </template>
         </div>
-
 
         <div class="center center-text" style="margin-top: 2rem;">
           <a href="https://www.linkedin.com/in/iameirik/" class="button">See more on LinkedIn</a>
@@ -165,19 +111,67 @@
 
       </div>
 
-
-
-
     </section>
 
   </template>
 
   <script>
 
-    Polymer({
-    is: "element-experience",
+    class ElementExperience extends Polymer.Element {
+        static get is() {
+          return 'element-experience';
+        }
 
-  });
+        static get properties() {
+          return {
+            xps: {
+              type: Array,
+              value: () => {
+                return [
+                  {
+                    "role": "Product Designer",
+                    "company": "Schibsted Media Group",
+                    "timespan": "May 2016 – Present",
+                    "location": "Barcelona, Spain"
+                  },
+                  {
+                    "role": "UX Designer",
+                    "company": "Schibsted Media Group",
+                    "timespan": "Sep 2015 - May 2016 · 9 mos",
+                    "location": "Oslo, Norway"
+                  },
+                  {
+                    "role": "Product Manager Web",
+                    "company": "Norsk Tipping",
+                    "timespan": "Sep 2014 - Sep 2015 · 1 yr 1 mo",
+                    "location": "Hamar, Norway"
+                  },
+                  {
+                    "role": "Lead Designer",
+                    "company": "Norsk Tipping",
+                    "timespan": "Sep 2013 - Sep 2014 · 1 yr 1 mo",
+                    "location": "Hamar, Norway"
+                  },
+                  {
+                    "role": "Interaction Designer",
+                    "company": "Norsk Tipping",
+                    "timespan": "Sep 2012 - Sep 2013 · 1 yr",
+                    "location": "Hamar, Norway"
+                  },
+                  {
+                    "role": "Webdesigner",
+                    "company": "Volda University College",
+                    "timespan": "Mar 2008 - Oct 2011 · 4 yrs",
+                    "location": "Volda, Norway"
+                  }
+                ]
+              }
+            }
+          }
+        }
+    }
+
+    window.customElements.define(ElementExperience.is, ElementExperience);
   
   </script>
 
