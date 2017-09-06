@@ -1,28 +1,24 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/app-layout/app-layout.html">
-<link rel="import" href="../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
-<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
 <link rel="import" href="../bower_components/paper-chip/paper-chip.html">
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="element-tools">
   <template>
 
-  <style include="shared-styles"></style>
-  <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
-  <style>
+    <style include="shared-styles"></style>
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+    <style>
+      section {
+        background-color: var(--tint-white);
+      }
 
-    section{
-      background-color: var(--tint-white);
-    }
+      paper-chip {
+        display: inline;
+      }
+    </style>
 
-    paper-chip{
-      display: inline;
-    }
-  </style>
-  
-    <section style="min-height: 10rem;" class="tint-white"> 
+    <section style="min-height: 10rem;" class="tint-white">
       <div class="medium center center-text">
         <div>
           <span class="emoji">⚒️<span>
@@ -30,46 +26,13 @@
         <h2>Tools</h2>
         <p>Tools come and go but these are the ones I use at the moment</p>
 
-        <paper-chip no-hover label="Sketch">
-          <img class="chip-image" slot="avatar" src="images/tools/sketch.png" alt="Sketch">
-        </paper-chip>
-        <paper-chip no-hover label="Invision">
-          <img class="chip-image" slot="avatar" src="images/tools/invision.png" alt="Invision">
-        </paper-chip>
-        <paper-chip no-hover label="Zeplin">
-          <img class="chip-image" slot="avatar" src="images/tools/zeplin.png" alt="Zeplin">
-        </paper-chip>
-        <paper-chip no-hover label="Origami">
-          <img class="chip-image" slot="avatar" src="images/tools/origami.png" alt="Origami">
-        </paper-chip>
-        <paper-chip no-hover label="Keynote">
-          <img class="chip-image" slot="avatar" src="images/tools/keynote.png" alt="Keynote">
-        </paper-chip>
-        <paper-chip no-hover label="Sublime">
-          <img class="chip-image" slot="avatar" src="images/tools/sublime.png" alt="Sublime">
-        </paper-chip>
-        <paper-chip no-hover label="Slack">
-          <img class="chip-image" slot="avatar" src="images/tools/slack.png" alt="Slack">
-        </paper-chip>
-        <paper-chip no-hover label="Principle">
-          <img class="chip-image" slot="avatar" src="images/tools/principle.png" alt="Principle">
-        </paper-chip>
-        <paper-chip no-hover label="Hotjar">
-          <img class="chip-image" slot="avatar" src="images/tools/hotjar.png" alt="Hotjar">
-        </paper-chip>
-        <paper-chip no-hover label="Google Analytics">
-          <img class="chip-image" slot="avatar" src="images/tools/ga.png" alt="Google Analytics">
-        </paper-chip>
-        <paper-chip no-hover label="Optimizely">
-          <img class="chip-image" slot="avatar" src="images/tools/optimizely.png" alt="Optimizely">
-        </paper-chip>
-        <paper-chip no-hover label="Google Tag Manager">
-          <img class="chip-image" slot="avatar" src="images/tools/gtm.png" alt="Google Tag Manager">
-        </paper-chip>
-        <paper-chip no-hover label="Mailchimp">
-          <img class="chip-image" slot="avatar" src="images/tools/mailchimp.png" alt="Mailchimp">
-        </paper-chip>
-
+        
+        <template is="dom-repeat" items="[[tools]]"> 
+          <paper-chip no-hover label="[[item.label]]">
+            <img class="chip-image" slot="avatar" src="[[item.img]]" alt="Sketch">
+          </paper-chip>
+        </template>
+ 
       </div>
     </section>
 
@@ -77,11 +40,77 @@
 
   <script>
 
-    Polymer({
-    is: "element-tools",
+     class ElementTools extends Polymer.Element {
+      static get is() {
+        return 'element-tools';
+      }
 
-  });
-  
+      static get properties() {
+        return {
+          tools: { 
+            type: Array,
+            value: () => {
+              return [
+                {
+                  "label": "Sketch",
+                  "img": "images/tools/sketch.png"
+                },
+                {
+                  "label": "Invision",
+                  "img": "images/tools/invision.png"
+                },
+                {
+                  "label": "Zeplin",
+                  "img": "images/tools/zeplin.png"
+                }, 
+                {
+                  "label": "Origami",
+                  "img": "images/tools/origami.png"
+                }, 
+                {
+                  "label": "Keynote",
+                  "img": "images/tools/keynote.png"
+                }, 
+                {
+                  "label": "Sublime",
+                  "img": "images/tools/sublime.png"
+                }, 
+                {
+                  "label": "Slack",
+                  "img": "images/tools/slack.png"
+                }, 
+                {
+                  "label": "Principle",
+                  "img": "images/tools/principle.png"
+                }, 
+                {
+                  "label": "Hotjar",
+                  "img": "images/tools/hotjar.png"
+                },
+                {
+                  "label": "Google Analytics",
+                  "img": "images/tools/ga.png"
+                },
+                {
+                  "label": "Optimizely",
+                  "img": "images/tools/optimizely.png"
+                }, 
+                {
+                  "label": "Google Tag Manager",
+                  "img": "images/tools/gtm.png"
+                }, 
+                {
+                  "label": "Mailchimp",
+                  "img": "images/tools/mailchimp.png"
+                }
+              ]
+            }
+          }
+        }
+      }
+     }
+
+   window.customElements.define(ElementTools.is, ElementTools);
   </script>
 
 </dom-module>
