@@ -65,7 +65,7 @@
     <div class="grid">
       <template is="dom-repeat" items="{{_items}}">
         <a class="item" target="_blank" href="[[item.link]]">
-          <lazy-image fade src="[[item.images.standard_resolution.url]]"></lazy-image>
+          <lazy-image sizing="cover" fade src="[[item.images.standard_resolution.url]]"></lazy-image>
         </a>
       </template>
     </div>
