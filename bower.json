@@ -16,7 +16,8 @@
     "app-layout": "PolymerElements/app-layout#^2.0.1",
     "paper-card": "PolymerElements/paper-card#^2.0.0",
     "iron-pages": "PolymerElements/iron-pages#^2.0.0",
-    "lazy-image": "^0.0.5"
+    "lazy-image": "^0.0.5",
+    "instagram-feed": "DinethH/instagram-feed#^0.0.3"
   },
   "devDependencies": {},
   "private": true,

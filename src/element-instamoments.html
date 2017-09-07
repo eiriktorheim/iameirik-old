@@ -1,11 +1,8 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
-<link rel="import" href="../bower_components/paper-button/paper-button.html">
-<link rel="import" href="../bower_components/iron-image/iron-image.html">
-<link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/instagram-feed/instagram-feed.html">
 <link rel="import" href="shared-styles.html">
-<link rel="import" href="instagram-feed.html">
 
 
 <dom-module id="element-instamoments">
@@ -22,13 +19,14 @@
           margin: 0 auto;
         }
       }
-      section{
+
+      section {
         background-color: var(--tint-very-light-grey);
       }
     </style>
 
     <section class="tint-very-light-grey">
-    
+
       <instagram-feed access-token="3928748.1722d26.5ba1f788eb9c49e697993cc2785387ed" url="https://www.instagram.com/eirik.torheim/">
         <span>Photos</span>
         <h2>Instagram Moments</h2>
@@ -38,14 +36,11 @@
 
   </template>
 
-<script>
+  <script>
+    Polymer({
+      is: 'element-instamoments',
 
-  Polymer({
-    is: 'element-instamoments',
-
-  });
-  
-</script>
+    });
+  </script>
 
 </dom-module>
-
