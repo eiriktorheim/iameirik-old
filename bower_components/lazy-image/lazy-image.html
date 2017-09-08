@@ -67,13 +67,19 @@
           fade: {
             type: Boolean,
             value: false
+          },
+
+          sizing: {
+            type: String,
+            value: 'contain'
           }
         };
       }
 
       static get observers() {
         return [
-          '_placeholderChanged(placeholder)'
+          '_placeholderChanged(placeholder)',
+          '_updateSizing(sizing)'
         ]
       }
 
@@ -120,6 +126,11 @@
         if (placeholder) {
           this.style.backgroundImage = `url(${placeholder})`;
         }
+      }
+
+      _updateSizing(sizing) {
+        const imgEl = Polymer.dom(this.root).querySelector('img');
+        imgEl.style.objectFit = sizing;
       }
     }
 
