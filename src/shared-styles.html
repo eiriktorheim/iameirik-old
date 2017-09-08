@@ -34,7 +34,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --txt-s: 1rem;
         --txt-xs: 0.875rem;
         --txt-xxs: 0.75rem;
+
+        --width-small:35rem;
+        --width-medium:40rem;
+        --width-large:60rem;
+        --width-full:100vw;
       }
+
 
       body {
         background-color: var(--tint-light-grey);
@@ -128,16 +134,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding: 6rem 1rem;
       }
 
+
+      .small {
+        max-width: var(--width-small);
+      }
+
       .medium {
-        max-width: 45rem;
+        max-width: var(--width-medium);
       }
 
       .large {
-        max-width: 60rem;
+        max-width: var(--width-large);
       }
 
       .full {
-        width: 100vw;
+        width: var(--width-full);
       }
 
       .circle {
@@ -179,8 +190,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         margin-right: auto;
       }
 
-      .center-text {
+      .center-text, .center-text-desktop {
         text-align: center;
+      }
+
+      @media (max-width: 599px) {
+        .center-text-desktop {
+          text-align: left;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
       }
 
       paper-button {

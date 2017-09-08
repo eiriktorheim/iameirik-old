@@ -1,0 +1,65 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="element-skills3">
+  <template>
+
+    <style include="shared-styles"></style>
+    <style is="custom-style" include="iron-flex iron-flex-alignment"></style>
+
+
+    <custom-style>
+      <style is="custom-style">
+        section {
+          background-color: var(--tint-very-light-grey);
+        }
+
+        .chips {
+          @apply --layout-self-start;
+          padding-top: 0rem;
+        }
+
+        h3 {
+          margin: 0;
+        }
+
+      </style>
+      
+    </custom-style>
+
+
+    <section style="min-height: 10rem;" class="tint-white">
+      <div style="margin: 0 auto;" class="large center center-text">
+        <h2>My skills</h2>
+      </div>
+
+      <div class="large skills center">
+        <div class="horizontal layout">
+
+            <div class="skill medium center center-text">
+              <h3>Product Design</h3>
+                <p class="center-text-desktop">I have an education in Graphic Design and 9 years of experience in digital design in roles as Webdesigner, Information Architecht, Interaction Designer, User Experience Designer and now Product Designer.</p>
+            </div>
+        </div>
+
+      </div>
+
+
+    </section>
+
+  </template>
+
+  <script>
+    class ElementSkills3 extends Polymer.Element {
+      static get is() {
+        return 'element-skills3';
+      }
+    }
+
+    window.customElements.define(ElementSkills3.is, ElementSkills3);
+  </script>
+
+</dom-module>
