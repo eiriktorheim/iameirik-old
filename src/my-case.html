@@ -24,7 +24,7 @@
     <app-route route="[[route]]" pattern="/:case/:caseName" data="{{routeData}}"></app-route>
 
     <template is="dom-repeat" items="{{cases}}" filter="{{_filterCases(routeData.caseName)}}" observe="routeData.caseName">
-      <element-case-page case="[[item]]"> </element-case-page>
+      <element-case-page project="[[item]]"> </element-case-page>
     </template>
 
 
