@@ -44,12 +44,10 @@
 
 
       .card-content {
-        @apply --layout-vertical;
-        position: relative;
-        height: 14.812rem;
+        @apply --layout-vertical;      
         font-weight: 400;
         font-size: 1.5rem;
-        padding: 1.875rem 1.562rem 1.562rem 1.562rem;
+        padding: 1.5rem;
       }
 
       lazy-image {
@@ -81,13 +79,24 @@
         text-decoration: none;
       }
 
-      .flex-end {
-        display: flex;
-        align-items: flex-end;
-        height: 100%;
-        justify-content: center;
-        padding-bottom: 8px;
+      h3, p{
+        line-height: 1.75rem;
       }
+
+      h3{
+        font-size: var(--txt-ml);
+        margin: 0;
+      }
+
+      p{
+        font-size: var(--txt-xs);
+        color: var(--tint-medium-grey);
+      }
+
+      .cta{
+
+      }
+
     </style>
 
 
@@ -111,7 +120,10 @@
               <div class="flexchild-vertical">
                 <h3 class="title">[[item.title]]&nbsp;</h3>
               </div>
-              <div class="flex-end">
+              <div>
+                <p>[[item.description]]</p>
+              </div>
+              <div class="cta">
                 <a href="[[item.url]]" class="button">View case</a>
               </div>
             </div>
@@ -140,17 +152,20 @@
                 "role": "UX/UI Designer",
                 "title": "Schibsted Media Platform",
                 "img": "../images/cases/case1.jpg",
-                "url": "/case/schibsted-media-platform"
+                "url": "/case/schibsted-media-platform",
+                "description": "Designing a cohesive media platform where the products belong together in one product family and creation suite."
               }, {
                 "role": "Team Lead Design",
                 "title": "Redesigning Norsk-tipping.no",
                 "img": "../images/cases/case2.jpg",
-                "url": "/case/redesigning-norsk-tipping"
+                "url": "/case/redesigning-norsk-tipping",
+                "description": "How we redesigned one of the biggest websites in Norway and created a cohesive user experience"
               }, {
                 "role": "Design Lead",
                 "title": "Marketplaces Professionals - Car dealers",
                 "img": "../images/cases/case3.jpg",
-                "url": "/"
+                "url": "/",
+                "description": "How insights and data can empower car dealers to sell their cars"
               }]
             }
           }
