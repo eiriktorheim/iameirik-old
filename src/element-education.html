@@ -26,6 +26,7 @@
           display: grid;
           grid-gap: 1rem;
           grid-auto-rows: minmax(5rem, auto);
+          margin-top: 1.5rem;
         }
 
         @media (max-width: 599px) {
@@ -61,6 +62,14 @@
         h3 {
           line-height: 2.75rem;
         }
+
+        h4{
+          font-weight: 100;
+          font-size: var(--txt-m)
+        }
+        .location{
+          color: var(--tint-medium-grey);
+        }
       </style>
 
     </custom-style>
@@ -73,6 +82,7 @@
           <span class="emoji">🎓<span>
         </div>
         <h2>Education</h2>
+        <p>Two bachelor degrees in four years of study</p>
       </div>
 
       <div class="large grid center">
@@ -82,7 +92,7 @@
               <h5>[[item.period]]</h5>
               <h3>[[item.level]]</h3>
               <h4>[[item.institute]]</h4>
-              <h4>[[item.location]]</h4>
+              <h4 class="location">[[item.location]]</h4>
             </div>
           </div>
         </template>

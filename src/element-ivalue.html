@@ -24,18 +24,53 @@
       paper-chip{
         display: inline;
       } 
+
+      .grid {
+        display: grid;
+        grid-gap: 1rem;
+        grid-auto-rows: minmax(5rem, auto);
+        margin-top: 1.5rem;
+      }
+
+      @media (max-width: 599px) {
+        .grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media (min-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 900px) {
+        .grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
     </style>
+
   </custom-style>
 
   
     <section style="min-height: 10rem;" class="tint-white"> 
       <div style="margin: 0 auto;" class="medium center center-text">
         <h2>What I like</h2>
-        <p>Imporant to me</p>
-        <p>Kitesurfing</p>
-        <p>Nature</p>
-        <p>Friends and family</p>
-        <p>Coffee</p>
+        <div class="grid">
+          <div class="card">
+            <p>Kitesurfing</p>
+          </div>
+          <div class="card">
+            <p>Nature</p>
+          </div>
+          <div class="card">
+            <p>Friends and family</p>
+          </div>
+          <div class="card">
+            <p>Coffee</p>
+          </div>
+        </div>
       </div>
     </section>
 
