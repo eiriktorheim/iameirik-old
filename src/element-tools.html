@@ -16,24 +16,85 @@
       paper-chip {
         display: inline;
       }
+
+      .grid {
+        display: grid;
+        grid-gap: 1rem;
+        grid-auto-rows: minmax(5rem, auto);
+      }
+
+      @media (max-width: 599px) {
+        .grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      @media (min-width: 600px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (min-width: 900px) {
+        .grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      paper-chip{
+        display: block;
+        margin: 0;
+      }
+
+      h4{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+
     </style>
 
     <section style="min-height: 10rem;" class="tint-white">
-      <div class="medium center center-text">
+      <div class="large center center-text">
         <div>
           <span class="emoji">⚒️<span>
         </div>
         <h2>Tools</h2>
         <p>Tools come and go but these are the ones I use at the moment</p>
-
-        
-        <template is="dom-repeat" items="[[tools]]"> 
-          <paper-chip no-hover label="[[item.label]]">
-            <img class="chip-image" slot="avatar" src="[[item.img]]" alt="[[item.label]]">
-          </paper-chip>
-        </template>
- 
       </div>
+
+      <div class="large center">
+
+        <div class="grid center-text">
+        
+          <div>
+            <h4>Design</h4>
+            <template is="dom-repeat" items="[[tools1]]"> 
+              <paper-chip no-hover label="[[item.label]]">
+                <img class="chip-image" slot="avatar" src="[[item.img]]" alt="[[item.label]]">
+              </paper-chip>
+            </template>
+          </div>
+
+          <div>
+            <h4>Insight/Analytics</h4>
+             <template is="dom-repeat" items="[[tools2]]"> 
+              <paper-chip no-hover label="[[item.label]]">
+                <img class="chip-image" slot="avatar" src="[[item.img]]" alt="[[item.label]]">
+              </paper-chip>
+            </template>
+          </div>
+
+          <div>
+            <h4>Code</h4>
+            <template is="dom-repeat" items="[[tools3]]"> 
+              <paper-chip no-hover label="[[item.label]]">
+                <img class="chip-image" slot="avatar" src="[[item.img]]" alt="[[item.label]]">
+              </paper-chip>
+            </template>
+          </div>
+
+      </div>
+
     </section>
 
   </template>
@@ -47,7 +108,7 @@
 
       static get properties() {
         return {
-          tools: { 
+          tools1: { 
             type: Array,
             value: () => {
               return [
@@ -70,26 +131,25 @@
                 {
                   "label": "Keynote",
                   "img": "images/tools/keynote.png"
-                }, 
-                {
-                  "label": "Sublime",
-                  "img": "images/tools/sublime.png"
-                }, 
-                {
-                  "label": "Slack",
-                  "img": "images/tools/slack.png"
-                }, 
+                },
                 {
                   "label": "Principle",
                   "img": "images/tools/principle.png"
-                }, 
-                {
-                  "label": "Hotjar",
-                  "img": "images/tools/hotjar.png"
-                },
+                }
+              ]
+            }
+          },
+          tools2: { 
+            type: Array,
+            value: () => {
+              return [ 
                 {
                   "label": "Google Analytics",
                   "img": "images/tools/ga.png"
+                },
+                {
+                  "label": "Hotjar",
+                  "img": "images/tools/hotjar.png"
                 },
                 {
                   "label": "Optimizely",
@@ -98,10 +158,29 @@
                 {
                   "label": "Google Tag Manager",
                   "img": "images/tools/gtm.png"
+                }
+              ]
+            }
+          },
+          tools3: { 
+            type: Array,
+            value: () => {
+              return [ 
+                {
+                  "label": "Github",
+                  "img": "images/tools/github.png"
+                },
+                {
+                  "label": "Sublime Text",
+                  "img": "images/tools/sublime.png"
+                },
+                {
+                  "label": "Polymer",
+                  "img": "images/tools/polymer.png"
                 }, 
                 {
-                  "label": "Mailchimp",
-                  "img": "images/tools/mailchimp.png"
+                  "label": "Firebase",
+                  "img": "images/tools/firebase.png"
                 }
               ]
             }

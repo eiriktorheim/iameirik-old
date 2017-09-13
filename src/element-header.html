@@ -47,12 +47,15 @@
         width: 14rem;
         margin-top: 1em;
         margin-bottom: 1em;
+        overflow: hidden !important;
         border: 1px solid rgba(0, 0, 0, .1);
+        border-radius: 50%;
         -webkit-border-radius: 50%;
         -moz-border-radius: 50%;
-        overflow: hidden;
         background-color: lightgray;
-        border-radius: 50%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
       }
 
       .avatar-container {
@@ -63,7 +66,7 @@
       .profile {
         @apply --layout-horizontal;
         @apply --layout-center;
-        height: 100vh;
+        height: 100vh;        
       }
 
       .icons {
@@ -274,7 +277,7 @@
       <div class="profile">
         <div class="medium center" style="padding: 1rem;">
           <div class="avatar-container">
-            <lazy-image class="avatar" fade alt="Profile picture" src="images/profile.jpg" height="164" width="164"></lazy-image>
+            <img class="avatar" alt="Profile picture" src="images/profile.jpg" height="164" width="164">
           </div>
           <div>
             <h1 class="iam center"><lazy-image fade alt="I am Eirik" src="images/iam.svg" height="48" width="228"></lazy-image></h1>
