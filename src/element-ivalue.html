@@ -34,13 +34,16 @@
 
       @media (max-width: 599px) {
         .grid {
-          grid-template-columns: repeat(1, 1fr);
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .card{
+          min-height: 11rem;
         }
       }
 
       @media (min-width: 600px) {
         .grid {
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(4, 1fr);
         }
       }
 
@@ -48,27 +51,55 @@
         .grid {
           grid-template-columns: repeat(4, 1fr);
         }
+        .card{
+          min-height: 12rem;
+        }
       }
+    
+      .card{
+        min-height: 11rem;
+        border: none;
+        background-size: cover;
+      } 
+
+      .kiting{
+        background-image: url("/images/ilike/kiting.jpg");
+      }
+
+      .nature{
+        background-image: url("/images/ilike/nature.jpg");
+      }
+/*
+      .family{
+        background-image: url("/images/ilike/family.jpg");
+      }
+
+      .exploring{
+        background-image: url("/images/ilike/exploring.jpg");
+      }*/
+
     </style>
+
+
 
   </custom-style>
 
   
     <section style="min-height: 10rem;" class="tint-white"> 
-      <div style="margin: 0 auto;" class="medium center center-text">
+      <div style="margin: 0 auto;" class="large center center-text">
         <h2>What I like</h2>
         <div class="grid">
-          <div class="card">
+          <div class="card kiting">
             <p>Kitesurfing</p>
           </div>
-          <div class="card">
+          <div class="card nature">
             <p>Nature</p>
           </div>
           <div class="card">
             <p>Friends and family</p>
           </div>
           <div class="card">
-            <p>Coffee</p>
+            <p>Exploring</p>
           </div>
         </div>
       </div>
