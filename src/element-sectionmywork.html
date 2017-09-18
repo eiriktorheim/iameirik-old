@@ -1,0 +1,111 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/lazy-image/lazy-image.html">
+<link rel="import" href="../bower_components/parallax-element/parallax-element.html">
+
+
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="element-sectionmywork">
+
+  <template>
+
+    <style is="custom-style" include="iron-flex"></style>
+    <style include="shared-styles"></style>
+
+    <style>
+
+        parallax-element {
+          height: 100vh;
+        }
+
+        div.baseGroup {
+          z-index: 1;
+          min-height: 700px;
+          background: white;
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        div.baseGroup.footer {
+          min-height: 400px;
+        }
+
+        parallax-layers[id^="img"] {
+          z-index: -1;
+          min-height: 600px;
+        }
+
+        parallax-layers[id^="img"] > .background {
+          background-repeat: no-repeat;
+          background-size: cover;
+          z-index: -2;
+        }
+        
+        parallax-layers[id^="img"] p {
+          position: absolute;
+          bottom: 0;
+          font-size: 1.5em;
+          color: white;
+          text-shadow: 2px -2px 11px rgba(0, 0, 0, 1);
+        }
+
+        #imgHeader > .background {
+          background-position: 30% 95% !important;
+          background-color: #009688;
+        }
+        
+        #img1 > .background {
+          background-position: 90% 40% !important;
+          background-color: #795548;
+        }
+          
+        #img2 > .background {
+          background-position: 70% 40% !important;
+          background-color: #00BCD4;
+        }
+        #img3 > .background {
+          background-position: 35% 50% !important;
+          background-color: #33691E;
+        }
+        #img4 > .background {
+          background-position: 55% 50% !important;
+          background-color: #EF9A9A;
+        }
+        #img5 > .background {
+          background-position: 50% 55% !important;
+          background-color: #4CAF50;
+        }
+        #test {
+          height: 400px;
+
+        }
+        parallax-element {
+
+        }
+
+    </style>
+
+
+    <section>
+    
+      <parallax-element>
+        <parallax-layers id="img3">
+          <lazy-image depth="-0.5" sizing="cover" preload fade src="../bower_components/parallax-element/demo/res/saint-michel.jpg" class="background fullbleed"></lazy-image>
+          <p>Menez Sant-Mikael</p>
+        </parallax-layers>
+      </parallax-element>
+
+    </section>
+
+  </template>
+
+  <script>
+    class ElementSectionMywork extends Polymer.Element {
+      static get is() {
+        return 'element-sectionmywork';
+      }
+    }
+
+    window.customElements.define(ElementSectionMywork.is, ElementSectionMywork);
+  </script>
+
+</dom-module>

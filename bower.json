@@ -17,12 +17,14 @@
     "paper-card": "PolymerElements/paper-card#^2.0.0",
     "iron-pages": "PolymerElements/iron-pages#^2.0.0",
     "lazy-image": "^0.0.5",
-    "instagram-feed": "DinethH/instagram-feed#^0.0.3"
+    "instagram-feed": "DinethH/instagram-feed#^0.0.3",
+    "parallax-element": "vguillou/parallax-element#^1.1.1"
   },
   "devDependencies": {},
   "private": true,
   "resolutions": {
     "polymer": "^2.0.2",
-    "webcomponentsjs": "^v1.0.2"
+    "webcomponentsjs": "^v1.0.2",
+    "iron-resizable-behavior": "^2.0.1"
   }
 }

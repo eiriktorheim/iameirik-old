@@ -91,11 +91,19 @@
 
       p{
         font-size: var(--txt-xs);
-        color: var(--tint-medium-grey);
+        color: var(--tint-dark-grey);
       }
 
       .cta{
+        margin-bottom: 1rem;
+      }
 
+      .button,
+      .button:hover{
+        background-color: var(--tint-light-grey); 
+        cursor:text !important;
+        text-decoration: none !important; 
+        color: var(--tint-medium-grey);
       }
 
     </style>
@@ -115,17 +123,17 @@
           <div class="card">
             <lazy-image style="background-color: lightgray;" sizing="cover" preload fade src="[[item.img]]"></lazy-image>
             <div class="card-content center-text">
-              <div>
+              <!--<div>
                 <span class="role">[[item.role]]</span>
-              </div>
-              <div class="flexchild-vertical">
+              </div>-->
+              <div class="flexchild-vertical" style="margin: .5rem 0;">
                 <h3 class="title">[[item.title]]&nbsp;</h3>
               </div>
-              <div>
+              <div style="margin: .5rem 0;">
                 <p>[[item.description]]</p>
               </div>
               <div class="cta">
-                <a href="[[item.url]]" class="button">View case</a>
+                <a href="[[item.url]]" class="button">View case (coming)</a>
               </div>
             </div>
           </div>
@@ -153,13 +161,13 @@
                 "role": "UX/UI Designer",
                 "title": "Schibsted Media Platform",
                 "img": "../images/cases/case1.jpg",
-                "url": "/case/schibsted-media-platform",
+                "url": "#",
                 "description": "Designing a cohesive media platform where the products belong together in one product family and creation suite."
               }, {
                 "role": "Team Lead Design",
                 "title": "Redesigning Norsk-tipping.no",
                 "img": "../images/cases/case2.jpg",
-                "url": "/case/redesigning-norsk-tipping",
+                "url": "#",
                 "description": "How we redesigned one of the biggest websites in Norway and created a cohesive user experience"
               }, {
                 "role": "Design Lead",
